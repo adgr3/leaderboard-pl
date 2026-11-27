@@ -54,12 +54,9 @@ ALIASES_MAP = load_aliases()
 
 
 def load_opisy():
-    try:
-        import yaml
-    except Exception:
-        return {}
+    import yaml  # required: a missing PyYAML must fail loudly, not drop all descriptions
     if not OPISY.exists():
-        return {}
+        raise SystemExit(f"missing {OPISY}")
     data = yaml.safe_load(OPISY.read_text(encoding="utf-8")) or {}
     return data
 

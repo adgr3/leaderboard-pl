@@ -11,12 +11,9 @@ SPACE = ROOT / "hf" / "space"
 
 
 def load_opisy():
-    try:
-        import yaml
-    except Exception:
-        return {}
+    import yaml  # required: a missing PyYAML must fail loudly, not drop all descriptions
     if not OPISY.exists():
-        return {}
+        raise SystemExit(f"missing {OPISY}")
     return yaml.safe_load(OPISY.read_text(encoding="utf-8")) or {}
 
 
@@ -228,7 +225,9 @@ def main():
             td=Path(td)
             tp=td/'r.parquet'; tc=td/'r.csv'
             write_parquet(tp, rows); write_csv(tc, rows, fieldnames)
-            if tp.read_bytes()!=parquet_path.read_bytes():
+            # Compare table contents, not bytes: parquet metadata embeds the pyarrow version.
+            import pyarrow.parquet as pq
+            if pq.read_table(tp).to_pylist()!=pq.read_table(parquet_path).to_pylist():
                 print('hf/dataset/data/results.parquet out of date'); raise SystemExit(1)
             if tc.read_text(encoding='utf-8')!=csv_path.read_text(encoding='utf-8'):
                 print('hf/dataset/data/results.csv out of date'); raise SystemExit(1)
