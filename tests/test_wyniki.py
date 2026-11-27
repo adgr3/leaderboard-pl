@@ -68,7 +68,7 @@ def test_nasze_pomiary_count_matches():
     text = (ROOT / "leaderboard.md").read_text(encoding="utf-8")
     # report/section must state adgr3 count
     assert f"adgr3: {len(adgr3)}" in text
-    assert "## Przegląd (nasze pomiary)" in text
+    assert "## Ranking główny" in text
 
 
 @pytest.mark.skipif(not (BENCH_SRC.exists() and TX_SRC.exists() and BIELIK_SRC.exists()), reason="requires local _zrodla and bielik-if-pl sources")

@@ -1,69 +1,158 @@
-﻿<!doctype html>
-<html lang="pl">
+<!doctype html>
+<html lang="pl" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>leaderboard-pl</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; margin: 24px; color: #111; }
-    .controls { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
-    label { display: flex; flex-direction: column; font-size: 14px; gap: 4px; }
-    input, select { padding: 6px 8px; font-size: 14px; }
-    table { border-collapse: collapse; width: 100%; font-size: 13px; }
-    th, td { border: 1px solid #ccc; padding: 6px; vertical-align: top; }
-    th { background: #f5f5f5; position: sticky; top: 0; }
-    .muted { color: #555; font-size: 13px; margin-bottom: 12px; }
+    :root{--bg:#ffffff;--fg:#111827;--muted:#6b7280;--card:#f8fafc;--border:#d1d5db;--accent:#2563eb;--good:#166534;--bad:#991b1b;--pill:#e5e7eb}
+    [data-theme="dark"]{--bg:#0b1220;--fg:#e5e7eb;--muted:#9ca3af;--card:#111827;--border:#374151;--accent:#60a5fa;--good:#86efac;--bad:#fca5a5;--pill:#1f2937}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.4}
+    header{padding:20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:5}
+    h1{margin:0 0 6px;font-size:1.6rem} .sub{color:var(--muted);font-size:.95rem}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+    button,.tab{border:1px solid var(--border);background:var(--card);color:var(--fg);padding:8px 12px;border-radius:8px;cursor:pointer;font-size:.92rem}
+    .tab.active,button.primary{background:var(--accent);color:white;border-color:var(--accent)}
+    main{padding:20px;max-width:1400px;margin:0 auto}
+    .panel{display:none}.panel.active{display:block}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:12px 0 20px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px}
+    .card .v{font-size:1.5rem;font-weight:700}.card .l{color:var(--muted);font-size:.85rem}
+    .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0}
+    label{display:flex;flex-direction:column;font-size:.82rem;color:var(--muted);gap:4px}
+    input,select{padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg)}
+    table{width:100%;border-collapse:collapse;font-size:.88rem}
+    th,td{border-bottom:1px solid var(--border);padding:8px 6px;text-align:left;vertical-align:top}
+    th{position:sticky;top:0;background:var(--card);cursor:pointer;white-space:nowrap}
+    .table-wrap{overflow:auto;border:1px solid var(--border);border-radius:10px}
+    .muted{color:var(--muted)} .pill{display:inline-block;padding:1px 6px;border-radius:999px;background:var(--pill);font-size:.75rem;margin-left:4px}
+    .src a{color:var(--accent);text-decoration:none}.src a:hover{text-decoration:underline}
+    .chart-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;margin:12px 0}
+    canvas{max-width:100%}
+    details{border:1px solid var(--border);border-radius:8px;padding:8px 10px;background:var(--card);margin:8px 0}
+    summary{cursor:pointer;font-weight:600}
+    .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+    @media (max-width:700px){header,main{padding:14px} th,td{font-size:.8rem;padding:6px 4px}}
   </style>
 </head>
 <body>
-  <h1>leaderboard-pl (lokalny podgląd)</h1>
-  <div class="muted">Statyczny podgląd pliku <code>wyniki.json</code>. Docelowy Space: <code>adegier/leaderboard-pl</code>. Nic nie jest publikowane przez to zadanie.</div>
-  <div class="controls">
-    <label>Rodzina<select id="family"><option value="">Wszystkie</option></select></label>
-    <label>Benchmark<select id="benchmark"><option value="">Wszystkie</option></select></label>
-    <label>Model<input id="model" placeholder="filtr modelu"></label>
+<header>
+  <h1>leaderboard-pl</h1>
+  <div class="sub">Publiczny, generowany leaderboard wyników benchmarków. Dane: <code>results.json</code> + <code>benchmarks.json</code>.</div>
+  <div class="row" id="tabs">
+    <button class="tab active" data-tab="ranking">Ranking</button>
+    <button class="tab" data-tab="families">Rodziny</button>
+    <button class="tab" data-tab="polish">Polszczyzna</button>
+    <button class="tab" data-tab="slayer">Slayer</button>
+    <button class="tab" data-tab="tokenizers">Tokenizery</button>
+    <button class="tab" data-tab="about">O projekcie</button>
+    <span style="flex:1"></span>
+    <button id="themeBtn">Motyw: jasny</button>
   </div>
-  <div id="count" class="muted"></div>
-  <table>
-    <thead><tr><th>Model</th><th>Rodzina</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>Status</th><th>Źródło</th></tr></thead>
-    <tbody id="body"></tbody>
-  </table>
-  <script>
-    const state = { rows: [] };
-    const byId = id => document.getElementById(id);
-    function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-    function fillSelect(id, values) {
-      const sel = byId(id);
-      for (const v of values) {
-        const o = document.createElement('option'); o.value = v; o.textContent = v; sel.appendChild(o);
-      }
-    }
-    function render() {
-      const family = byId('family').value;
-      const benchmark = byId('benchmark').value;
-      const model = byId('model').value.toLowerCase();
-      const rows = state.rows.filter(r =>
-        (!family || r.family === family) &&
-        (!benchmark || r.benchmark === benchmark) &&
-        (!model || String(r.model).toLowerCase().includes(model))
-      );
-      byId('count').textContent = `Widoczne rekordy: ${rows.length} / ${state.rows.length}`;
-      byId('body').innerHTML = rows.map(r => {
-        const src = r.source || {};
-        const link = src.url ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">link</a>` : esc(src.path || '');
-        const score = r.status === 'null' ? `null: ${esc(r.null_reason || '')}` : esc(r.score);
-        return `<tr><td>${esc(r.model)}</td><td>${esc(r.family)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${score}</td><td>${esc(r.status)}</td><td>${link}</td></tr>`;
-      }).join('');
-    }
-    async function main() {
-      const res = await fetch('wyniki.json');
-      state.rows = await res.json();
-      fillSelect('family', [...new Set(state.rows.map(r => r.family).filter(Boolean))].sort());
-      fillSelect('benchmark', [...new Set(state.rows.map(r => r.benchmark).filter(Boolean))].sort());
-      ['family','benchmark','model'].forEach(id => byId(id).addEventListener('input', render));
-      render();
-    }
-    main().catch(e => { byId('count').textContent = 'Błąd ładowania wyniki.json: ' + e; });
-  </script>
+</header>
+<main>
+  <div class="cards" id="cards"></div>
+
+  <section class="panel active" id="panel-ranking">
+    <div class="filters">
+      <label>Model<input id="f-model" placeholder="filtr modelu"></label>
+      <label>Benchmark<select id="f-bench"><option value="">Wszystkie</option></select></label>
+      <label>Rodzina<select id="f-family"><option value="">Wszystkie</option></select></label>
+      <label>Autor<select id="f-author"><option value="">Wszyscy</option><option value="adgr3">adgr3</option><option value="bench-team">bench-team</option><option value="model-card">model-card</option></select></label>
+      <label>Porównywalne<select id="f-comp"><option value="">Wszystkie</option><option value="1">Tylko porównywalne</option></select></label>
+      <label>Status<select id="f-status"><option value="">Wszystkie</option><option value="measured">measured</option><option value="null">null</option></select></label>
+    </div>
+    <div class="muted" id="count"></div>
+    <div class="chart-box"><canvas id="avgChart" height="120"></canvas></div>
+    <div class="table-wrap"><table><thead><tr id="head"></tr></thead><tbody id="body"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="panel-families">
+    <div class="filters"><label>Rodzina<select id="fam-family"></select></label></div>
+    <div id="fam-desc"></div>
+    <div class="chart-box"><canvas id="famChart" height="120"></canvas></div>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Flagi</th><th>Źródło</th></tr></thead><tbody id="fam-body"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="panel-polish">
+    <p>Wyróżnik projektu: wyniki na polskich danych i lokalnych ewaluacjach PL.</p>
+    <div id="pl-desc"></div>
+    <div class="chart-box"><canvas id="plChart" height="120"></canvas></div>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Flagi</th><th>Źródło</th></tr></thead><tbody id="pl-body"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="panel-slayer">
+    <div class="chart-box"><canvas id="slChart" height="120"></canvas></div>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Flagi</th><th>Źródło</th></tr></thead><tbody id="sl-body"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="panel-tokenizers">
+    <div class="chart-box"><canvas id="tokChart" height="120"></canvas></div>
+    <div class="table-wrap"><table><thead><tr><th>Tokenizer/model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Źródło</th></tr></thead><tbody id="tok-body"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="panel-about">
+    <div class="grid2">
+      <div class="card"><h3>Co to jest</h3><p>Publiczny leaderboard wyników benchmarków LLM. Dane są generowane z plików <code>wyniki/*.json</code> w repo <a href="https://github.com/adgr3/leaderboard-pl">adgr3/leaderboard-pl</a>.</p><p>Każdy wynik ma źródło, metrykę, status, odstępstwa i informację o porównywalności.</p></div>
+      <div class="card"><h3>Jak czytać</h3><ul><li>Porównuj tylko ten sam benchmark, metrykę i porównywalne ustawienia.</li><li><code>†</code> odstępstwo/nieporównywalne, <code>∅</code> null, <code>★</code> pomiar adgr3.</li><li>Rankingi/średnie pomijają wyniki nieporównywalne.</li></ul></div>
+    </div>
+    <h3>Benchmarki</h3>
+    <div id="bench-list"></div>
+  </section>
+</main>
+<script>
+
+const LM15=["arc-challenge","arc-easy","blimp","ewok","hellaswag","lambada","mathqa","medmcqa","multiblimp-pl","piqa","pubmedqa","social-iqa","wikitext-2","winogrande","wsc273"];
+const state={rows:[],bench:{},charts:{},sort:{k:'model',dir:1}};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function fmt(r){ if(r.status!=='measured'||r.score==null){ const reason=r.null_reason||'brak powodu'; return r.status==='null'?`null (${esc(reason)})`:esc(reason);} const v=r.score_display??r.score; const pct=Math.abs(v)<=1000 && String(r.metric||'').match(/acc|pass|accuracy|rate|omniscience|exact_match|ewok/i) && (r.score<=1.5 || String(r.benchmark||'').match(/ifeval|ifbench|ruler|hle|lcr|automation|bfcl|humanity|terminal/i)); if(String(r.metric).match(/bytes per token|fertility|perplexity/i)) return Number(v).toFixed(4).replace(/0+$/,'').replace(/\.$/,''); if(pct) return `${Number(v).toFixed(1)}%`; return Number(v).toFixed(4).replace(/0+$/,'').replace(/\.$/,''); }
+function flags(r){ let f=''; if(r.measured_by==='adgr3') f+='★'; if((r.deviations||'')!=='') f+='†'; if(r.status==='null') f+='∅'; if(r.measured_by==='model-card') f+='ⓡ'; return f; }
+function isComparable(r){ return r.status==='measured' && !(r.deviations||'') && r.comparable!==false; }
+function srcCell(r){ const u=r.source_url, p=r.source_path||'źródło'; const label=p.split('/').pop(); return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(label)}</a>`:esc(label); }
+function setCards(){ const models=new Set(state.rows.map(r=>r.model)); const benches=new Set(state.rows.map(r=>r.benchmark)); const measured=state.rows.filter(r=>r.status==='measured').length; $('cards').innerHTML=[
+  ['Modele',models.size],['Benchmarki',benches.size],['Rekordy',state.rows.length],['Measured',measured]
+ ].map(([l,v])=>`<div class="card"><div class="v">${v}</div><div class="l">${l}</div></div>`).join(''); }
+function fillSel(id, vals){ const s=$(id); vals.forEach(v=>{const o=document.createElement('option'); o.value=v; o.textContent=v; s.appendChild(o);}); }
+function filtered(){ const m=$('f-model').value.toLowerCase(); const b=$('f-bench').value; const fam=$('f-family').value; const a=$('f-author').value; const c=$('f-comp').value; const st=$('f-status').value; return state.rows.filter(r=> (!m||String(r.model).toLowerCase().includes(m)) && (!b||r.benchmark===b) && (!fam||r.benchmark_family===fam) && (!a||r.measured_by===a) && (!c||isComparable(r)) && (!st||r.status===st)); }
+function renderTable(){ const rows=filtered().slice(); const k=state.sort.k, dir=state.sort.dir; rows.sort((a,b)=>{ let va=a[k], vb=b[k]; if(k==='score'){ va=a.score_display??-1e18; vb=b.score_display??-1e18; } va=va??''; vb=vb??''; if(va<vb) return -1*dir; if(va>vb) return 1*dir; return 0; });
+  $('count').textContent=`Widoczne rekordy: ${rows.length} / ${state.rows.length}`;
+  const cols=[['model','Model'],['benchmark','Benchmark'],['metric','Metryka'],['score','Wynik'],['n','n'],['measured_by','Autor'],['status','Status'],['source','Źródło']];
+  $('head').innerHTML=cols.map(([k,l])=>`<th data-k="${k}">${l}${state.sort.k===k?(state.sort.dir>0?' ▲':' ▼'):''}</th>`).join('');
+  $('head').querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k; if(state.sort.k===k) state.sort.dir*=-1; else {state.sort.k=k; state.sort.dir=1;} renderTable();});
+  $('body').innerHTML=rows.slice(0,800).map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}<div class="muted">${esc(r.benchmark_display_pl||'')}</div></td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)||' '}</span></td><td>${r.n??'—'}</td><td>${esc(r.measured_by||'')}</td><td>${esc(r.status||'')}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
+}
+function chart(id,type,data,opts){ if(state.charts[id]) state.charts[id].destroy(); state.charts[id]=new Chart($(id),{type,data,options:Object.assign({responsive:true,plugins:{legend:{labels:{color:getComputedStyle(document.body).color}}},scales:{x:{ticks:{color:getComputedStyle(document.body).color}},y:{ticks:{color:getComputedStyle(document.body).color}}}},opts||{})}); }
+
+function buildMainChart(){ const byModel={}; for(const b of LM15){ const vals=state.rows.filter(r=>r.benchmark===b && isComparable(r) && r.score!=null).map(r=>r.score_display??r.score); if(!vals.length) continue; const min=Math.min(...vals), max=Math.max(...vals), span=(max-min)||1; const dir=(state.bench[b]||{}).direction||'higher'; for(const r of state.rows.filter(r=>r.benchmark===b && isComparable(r) && r.score!=null)){ let nv=((r.score_display??r.score)-min)/span; if(dir==='lower') nv=1-nv; (byModel[r.model]=byModel[r.model]||[]).push(nv); }}
+  const items=Object.entries(byModel).filter(([m,v])=>v.length===15).map(([m,v])=>({m,avg:100*v.reduce((a,b)=>a+b,0)/v.length})).sort((a,b)=>b.avg-a.avg).slice(0,20);
+  chart('avgChart','bar',{labels:items.map(i=>i.m),datasets:[{label:'Średnia znormalizowana (15 lm-eval, komplet)',data:items.map(i=>i.avg),backgroundColor:'#4c78a8'}]},{indexAxis:'y',scales:{x:{min:0,max:100,ticks:{color:getComputedStyle(document.body).color}},y:{ticks:{color:getComputedStyle(document.body).color}}}});
+}
+function renderFamilies(){ const fams=[...new Set(state.rows.map(r=>r.benchmark_family).filter(Boolean))].sort(); const sel=$('fam-family'); sel.innerHTML=''; fams.forEach(f=>{const o=document.createElement('option');o.value=f;o.textContent=f;sel.appendChild(o);}); sel.onchange=drawFamily; drawFamily(); }
+function drawFamily(){ const fam=$('fam-family').value; const rows=state.rows.filter(r=>r.benchmark_family===fam).sort((a,b)=> (a.benchmark||'').localeCompare(b.benchmark||'') || String(b.score_display??-1e18).localeCompare(String(a.score_display??-1e18))); $('fam-desc').innerHTML=[...new Set(rows.map(r=>r.benchmark))].map(b=>{const d=state.bench[b]||{}; return `<details><summary>${esc(d.display_pl||b)}</summary><div>${esc(d.measures_pl||'')}</div><div class="muted">${esc(d.measures_en||'')}</div><div class="muted">Metryka: <code>${esc(d.metric||'')}</code>, kierunek: ${esc(d.direction||'')}, n=${esc(d.n_items||'')}, język: ${esc(d.language||'')}</div><div class="src">Źródło: ${d.source_url?`<a href="${esc(d.source_url)}" target="_blank">${esc(d.source_url)}</a>`:''}</div></details>`;}).join('');
+  $('fam-body').innerHTML=rows.slice(0,500).map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)}</span></td><td>${r.n??'—'}</td><td>${flags(r)}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
+  const b0=[...new Set(rows.filter(r=>r.status==='measured'&&r.score!=null).map(r=>r.benchmark))][0];
+  const br=rows.filter(r=>r.benchmark===b0 && r.status==='measured' && r.score!=null).slice().sort((a,b)=>(b.score_display??b.score)-(a.score_display??a.score)).slice(0,20);
+  chart('famChart','bar',{labels:br.map(r=>r.model),datasets:[{label:b0||'brak',data:br.map(r=>r.score_display??r.score),backgroundColor:'#72b7b2'}]},{indexAxis:'y'});
+}
+function renderPolish(){ const pl=["multiblimp-pl","IFBench (Bielik IF-PL local)","IFEval (Bielik IF-PL local)","Token fertility (tokens per word, 7 Polish domains)","Held-out corpus (bytes per token)"]; const rows=state.rows.filter(r=>pl.includes(r.benchmark)); $('pl-desc').innerHTML=pl.map(b=>{const d=state.bench[b]||{}; return `<details ${b==='multiblimp-pl'?'open':''}><summary>${esc(d.display_pl||b)}</summary><div>${esc(d.measures_pl||'')}</div><div class="src">Źródło: ${d.source_url?`<a href="${esc(d.source_url)}" target="_blank">${esc(d.source_url)}</a>`:''}</div></details>`}).join('');
+  $('pl-body').innerHTML=rows.map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)}</span></td><td>${r.n??'—'}</td><td>${flags(r)}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
+  const br=rows.filter(r=>r.benchmark==='multiblimp-pl'&&r.status==='measured'&&r.score!=null).slice().sort((a,b)=>(b.score_display??b.score)-(a.score_display??a.score));
+  chart('plChart','bar',{labels:br.map(r=>r.model),datasets:[{label:'MultiBLiMP PL accuracy',data:br.map(r=>r.score_display??r.score),backgroundColor:'#4c78a8'}]},{indexAxis:'y'});
+}
+
+function renderSlayer(){ const rows=state.rows.filter(r=>String(r.model).toLowerCase().startsWith('slayer') && r.benchmark_family!=='tokenizers').sort((a,b)=>a.model.localeCompare(b.model)||a.benchmark.localeCompare(b.benchmark)); $('sl-body').innerHTML=rows.map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)}</span></td><td>${r.n??'—'}</td><td>${flags(r)}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
+  const bench='arc-easy'; const br=rows.filter(r=>r.benchmark===bench && r.status==='measured').sort((a,b)=>a.model.localeCompare(b.model)); chart('slChart','line',{labels:br.map(r=>r.model),datasets:[{label:bench,data:br.map(r=>r.score_display??r.score),borderColor:'#d62728',backgroundColor:'#d6272840'}]},{scales:{y:{ticks:{color:getComputedStyle(document.body).color}}}});
+}
+function renderTok(){ const rows=state.rows.filter(r=>r.benchmark_family==='tokenizers').sort((a,b)=>a.benchmark.localeCompare(b.benchmark)||(a.score_display??a.score)-(b.score_display??b.score)); $('tok-body').innerHTML=rows.map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)}</td><td>${r.n??'—'}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
+  const br=rows.filter(r=>r.benchmark==='Token fertility (tokens per word, 7 Polish domains)'&&r.status==='measured').sort((a,b)=>(a.score_display??a.score)-(b.score_display??b.score));
+  chart('tokChart','bar',{labels:br.map(r=>r.model),datasets:[{label:'Fertility (↓ lepiej)',data:br.map(r=>r.score_display??r.score),backgroundColor:'#8c564b'}]},{indexAxis:'y'});
+}
+function renderAbout(){ $('bench-list').innerHTML=Object.values(state.bench).sort((a,b)=>(a.display_pl||'').localeCompare(b.display_pl||'')).map(d=>`<details><summary>${esc(d.display_pl||d.benchmark)} <span class="muted">(${esc(d.family)})</span></summary><div><b>PL:</b> ${esc(d.measures_pl||'')}</div><div><b>EN:</b> ${esc(d.measures_en||'')}</div><div class="muted">Język: ${esc(d.language||'')} · Metryka: <code>${esc(d.metric||'')}</code> · Kierunek: ${esc(d.direction||'')} · n=${esc(d.n_items||'')}</div><div class="src">Źródło: ${d.source_url?`<a href="${esc(d.source_url)}" target="_blank" rel="noopener">${esc(d.source_url)}</a>`:''}</div></details>`).join(''); }
+function wire(){ document.querySelectorAll('.tab').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));$('panel-'+btn.dataset.tab).classList.add('active');}); ['f-model','f-bench','f-family','f-author','f-comp','f-status'].forEach(id=>$(id).addEventListener('input',renderTable)); $('themeBtn').onclick=()=>{const html=document.documentElement; const dark=html.getAttribute('data-theme')==='dark'; html.setAttribute('data-theme', dark?'light':'dark'); $('themeBtn').textContent='Motyw: '+(dark?'jasny':'ciemny'); buildMainChart(); drawFamily(); renderPolish(); renderSlayer(); renderTok();}; }
+async function main(){ const [r1,r2]=await Promise.all([fetch('results.json'),fetch('benchmarks.json')]); state.rows=await r1.json(); const bl=await r2.json(); bl.forEach(b=>state.bench[b.benchmark]=b); setCards(); fillSel('f-bench',[...new Set(state.rows.map(r=>r.benchmark))].sort()); fillSel('f-family',[...new Set(state.rows.map(r=>r.benchmark_family).filter(Boolean))].sort()); wire(); renderTable(); buildMainChart(); renderFamilies(); renderPolish(); renderSlayer(); renderTok(); renderAbout(); }
+main().catch(e=>{ $('count').textContent='Błąd ładowania danych: '+e; console.error(e); });
+</script>
 </body>
 </html>

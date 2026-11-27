@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest jsonschema
+          pip install pytest jsonschema pyarrow pyyaml
       - name: Validate wynik JSON files against schema
         run: |
           python - <<'PY'
@@ -32,5 +32,7 @@ jobs:
           PY
       - name: Check generated leaderboard files
         run: python scripts/buduj.py --check
+      - name: Check HF export files
+        run: python scripts/eksport_hf.py --check
       - name: Run tests
         run: python -m pytest -q

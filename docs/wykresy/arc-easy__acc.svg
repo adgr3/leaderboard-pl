@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="570" viewBox="0 0 920 570" font-family="Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="28" font-size="16" font-weight="bold" fill="#111">ARC-Easy – acc</text>
+<text x="20" y="46" font-size="11" fill="#444">↑ wyżej lepiej; wąsy = SE gdy dostępne; ★=adgr3, †=odstępstwo</text>
+<line x1="160" y1="54" x2="160" y2="535" stroke="#555"/>
+<line x1="160.0" y1="54" x2="160.0" y2="535" stroke="#ddd"/>
+<text x="160.0" y="552" font-size="10" text-anchor="middle" fill="#444">0.0%</text>
+<line x1="315.0" y1="54" x2="315.0" y2="535" stroke="#ddd"/>
+<text x="315.0" y="552" font-size="10" text-anchor="middle" fill="#444">20.5%</text>
+<line x1="470.0" y1="54" x2="470.0" y2="535" stroke="#ddd"/>
+<text x="470.0" y="552" font-size="10" text-anchor="middle" fill="#444">40.9%</text>
+<line x1="625.0" y1="54" x2="625.0" y2="535" stroke="#ddd"/>
+<text x="625.0" y="552" font-size="10" text-anchor="middle" fill="#444">61.4%</text>
+<line x1="780.0" y1="54" x2="780.0" y2="535" stroke="#ddd"/>
+<text x="780.0" y="552" font-size="10" text-anchor="middle" fill="#444">81.9%</text>
+<text x="470.0" y="566" font-size="11" text-anchor="middle" fill="#444">%</text>
+<text x="16" y="79" font-size="11" fill="#111">bielik-11b-v3-instruct</text>
+<rect x="160" y="67" width="620.00" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="774.01" y1="74" x2="785.99" y2="74" stroke="#222"/>
+<line x1="774.01" y1="70" x2="774.01" y2="78" stroke="#222"/>
+<line x1="785.99" y1="70" x2="785.99" y2="78" stroke="#222"/>
+<text x="786.00" y="79" font-size="10" fill="#111">81.9%</text>
+<text x="16" y="103" font-size="11" fill="#111">lfm3-1.7b-base</text>
+<rect x="160" y="91" width="543.18" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="696.18" y1="98" x2="710.18" y2="98" stroke="#222"/>
+<line x1="696.18" y1="94" x2="696.18" y2="102" stroke="#222"/>
+<line x1="710.18" y1="94" x2="710.18" y2="102" stroke="#222"/>
+<text x="709.18" y="103" font-size="10" fill="#111">71.7%</text>
+<text x="16" y="127" font-size="11" fill="#111">qwen3.5-0.8b-base</text>
+<rect x="160" y="115" width="534.25" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="687.17" y1="122" x2="701.34" y2="122" stroke="#222"/>
+<line x1="687.17" y1="118" x2="687.17" y2="126" stroke="#222"/>
+<line x1="701.34" y1="118" x2="701.34" y2="126" stroke="#222"/>
+<text x="700.25" y="127" font-size="10" fill="#111">70.5%</text>
+<text x="16" y="151" font-size="11" fill="#111">eurollm-1.7b</text>
+<rect x="160" y="139" width="518.95" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="671.73" y1="146" x2="686.17" y2="146" stroke="#222"/>
+<line x1="671.73" y1="142" x2="671.73" y2="150" stroke="#222"/>
+<line x1="686.17" y1="142" x2="686.17" y2="150" stroke="#222"/>
+<text x="684.95" y="151" font-size="10" fill="#111">68.5%</text>
+<text x="16" y="175" font-size="11" fill="#111">slayer1b-1.09-k40000</text>
+<rect x="160" y="163" width="504.61" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="657.28" y1="170" x2="671.94" y2="170" stroke="#222"/>
+<line x1="657.28" y1="166" x2="657.28" y2="174" stroke="#222"/>
+<line x1="671.94" y1="166" x2="671.94" y2="174" stroke="#222"/>
+<text x="670.61" y="175" font-size="10" fill="#111">66.6%</text>
+<text x="16" y="199" font-size="11" fill="#111">slayer1b-1.09-k70000</text>
+<rect x="160" y="187" width="501.42" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="654.07" y1="194" x2="668.77" y2="194" stroke="#222"/>
+<line x1="654.07" y1="190" x2="654.07" y2="198" stroke="#222"/>
+<line x1="668.77" y1="190" x2="668.77" y2="198" stroke="#222"/>
+<text x="667.42" y="199" font-size="10" fill="#111">66.2%</text>
+<text x="16" y="223" font-size="11" fill="#111">slayer1b-1.07-hf</text>
+<rect x="160" y="211" width="452.97" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="605.35" y1="218" x2="620.59" y2="218" stroke="#222"/>
+<line x1="605.35" y1="214" x2="605.35" y2="222" stroke="#222"/>
+<line x1="620.59" y1="214" x2="620.59" y2="222" stroke="#222"/>
+<text x="618.97" y="223" font-size="10" fill="#111">59.8%</text>
+<text x="16" y="247" font-size="11" fill="#111">slayer1b-1.08</text>
+<rect x="160" y="235" width="442.13" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="594.47" y1="242" x2="609.79" y2="242" stroke="#222"/>
+<line x1="594.47" y1="238" x2="594.47" y2="246" stroke="#222"/>
+<line x1="609.79" y1="238" x2="609.79" y2="246" stroke="#222"/>
+<text x="608.13" y="247" font-size="10" fill="#111">58.4%</text>
+<text x="16" y="271" font-size="11" fill="#111">pythia-1b-v0</text>
+<rect x="160" y="259" width="423.00" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="575.29" y1="266" x2="590.72" y2="266" stroke="#222"/>
+<line x1="575.29" y1="262" x2="575.29" y2="270" stroke="#222"/>
+<line x1="590.72" y1="262" x2="590.72" y2="270" stroke="#222"/>
+<text x="589.00" y="271" font-size="10" fill="#111">55.9%</text>
+<text x="16" y="295" font-size="11" fill="#111">bielik-1.5b-v3</text>
+<rect x="160" y="283" width="413.44" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="565.70" y1="290" x2="581.18" y2="290" stroke="#222"/>
+<line x1="565.70" y1="286" x2="565.70" y2="294" stroke="#222"/>
+<line x1="581.18" y1="286" x2="581.18" y2="294" stroke="#222"/>
+<text x="579.44" y="295" font-size="10" fill="#111">54.6%</text>
+<text x="16" y="319" font-size="11" fill="#111">slayer1b-1.05</text>
+<rect x="160" y="307" width="402.60" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="554.85" y1="314" x2="570.36" y2="314" stroke="#222"/>
+<line x1="554.85" y1="310" x2="554.85" y2="318" stroke="#222"/>
+<line x1="570.36" y1="310" x2="570.36" y2="318" stroke="#222"/>
+<text x="568.60" y="319" font-size="10" fill="#111">53.2%</text>
+<text x="16" y="343" font-size="11" fill="#111">slayer1b-1.06</text>
+<rect x="160" y="331" width="398.46" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="550.70" y1="338" x2="566.22" y2="338" stroke="#222"/>
+<line x1="550.70" y1="334" x2="550.70" y2="342" stroke="#222"/>
+<line x1="566.22" y1="334" x2="566.22" y2="342" stroke="#222"/>
+<text x="564.46" y="343" font-size="10" fill="#111">52.6%</text>
+<text x="16" y="367" font-size="11" fill="#111">slayer1b-1.04</text>
+<rect x="160" y="355" width="389.85" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="542.08" y1="362" x2="557.62" y2="362" stroke="#222"/>
+<line x1="542.08" y1="358" x2="542.08" y2="366" stroke="#222"/>
+<line x1="557.62" y1="358" x2="557.62" y2="366" stroke="#222"/>
+<text x="555.85" y="367" font-size="10" fill="#111">51.5%</text>
+<text x="16" y="391" font-size="11" fill="#111">slayer1b-1.03</text>
+<rect x="160" y="379" width="374.55" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="526.78" y1="386" x2="542.32" y2="386" stroke="#222"/>
+<line x1="526.78" y1="382" x2="526.78" y2="390" stroke="#222"/>
+<line x1="542.32" y1="382" x2="542.32" y2="390" stroke="#222"/>
+<text x="540.55" y="391" font-size="10" fill="#111">49.5%</text>
+<text x="16" y="415" font-size="11" fill="#111">slayer1b-1.02</text>
+<rect x="160" y="403" width="366.26" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="518.50" y1="410" x2="534.03" y2="410" stroke="#222"/>
+<line x1="518.50" y1="406" x2="518.50" y2="414" stroke="#222"/>
+<line x1="534.03" y1="406" x2="534.03" y2="414" stroke="#222"/>
+<text x="532.26" y="415" font-size="10" fill="#111">48.4%</text>
+<text x="16" y="439" font-size="11" fill="#111">slayer1b-1.01</text>
+<rect x="160" y="427" width="358.61" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="510.85" y1="434" x2="526.37" y2="434" stroke="#222"/>
+<line x1="510.85" y1="430" x2="510.85" y2="438" stroke="#222"/>
+<line x1="526.37" y1="430" x2="526.37" y2="438" stroke="#222"/>
+<text x="524.61" y="439" font-size="10" fill="#111">47.3%</text>
+<text x="16" y="463" font-size="11" fill="#111">lfm2.5-1.2b-base</text>
+<rect x="160" y="451" width="324.82" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="477.13" y1="458" x2="492.51" y2="458" stroke="#222"/>
+<line x1="477.13" y1="454" x2="477.13" y2="462" stroke="#222"/>
+<line x1="492.51" y1="454" x2="492.51" y2="462" stroke="#222"/>
+<text x="490.82" y="463" font-size="10" fill="#111">42.9% †</text>
+<text x="16" y="487" font-size="11" fill="#111">slayer1b-1.00</text>
+<rect x="160" y="475" width="321.32" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="473.64" y1="482" x2="489.00" y2="482" stroke="#222"/>
+<line x1="473.64" y1="478" x2="473.64" y2="486" stroke="#222"/>
+<line x1="489.00" y1="478" x2="489.00" y2="486" stroke="#222"/>
+<text x="487.32" y="487" font-size="10" fill="#111">42.4%</text>
+<text x="16" y="511" font-size="11" fill="#111">lfm3-1.7b</text>
+<rect x="160" y="499" width="305.38" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="457.75" y1="506" x2="473.00" y2="506" stroke="#222"/>
+<line x1="457.75" y1="502" x2="457.75" y2="510" stroke="#222"/>
+<line x1="473.00" y1="502" x2="473.00" y2="510" stroke="#222"/>
+<text x="471.38" y="511" font-size="10" fill="#111">40.3% †</text>
+</svg>

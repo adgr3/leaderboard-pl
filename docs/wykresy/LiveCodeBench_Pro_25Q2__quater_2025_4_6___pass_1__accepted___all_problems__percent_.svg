@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="210" viewBox="0 0 920 210" font-family="Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="28" font-size="16" font-weight="bold" fill="#111">LiveCodeBench Pro 25Q2 – pass@1 (accepted / all problems, percent)</text>
+<text x="20" y="46" font-size="11" fill="#444">↑ wyżej lepiej; wąsy = SE gdy dostępne; ★=adgr3, †=odstępstwo</text>
+<line x1="160" y1="54" x2="160" y2="175" stroke="#555"/>
+<line x1="160.0" y1="54" x2="160.0" y2="175" stroke="#ddd"/>
+<text x="160.0" y="192" font-size="10" text-anchor="middle" fill="#444">0.0%</text>
+<line x1="315.0" y1="54" x2="315.0" y2="175" stroke="#ddd"/>
+<text x="315.0" y="192" font-size="10" text-anchor="middle" fill="#444">8.1%</text>
+<line x1="470.0" y1="54" x2="470.0" y2="175" stroke="#ddd"/>
+<text x="470.0" y="192" font-size="10" text-anchor="middle" fill="#444">16.2%</text>
+<line x1="625.0" y1="54" x2="625.0" y2="175" stroke="#ddd"/>
+<text x="625.0" y="192" font-size="10" text-anchor="middle" fill="#444">24.3%</text>
+<line x1="780.0" y1="54" x2="780.0" y2="175" stroke="#ddd"/>
+<text x="780.0" y="192" font-size="10" text-anchor="middle" fill="#444">32.3%</text>
+<text x="470.0" y="206" font-size="11" text-anchor="middle" fill="#444">%</text>
+<text x="16" y="79" font-size="11" fill="#111">lfm3-1.7b</text>
+<rect x="160" y="67" width="620.00" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="710.60" y1="74" x2="849.40" y2="74" stroke="#222"/>
+<line x1="710.60" y1="70" x2="710.60" y2="78" stroke="#222"/>
+<line x1="849.40" y1="70" x2="849.40" y2="78" stroke="#222"/>
+<text x="786.00" y="79" font-size="10" fill="#111">32.3% †</text>
+<text x="16" y="103" font-size="11" fill="#111">lfm3-1.7b-nothink</text>
+<rect x="160" y="91" width="550.98" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="643.88" y1="98" x2="778.08" y2="98" stroke="#222"/>
+<line x1="643.88" y1="94" x2="643.88" y2="102" stroke="#222"/>
+<line x1="778.08" y1="94" x2="778.08" y2="102" stroke="#222"/>
+<text x="716.98" y="103" font-size="10" fill="#111">28.7% †</text>
+<text x="16" y="127" font-size="11" fill="#111">bielik-11b-v3.1</text>
+<rect x="160" y="115" width="34.51" height="14" fill="#72b7b2" opacity="0.85"/>
+<line x1="-1780.14" y1="122" x2="2169.15" y2="122" stroke="#222"/>
+<line x1="-1780.14" y1="118" x2="-1780.14" y2="126" stroke="#222"/>
+<line x1="2169.15" y1="118" x2="2169.15" y2="126" stroke="#222"/>
+<text x="200.51" y="127" font-size="10" fill="#111">1.8% †</text>
+<text x="16" y="151" font-size="11" fill="#111">slayer1b-1.09-k70000</text>
+<rect x="160" y="139" width="0.00" height="14" fill="#72b7b2" opacity="0.85"/>
+<text x="166.00" y="151" font-size="10" fill="#111">0.0% †</text>
+</svg>
