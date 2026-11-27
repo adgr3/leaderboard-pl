@@ -1,0 +1,514 @@
+# Opisy benchmarków leaderboard-pl. Każdy wpis oparty na faktach ze źródeł.
+# Pola: id (klucz = nazwa benchmarku w wyniki/), display_pl, display_en, family,
+# family_pl, family_en, measures_pl, measures_en, language, metric, direction,
+# n_items, source_url, source_note.
+
+AA-LCR:
+  display_pl: "AA-LCR"
+  display_en: "AA-LCR"
+  family: "long_context"
+  family_pl: "Długi kontekst"
+  family_en: "Long context"
+  measures_pl: "Ocena dokładności na 100 pytaniach AA-LCR z długim kontekstem; odpowiedzi sprawdzane przez automatyczny checker równości oparty o LLM."
+  measures_en: "Accuracy over 100 AA-LCR long-context questions, judged by an LLM equality checker."
+  language: "en"
+  metric: "accuracy over the 100 AA-LCR questions, judged by an LLM equality checker (percent)"
+  direction: "higher"
+  n_items: 100
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/aa-lcr"
+  source_note: "Bench Team API benchmark README; n=100 questions stated in metric description."
+
+AA-Omniscience (public):
+  display_pl: "AA-Omniscience (publiczny)"
+  display_en: "AA-Omniscience (public)"
+  family: "agents_tools"
+  family_pl: "Agenci i narzędzia"
+  family_en: "Agents and tools"
+  measures_pl: "Indeks omniscience z publicznego zestawu AA-Omniscience; mierzy wiedzę i kalibrację modelu na pytaniach faktograficznych."
+  measures_en: "Omniscience index from the public AA-Omniscience set; measures factual knowledge and calibration."
+  language: "en"
+  metric: "omniscience_index"
+  direction: "higher"
+  n_items: 600
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/aa-omniscience"
+  source_note: "Bench Team API benchmark README; n=600 from records."
+
+AutomationBench (public):
+  display_pl: "AutomationBench (publiczny)"
+  display_en: "AutomationBench (public)"
+  family: "agents_tools"
+  family_pl: "Agenci i narzędzia"
+  family_en: "Agents and tools"
+  measures_pl: "Odsetek zaliczonych zadań automatyzacji w publicznym AutomationBench; model używa narzędzi do wykonania zadań."
+  measures_en: "Pass rate on public AutomationBench automation tasks; the model uses tools to complete tasks."
+  language: "en"
+  metric: "pass_rate"
+  direction: "higher"
+  n_items: 600
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/automationbench"
+  source_note: "Bench Team API benchmark README; n=600 from records."
+
+BFCL V4:
+  display_pl: "BFCL V4"
+  display_en: "BFCL V4"
+  family: "agents_tools"
+  family_pl: "Agenci i narzędzia"
+  family_en: "Agents and tools"
+  measures_pl: "Berkeley Function Calling Leaderboard V4; mierzy poprawność wywołań funkcji/narzędzi. Wyniki w tym repo są oznaczone jako niekompletne (brak kategorii web_search)."
+  measures_en: "Berkeley Function Calling Leaderboard V4; measures function/tool calling accuracy. Results in this repo are marked incomplete (web_search categories not run)."
+  language: "en"
+  metric: "overall_acc"
+  direction: "higher"
+  n_items: 4906
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/bfcl-v4"
+  source_note: "Bench Team API benchmark README; n=4906 from records; web_search categories missing per deviations."
+
+GPQA Diamond (exploratory, CoT zero-shot):
+  display_pl: "GPQA Diamond (eksploracyjny, CoT zero-shot)"
+  display_en: "GPQA Diamond (exploratory, CoT zero-shot)"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Eksploracyjny przebieg GPQA Diamond (pytania ekspertowe z nauk ścisłych) w trybie CoT zero-shot; metryka exact match po elastycznej ekstrakcji."
+  measures_en: "Exploratory GPQA Diamond run (graduate-level science questions) in CoT zero-shot mode; exact match with flexible extraction."
+  language: "en"
+  metric: "exact_match (flexible-extract)"
+  direction: "higher"
+  n_items: 198
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/gpqa-diamond"
+  source_note: "Bench Team API benchmark README; n=198 from records; exploratory/CoT zero-shot as named."
+
+Held-out corpus (bytes per token):
+  display_pl: "Korpus held-out (bajty na token)"
+  display_en: "Held-out corpus (bytes per token)"
+  family: "tokenizers"
+  family_pl: "Tokenizery"
+  family_en: "Tokenizers"
+  measures_pl: "Kompresja tokenizera na korpusie held-out: średnia liczba bajtów UTF-8 na token (wyżej = lepsza kompresja)."
+  measures_en: "Tokenizer compression on a held-out corpus: average UTF-8 bytes per token (higher = better compression)."
+  language: "pl"
+  metric: "bytes per token"
+  direction: "higher"
+  n_items: 10017776
+  source_url: "https://github.com/adgr3/tokenizatorex"
+  source_note: "adgr3/tokenizatorex results/metrics.json; n from record."
+
+"Humanity's Last Exam (no tools)":
+  display_pl: "Humanity's Last Exam (bez narzędzi)"
+  display_en: "Humanity's Last Exam (no tools)"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Dokładność na Humanity's Last Exam bez narzędzi; trudne pytania ekspertowe z wielu dziedzin."
+  measures_en: "Accuracy on Humanity's Last Exam without tools; difficult expert questions across domains."
+  language: "en"
+  metric: "accuracy"
+  direction: "higher"
+  n_items: 2158
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/pull/358"
+  source_note: "Source URL from record (PR #358); n=2158 from measured record; deviations note 1 sample/item."
+
+IFBench:
+  display_pl: "IFBench"
+  display_en: "IFBench"
+  family: "polish_instructions"
+  family_pl: "Polszczyzna i instrukcje"
+  family_en: "Polish and instructions"
+  measures_pl: "Dokładność ścisła na poziomie promptu w IFBench; sprawdza wykonywanie ograniczeń instrukcyjnych."
+  measures_en: "Prompt-level strict accuracy on IFBench; tests adherence to instruction constraints."
+  language: "en"
+  metric: "prompt_level_strict_acc"
+  direction: "higher"
+  n_items: 300
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/ifbench"
+  source_note: "Bench Team API benchmark README; n=300 from records."
+
+IFBench (Bielik IF-PL local):
+  display_pl: "IFBench (Bielik IF-PL, lokalny)"
+  display_en: "IFBench (Bielik IF-PL, local)"
+  family: "polish_instructions"
+  family_pl: "Polszczyzna i instrukcje"
+  family_en: "Polish and instructions"
+  measures_pl: "Lokalny przebieg IFBench w protokole Bielik IF-PL; metryki strict/loose na poziomie promptu i instrukcji. Nieporównywalny z harnessami Bench Team."
+  measures_en: "Local IFBench run in Bielik IF-PL protocol; strict/loose prompt- and instruction-level metrics. Not comparable to Bench Team harness runs."
+  language: "en"
+  metric: "prompt_level_strict"
+  direction: "higher"
+  n_items: 300
+  source_url: "local://bielik-if-pl"
+  source_note: "Local Bielik IF-PL evaluation set; deviations mark local protocol."
+
+IFEval:
+  display_pl: "IFEval"
+  display_en: "IFEval"
+  family: "polish_instructions"
+  family_pl: "Polszczyzna i instrukcje"
+  family_en: "Polish and instructions"
+  measures_pl: "Dokładność ścisła na poziomie promptu w IFEval; sprawdza wykonywanie weryfikowalnych instrukcji."
+  measures_en: "Prompt-level strict accuracy on IFEval; tests following verifiable instructions."
+  language: "en"
+  metric: "prompt_level_strict_acc"
+  direction: "higher"
+  n_items: 541
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/ifeval"
+  source_note: "Bench Team benchmark README; n=541 from records."
+
+IFEval (Bielik IF-PL local):
+  display_pl: "IFEval (Bielik IF-PL, lokalny)"
+  display_en: "IFEval (Bielik IF-PL, local)"
+  family: "polish_instructions"
+  family_pl: "Polszczyzna i instrukcje"
+  family_en: "Polish and instructions"
+  measures_pl: "Lokalny przebieg IFEval w protokole Bielik IF-PL; metryki strict/loose na poziomie promptu i instrukcji. Nieporównywalny z harnessami Bench Team."
+  measures_en: "Local IFEval run in Bielik IF-PL protocol; strict/loose prompt- and instruction-level metrics. Not comparable to Bench Team harness runs."
+  language: "en"
+  metric: "prompt_level_strict"
+  direction: "higher"
+  n_items: 541
+  source_url: "local://bielik-if-pl"
+  source_note: "Local Bielik IF-PL evaluation set; deviations mark local protocol."
+
+IFStruct:
+  display_pl: "IFStruct"
+  display_en: "IFStruct"
+  family: "polish_instructions"
+  family_pl: "Polszczyzna i instrukcje"
+  family_en: "Polish and instructions"
+  measures_pl: "Odsetek zaliczonych zadań IFStruct; sprawdza wykonywanie instrukcji ze strukturą wyjścia."
+  measures_en: "Pass rate on IFStruct; tests following instructions with structured output constraints."
+  language: "en"
+  metric: "pass_rate"
+  direction: "higher"
+  n_items: 2000
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/ifstruct"
+  source_note: "Bench Team API benchmark README; n=2000 from records."
+
+LiveCodeBench Pro 25Q2 (quater_2025_4_6):
+  display_pl: "LiveCodeBench Pro 25Q2"
+  display_en: "LiveCodeBench Pro 25Q2"
+  family: "code"
+  family_pl: "Kod"
+  family_en: "Code"
+  measures_pl: "Odsetek zaakceptowanych rozwiązań (pass@1) w LiveCodeBench Pro 25Q2 (kwartał 2025_4_6)."
+  measures_en: "Pass@1 (accepted/all problems, percent) on LiveCodeBench Pro 25Q2 (quarter 2025_4_6)."
+  language: "en"
+  metric: "pass@1 (accepted / all problems, percent)"
+  direction: "higher"
+  n_items: 167
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/livecodebench-pro-25q2"
+  source_note: "Bench Team API benchmark README; n=167 from records."
+
+LiveCodeBench v6 (code generation, release_v6):
+  display_pl: "LiveCodeBench v6 (generowanie kodu)"
+  display_en: "LiveCodeBench v6 (code generation)"
+  family: "code"
+  family_pl: "Kod"
+  family_en: "Code"
+  measures_pl: "Pass@1 generowania kodu w LiveCodeBench v6 (release_v6)."
+  measures_en: "Code generation pass@1 on LiveCodeBench v6 (release_v6)."
+  language: "en"
+  metric: "pass@1"
+  direction: "higher"
+  n_items: 1055
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/livecodebench-v6"
+  source_note: "Bench Team API benchmark README; n=1055 from records."
+
+Multi-IF:
+  display_pl: "Multi-IF"
+  display_en: "Multi-IF"
+  family: "polish_instructions"
+  family_pl: "Polszczyzna i instrukcje"
+  family_en: "Polish and instructions"
+  measures_pl: "Średnia z 3 tur w Multi-IF (overall, wszystkie języki); mierzy wykonywanie instrukcji w rozmowie wieloturowej."
+  measures_en: "Mean over 3 turns of all-languages overall in Multi-IF; measures multi-turn instruction following."
+  language: "multilingual"
+  metric: "mean over 3 turns of all-languages overall"
+  direction: "higher"
+  n_items: 13447
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/multi-if"
+  source_note: "Bench Team API benchmark README; n=13447 from records."
+
+RULER:
+  display_pl: "RULER"
+  display_en: "RULER"
+  family: "long_context"
+  family_pl: "Długi kontekst"
+  family_en: "Long context"
+  measures_pl: "Średnia z 13 zadań RULER przy kontekście 131072 tokenów (procent); mierzy użyteczność długiego kontekstu."
+  measures_en: "Mean of 13 RULER task scores at 131072 tokens (percent); measures long-context capability."
+  language: "en"
+  metric: "mean of the 13 RULER task scores at 131072 tokens (percent)"
+  direction: "higher"
+  n_items: 650
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/ruler-128k"
+  source_note: "Bench Team API benchmark README; n=650 from measured record; 131072-token context stated in metric."
+
+SciCode:
+  display_pl: "SciCode"
+  display_en: "SciCode"
+  family: "code"
+  family_pl: "Kod"
+  family_en: "Code"
+  measures_pl: "Odsetek zaliczonych podproblemów SciCode z tłem naukowym (poprawne kroki / 288 × 100)."
+  measures_en: "SciCode subproblem pass rate with background (correct steps / 288 x 100)."
+  language: "en"
+  metric: "subproblem pass rate, with background (correct steps / 288 x 100, test_generated_code.py)"
+  direction: "higher"
+  n_items: 288
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/scicode"
+  source_note: "Bench Team API benchmark README; n=288 from records."
+
+Terminal-Bench 2.1:
+  display_pl: "Terminal-Bench 2.1"
+  display_en: "Terminal-Bench 2.1"
+  family: "agents_tools"
+  family_pl: "Agenci i narzędzia"
+  family_en: "Agents and tools"
+  measures_pl: "Odsetek zaliczonych zadań w Terminal-Bench 2.1; agent wykonuje zadania w terminalu, oceniane testami."
+  measures_en: "Pass rate on Terminal-Bench 2.1; agent completes terminal tasks graded by tests."
+  language: "en"
+  metric: "pass rate (task tests pass, reward 1), mean over tasks and trials"
+  direction: "higher"
+  n_items: 89
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/api-benchmarks/terminal-bench-2-1"
+  source_note: "Bench Team API benchmark README; n=89 from records."
+
+Token fertility (tokens per word, 7 Polish domains):
+  display_pl: "Płodność tokenizera (tokeny/słowo, 7 domen PL)"
+  display_en: "Token fertility (tokens per word, 7 Polish domains)"
+  family: "tokenizers"
+  family_pl: "Tokenizery"
+  family_en: "Tokenizers"
+  measures_pl: "Średnia liczba tokenów na słowo na 7 polskich domenach (mniej = lepsza kompresja dla polskiego tekstu)."
+  measures_en: "Average tokens per word over 7 Polish domains (lower = better compression for Polish text)."
+  language: "pl"
+  metric: "fertility (tokens/word)"
+  direction: "lower"
+  n_items: 1918225
+  source_url: "https://github.com/adgr3/tokenizatorex"
+  source_note: "adgr3/tokenizatorex benchmark; n=1918225 words from record."
+
+arc-challenge:
+  display_pl: "ARC-Challenge"
+  display_en: "ARC-Challenge"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Pytania przyrodnicze ze szkolnych testów (część trudna), 4 opcje; metryka acc_norm."
+  measures_en: "Grade-school science questions (challenge set), 4 options; acc_norm metric."
+  language: "en"
+  metric: "acc_norm"
+  direction: "higher"
+  n_items: 1172
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/arc-challenge"
+  source_note: "Bench Team benchmark README/ORIGINAL: ai2_arc ARC-Challenge, test split, n=1172."
+
+arc-easy:
+  display_pl: "ARC-Easy"
+  display_en: "ARC-Easy"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Pytania przyrodnicze ze szkolnych testów (część łatwa), 4 opcje; metryka acc."
+  measures_en: "Grade-school science questions (easy set), 4 options; acc metric."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 2376
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/arc-easy"
+  source_note: "Bench Team benchmark README/ORIGINAL: ai2_arc ARC-Easy, test split, n=2376."
+
+blimp:
+  display_pl: "BLiMP"
+  display_en: "BLiMP"
+  family: "language_modeling"
+  family_pl: "Modelowanie języka"
+  family_en: "Language modeling"
+  measures_pl: "Minimalne pary gramatyczne angielskiego (67 paradygmatów × 1000 par); model wybiera zdanie bardziej prawdopodobne."
+  measures_en: "English grammatical minimal pairs (67 paradigms x 1000 pairs); model prefers the more probable sentence."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 67000
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/blimp"
+  source_note: "Bench Team benchmark README: 67 paradigms x 1000 pairs, n=67000."
+
+ewok:
+  display_pl: "EWoK"
+  display_en: "EWoK"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Elements of World Knowledge: ocena wiedzy o świecie przez wybór zdania pasującego do kontekstu."
+  measures_en: "Elements of World Knowledge: evaluates world knowledge by choosing context-matching sentence."
+  language: "en"
+  metric: "ewok"
+  direction: "higher"
+  n_items: 4374
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/ewok"
+  source_note: "Bench Team benchmark README: full ewok-core-1.0 set, n=4374."
+
+hellaswag:
+  display_pl: "HellaSwag"
+  display_en: "HellaSwag"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Dokończenie opisu sytuacji zdroworozsądkowej; 4 możliwe zakończenia, metryka acc_norm."
+  measures_en: "Commonsense sentence completion; 4 endings, acc_norm metric."
+  language: "en"
+  metric: "acc_norm"
+  direction: "higher"
+  n_items: 10042
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/hellaswag"
+  source_note: "Bench Team benchmark README: Rowan/hellaswag validation, n=10042."
+
+lambada:
+  display_pl: "LAMBADA"
+  display_en: "LAMBADA"
+  family: "language_modeling"
+  family_pl: "Modelowanie języka"
+  family_en: "Language modeling"
+  measures_pl: "Przewidywanie ostatniego słowa fragmentu wymagającego szerokiego kontekstu; metryka acc."
+  measures_en: "Predicting the last word of a passage requiring broad context; acc metric."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 5153
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/lambada"
+  source_note: "Bench Team benchmark README: EleutherAI/lambada_openai test, n=5153."
+
+mathqa:
+  display_pl: "MathQA"
+  display_en: "MathQA"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Zadania tekstowe z matematyki, 5 opcji odpowiedzi; metryka acc_norm."
+  measures_en: "Math word problems, 5 answer options; acc_norm metric."
+  language: "en"
+  metric: "acc_norm"
+  direction: "higher"
+  n_items: 2985
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/mathqa"
+  source_note: "Bench Team benchmark README: allenai/math_qa test, n=2985."
+
+medmcqa:
+  display_pl: "MedMCQA"
+  display_en: "MedMCQA"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Pytania z egzaminów medycznych, 4 opcje; metryka acc."
+  measures_en: "Medical exam questions, 4 options; acc metric."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 4183
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/medmcqa"
+  source_note: "Bench Team benchmark README: medmcqa validation, n=4183."
+
+multiblimp-pl:
+  display_pl: "MultiBLiMP PL"
+  display_en: "MultiBLiMP PL"
+  family: "polish_instructions"
+  family_pl: "Polszczyzna i instrukcje"
+  family_en: "Polish and instructions"
+  measures_pl: "Polski podzbiór MultiBLiMP: minimalne pary sprawdzające zgodność gramatyczną w języku polskim."
+  measures_en: "Polish subset of MultiBLiMP: minimal pairs testing Polish grammatical agreement."
+  language: "pl"
+  metric: "accuracy"
+  direction: "higher"
+  n_items: 3272
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/multiblimp-pl"
+  source_note: "Bench Team benchmark README: MultiBLiMP 1.0 Polish, n=3272."
+
+piqa:
+  display_pl: "PIQA"
+  display_en: "PIQA"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Physical Interaction QA: zdroworozsądkowe rozumowanie o fizycznych interakcjach, 2 opcje; acc_norm."
+  measures_en: "Physical Interaction QA: commonsense physical reasoning, 2 options; acc_norm."
+  language: "en"
+  metric: "acc_norm"
+  direction: "higher"
+  n_items: 1838
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/piqa"
+  source_note: "Bench Team benchmark README: piqa validation, n=1838."
+
+pubmedqa:
+  display_pl: "PubMedQA"
+  display_en: "PubMedQA"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Pytania tak/nie/może na podstawie abstraktów PubMed; metryka acc."
+  measures_en: "Yes/no/maybe questions over PubMed abstracts; acc metric."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 500
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/pubmedqa"
+  source_note: "Bench Team benchmark README: pubmedqa PQA-L test, n=500."
+
+social-iqa:
+  display_pl: "Social IQa"
+  display_en: "Social IQa"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Rozumowanie o sytuacjach społecznych, 3 opcje; metryka acc."
+  measures_en: "Social situation reasoning, 3 options; acc metric."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 1954
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/social-iqa"
+  source_note: "Bench Team benchmark README: social_iqa validation, n=1954."
+
+wikitext-2:
+  display_pl: "WikiText-2"
+  display_en: "WikiText-2"
+  family: "language_modeling"
+  family_pl: "Modelowanie języka"
+  family_en: "Language modeling"
+  measures_pl: "Perpleksja bajtowa na WikiText-2 (modelowanie języka). Niżej = lepiej."
+  measures_en: "Byte perplexity on WikiText-2 (language modeling). Lower is better."
+  language: "en"
+  metric: "byte_perplexity"
+  direction: "lower"
+  n_items: 62
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/wikitext-2"
+  source_note: "Bench Team benchmark README: wikitext-2 test documents, n=62."
+
+winogrande:
+  display_pl: "WinoGrande"
+  display_en: "WinoGrande"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Rozwiązywanie koreferencji w stylu Winograd, 2 opcje; metryka acc."
+  measures_en: "Winograd-style coreference resolution, 2 options; acc metric."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 1267
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/winogrande"
+  source_note: "Bench Team benchmark README: winogrande_xl validation, n=1267."
+
+wsc273:
+  display_pl: "WSC273"
+  display_en: "WSC273"
+  family: "knowledge_reasoning"
+  family_pl: "Wiedza i rozumowanie"
+  family_en: "Knowledge and reasoning"
+  measures_pl: "Winograd Schema Challenge (273 przykłady), rozwiązywanie zaimków; metryka acc."
+  measures_en: "Winograd Schema Challenge (273 examples), pronoun resolution; acc metric."
+  language: "en"
+  metric: "acc"
+  direction: "higher"
+  n_items: 273
+  source_url: "https://github.com/slayerlabs/benchmarks-fabryka-ai/tree/main/research/benchmarks/wsc273"
+  source_note: "Bench Team benchmark README: wsc273 test, n=273."

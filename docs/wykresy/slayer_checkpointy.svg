@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" font-family="Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="28" font-size="16" font-weight="bold" fill="#111">Slayer – postęp po checkpointach</text>
+<text x="20" y="46" font-size="11" fill="#444">Wartości znormalizowane per benchmark w obrębie widocznych checkpointów; oś Y: 0=najgorszy, 1=najlepszy.</text>
+<line x1="70" y1="70" x2="70" y2="350" stroke="#333"/>
+<line x1="70" y1="350" x2="720" y2="350" stroke="#333"/>
+<line x1="70" y1="350.0" x2="720" y2="350.0" stroke="#eee"/>
+<text x="62" y="354.0" font-size="10" text-anchor="end" fill="#444">0.00</text>
+<line x1="70" y1="280.0" x2="720" y2="280.0" stroke="#eee"/>
+<text x="62" y="284.0" font-size="10" text-anchor="end" fill="#444">0.25</text>
+<line x1="70" y1="210.0" x2="720" y2="210.0" stroke="#eee"/>
+<text x="62" y="214.0" font-size="10" text-anchor="end" fill="#444">0.50</text>
+<line x1="70" y1="140.0" x2="720" y2="140.0" stroke="#eee"/>
+<text x="62" y="144.0" font-size="10" text-anchor="end" fill="#444">0.75</text>
+<line x1="70" y1="70.0" x2="720" y2="70.0" stroke="#eee"/>
+<text x="62" y="74.0" font-size="10" text-anchor="end" fill="#444">1.00</text>
+<text x="18" y="210.0" font-size="11" transform="rotate(-90 18,210.0)" fill="#444">wynik znormalizowany</text>
+<text x="70.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.00</text>
+<line x1="70.0" y1="350" x2="70.0" y2="354" stroke="#333"/>
+<text x="135.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.01</text>
+<line x1="135.0" y1="350" x2="135.0" y2="354" stroke="#333"/>
+<text x="200.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.02</text>
+<line x1="200.0" y1="350" x2="200.0" y2="354" stroke="#333"/>
+<text x="265.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.03</text>
+<line x1="265.0" y1="350" x2="265.0" y2="354" stroke="#333"/>
+<text x="330.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.04</text>
+<line x1="330.0" y1="350" x2="330.0" y2="354" stroke="#333"/>
+<text x="395.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.05</text>
+<line x1="395.0" y1="350" x2="395.0" y2="354" stroke="#333"/>
+<text x="460.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.06</text>
+<line x1="460.0" y1="350" x2="460.0" y2="354" stroke="#333"/>
+<text x="525.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.07-hf</text>
+<line x1="525.0" y1="350" x2="525.0" y2="354" stroke="#333"/>
+<text x="590.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.08</text>
+<line x1="590.0" y1="350" x2="590.0" y2="354" stroke="#333"/>
+<text x="655.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.09-k40000</text>
+<line x1="655.0" y1="350" x2="655.0" y2="354" stroke="#333"/>
+<text x="720.0" y="392" font-size="10" text-anchor="middle" fill="#111">s1b-1.09-k70000</text>
+<line x1="720.0" y1="350" x2="720.0" y2="354" stroke="#333"/>
+<text x="395.0" y="412" font-size="11" text-anchor="middle" fill="#444">checkpoint / model</text>
+<path d="M 70.0,350.0 L 135.0,301.0 L 200.0,290.5 L 265.0,271.3 L 330.0,273.0 L 395.0,262.5 L 460.0,267.8 L 525.0,236.2 L 590.0,180.2 L 655.0,78.7 L 720.0,70.0" fill="none" stroke="#1f77b4" stroke-width="2.2"/>
+<circle cx="70.0" cy="350.0" r="3.5" fill="#1f77b4"><title>arc-challenge: 21.7577</title></circle>
+<circle cx="135.0" cy="301.0" r="3.5" fill="#1f77b4"><title>arc-challenge: 24.1468</title></circle>
+<circle cx="200.0" cy="290.5" r="3.5" fill="#1f77b4"><title>arc-challenge: 24.6587</title></circle>
+<circle cx="265.0" cy="271.3" r="3.5" fill="#1f77b4"><title>arc-challenge: 25.5973</title></circle>
+<circle cx="330.0" cy="273.0" r="3.5" fill="#1f77b4"><title>arc-challenge: 25.5119</title></circle>
+<circle cx="395.0" cy="262.5" r="3.5" fill="#1f77b4"><title>arc-challenge: 26.0239</title></circle>
+<circle cx="460.0" cy="267.8" r="3.5" fill="#1f77b4"><title>arc-challenge: 25.7679</title></circle>
+<circle cx="525.0" cy="236.2" r="3.5" fill="#1f77b4"><title>arc-challenge: 27.3038</title></circle>
+<circle cx="590.0" cy="180.2" r="3.5" fill="#1f77b4"><title>arc-challenge: 30.0341</title></circle>
+<circle cx="655.0" cy="78.7" r="3.5" fill="#1f77b4"><title>arc-challenge: 34.9829</title></circle>
+<circle cx="720.0" cy="70.0" r="3.5" fill="#1f77b4"><title>arc-challenge: 35.4096</title></circle>
+<rect x="730" y="76" width="12" height="12" fill="#1f77b4"/>
+<text x="748" y="86" font-size="10.5" fill="#111">ARC-Challenge</text>
+<path d="M 70.0,350.0 L 135.0,293.0 L 200.0,281.3 L 265.0,268.7 L 330.0,245.3 L 395.0,225.8 L 460.0,232.2 L 525.0,148.9 L 590.0,165.4 L 655.0,70.0 L 720.0,74.9" fill="none" stroke="#ff7f0e" stroke-width="2.2"/>
+<circle cx="70.0" cy="350.0" r="3.5" fill="#ff7f0e"><title>arc-easy: 42.4242</title></circle>
+<circle cx="135.0" cy="293.0" r="3.5" fill="#ff7f0e"><title>arc-easy: 47.3485</title></circle>
+<circle cx="200.0" cy="281.3" r="3.5" fill="#ff7f0e"><title>arc-easy: 48.3586</title></circle>
+<circle cx="265.0" cy="268.7" r="3.5" fill="#ff7f0e"><title>arc-easy: 49.4529</title></circle>
+<circle cx="330.0" cy="245.3" r="3.5" fill="#ff7f0e"><title>arc-easy: 51.4731</title></circle>
+<circle cx="395.0" cy="225.8" r="3.5" fill="#ff7f0e"><title>arc-easy: 53.1566</title></circle>
+<circle cx="460.0" cy="232.2" r="3.5" fill="#ff7f0e"><title>arc-easy: 52.6094</title></circle>
+<circle cx="525.0" cy="148.9" r="3.5" fill="#ff7f0e"><title>arc-easy: 59.8064</title></circle>
+<circle cx="590.0" cy="165.4" r="3.5" fill="#ff7f0e"><title>arc-easy: 58.3754</title></circle>
+<circle cx="655.0" cy="70.0" r="3.5" fill="#ff7f0e"><title>arc-easy: 66.6246</title></circle>
+<circle cx="720.0" cy="74.9" r="3.5" fill="#ff7f0e"><title>arc-easy: 66.2037</title></circle>
+<rect x="730" y="94" width="12" height="12" fill="#ff7f0e"/>
+<text x="748" y="104" font-size="10.5" fill="#111">ARC-Easy</text>
+<path d="M 70.0,350.0 L 135.0,264.2 L 200.0,246.4 L 265.0,218.0 L 330.0,231.1 L 395.0,155.1 L 460.0,153.1 L 525.0,130.6 L 590.0,106.8 L 655.0,70.0 L 720.0,70.2" fill="none" stroke="#2ca02c" stroke-width="2.2"/>
+<circle cx="70.0" cy="350.0" r="3.5" fill="#2ca02c"><title>blimp: 73.8164</title></circle>
+<circle cx="135.0" cy="264.2" r="3.5" fill="#2ca02c"><title>blimp: 76.1642</title></circle>
+<circle cx="200.0" cy="246.4" r="3.5" fill="#2ca02c"><title>blimp: 76.6522</title></circle>
+<circle cx="265.0" cy="218.0" r="3.5" fill="#2ca02c"><title>blimp: 77.4284</title></circle>
+<circle cx="330.0" cy="231.1" r="3.5" fill="#2ca02c"><title>blimp: 77.0701</title></circle>
+<circle cx="395.0" cy="155.1" r="3.5" fill="#2ca02c"><title>blimp: 79.1522</title></circle>
+<circle cx="460.0" cy="153.1" r="3.5" fill="#2ca02c"><title>blimp: 79.206</title></circle>
+<circle cx="525.0" cy="130.6" r="3.5" fill="#2ca02c"><title>blimp: 79.8224</title></circle>
+<circle cx="590.0" cy="106.8" r="3.5" fill="#2ca02c"><title>blimp: 80.4731</title></circle>
+<circle cx="655.0" cy="70.0" r="3.5" fill="#2ca02c"><title>blimp: 81.4806</title></circle>
+<circle cx="720.0" cy="70.2" r="3.5" fill="#2ca02c"><title>blimp: 81.4761</title></circle>
+<rect x="730" y="112" width="12" height="12" fill="#2ca02c"/>
+<text x="748" y="122" font-size="10.5" fill="#111">BLiMP</text>
+<path d="M 70.0,350.0 L 135.0,287.6 L 200.0,267.5 L 265.0,257.6 L 330.0,237.2 L 395.0,211.0 L 460.0,196.7 L 525.0,147.8 L 590.0,173.1 L 655.0,99.7 L 720.0,70.0" fill="none" stroke="#d62728" stroke-width="2.2"/>
+<circle cx="70.0" cy="350.0" r="3.5" fill="#d62728"><title>ewok: 52.9607</title></circle>
+<circle cx="135.0" cy="287.6" r="3.5" fill="#d62728"><title>ewok: 55.407</title></circle>
+<circle cx="200.0" cy="267.5" r="3.5" fill="#d62728"><title>ewok: 56.1957</title></circle>
+<circle cx="265.0" cy="257.6" r="3.5" fill="#d62728"><title>ewok: 56.5844</title></circle>
+<circle cx="330.0" cy="237.2" r="3.5" fill="#d62728"><title>ewok: 57.3845</title></circle>
+<circle cx="395.0" cy="211.0" r="3.5" fill="#d62728"><title>ewok: 58.4134</title></circle>
+<circle cx="460.0" cy="196.7" r="3.5" fill="#d62728"><title>ewok: 58.9735</title></circle>
+<circle cx="525.0" cy="147.8" r="3.5" fill="#d62728"><title>ewok: 60.8939</title></circle>
+<circle cx="590.0" cy="173.1" r="3.5" fill="#d62728"><title>ewok: 59.8994</title></circle>
+<circle cx="655.0" cy="99.7" r="3.5" fill="#d62728"><title>ewok: 62.7801</title></circle>
+<circle cx="720.0" cy="70.0" r="3.5" fill="#d62728"><title>ewok: 63.946</title></circle>
+<rect x="730" y="130" width="12" height="12" fill="#d62728"/>
+<text x="748" y="140" font-size="10.5" fill="#111">EWoK</text>
+<path d="M 70.0,350.0 L 135.0,325.9 L 200.0,292.5 L 265.0,281.0 L 330.0,263.7 L 395.0,248.1 L 460.0,236.8 L 525.0,194.5 L 590.0,194.1 L 655.0,96.2 L 720.0,70.0" fill="none" stroke="#9467bd" stroke-width="2.2"/>
+<circle cx="70.0" cy="350.0" r="3.5" fill="#9467bd"><title>hellaswag: 28.4605</title></circle>
+<circle cx="135.0" cy="325.9" r="3.5" fill="#9467bd"><title>hellaswag: 30.7708</title></circle>
+<circle cx="200.0" cy="292.5" r="3.5" fill="#9467bd"><title>hellaswag: 33.9773</title></circle>
+<circle cx="265.0" cy="281.0" r="3.5" fill="#9467bd"><title>hellaswag: 35.0727</title></circle>
+<circle cx="330.0" cy="263.7" r="3.5" fill="#9467bd"><title>hellaswag: 36.7357</title></circle>
+<circle cx="395.0" cy="248.1" r="3.5" fill="#9467bd"><title>hellaswag: 38.2294</title></circle>
+<circle cx="460.0" cy="236.8" r="3.5" fill="#9467bd"><title>hellaswag: 39.3149</title></circle>
+<circle cx="525.0" cy="194.5" r="3.5" fill="#9467bd"><title>hellaswag: 43.3679</title></circle>
+<circle cx="590.0" cy="194.1" r="3.5" fill="#9467bd"><title>hellaswag: 43.4077</title></circle>
+<circle cx="655.0" cy="96.2" r="3.5" fill="#9467bd"><title>hellaswag: 52.7982</title></circle>
+<circle cx="720.0" cy="70.0" r="3.5" fill="#9467bd"><title>hellaswag: 55.3077</title></circle>
+<rect x="730" y="148" width="12" height="12" fill="#9467bd"/>
+<text x="748" y="158" font-size="10.5" fill="#111">HellaSwag</text>
+<path d="M 70.0,350.0 L 135.0,271.1 L 200.0,225.2 L 265.0,212.2 L 330.0,187.0 L 395.0,176.4 L 460.0,174.5 L 525.0,121.1 L 590.0,133.3 L 655.0,74.8 L 720.0,70.0" fill="none" stroke="#8c564b" stroke-width="2.2"/>
+<circle cx="70.0" cy="350.0" r="3.5" fill="#8c564b"><title>lambada: 20.7258</title></circle>
+<circle cx="135.0" cy="271.1" r="3.5" fill="#8c564b"><title>lambada: 27.7896</title></circle>
+<circle cx="200.0" cy="225.2" r="3.5" fill="#8c564b"><title>lambada: 31.9037</title></circle>
+<circle cx="265.0" cy="212.2" r="3.5" fill="#8c564b"><title>lambada: 33.0681</title></circle>
+<circle cx="330.0" cy="187.0" r="3.5" fill="#8c564b"><title>lambada: 35.3192</title></circle>
+<circle cx="395.0" cy="176.4" r="3.5" fill="#8c564b"><title>lambada: 36.2701</title></circle>
+<circle cx="460.0" cy="174.5" r="3.5" fill="#8c564b"><title>lambada: 36.4448</title></circle>
+<circle cx="525.0" cy="121.1" r="3.5" fill="#8c564b"><title>lambada: 41.2187</title></circle>
+<circle cx="590.0" cy="133.3" r="3.5" fill="#8c564b"><title>lambada: 40.132</title></circle>
+<circle cx="655.0" cy="74.8" r="3.5" fill="#8c564b"><title>lambada: 45.3716</title></circle>
+<circle cx="720.0" cy="70.0" r="3.5" fill="#8c564b"><title>lambada: 45.7986</title></circle>
+<rect x="730" y="166" width="12" height="12" fill="#8c564b"/>
+<text x="748" y="176" font-size="10.5" fill="#111">LAMBADA</text>
+<path d="M 70.0,331.8 L 135.0,273.6 L 200.0,259.1 L 265.0,277.3 L 330.0,350.0 L 395.0,270.0 L 460.0,240.9 L 525.0,70.0 L 590.0,139.1 L 655.0,171.8 L 720.0,222.7" fill="none" stroke="#e377c2" stroke-width="2.2"/>
+<circle cx="70.0" cy="331.8" r="3.5" fill="#e377c2"><title>mathqa: 21.0385</title></circle>
+<circle cx="135.0" cy="273.6" r="3.5" fill="#e377c2"><title>mathqa: 21.5745</title></circle>
+<circle cx="200.0" cy="259.1" r="3.5" fill="#e377c2"><title>mathqa: 21.7085</title></circle>
+<circle cx="265.0" cy="277.3" r="3.5" fill="#e377c2"><title>mathqa: 21.541</title></circle>
+<circle cx="330.0" cy="350.0" r="3.5" fill="#e377c2"><title>mathqa: 20.871</title></circle>
+<circle cx="395.0" cy="270.0" r="3.5" fill="#e377c2"><title>mathqa: 21.608</title></circle>
+<circle cx="460.0" cy="240.9" r="3.5" fill="#e377c2"><title>mathqa: 21.876</title></circle>
+<circle cx="525.0" cy="70.0" r="3.5" fill="#e377c2"><title>mathqa: 23.4506</title></circle>
+<circle cx="590.0" cy="139.1" r="3.5" fill="#e377c2"><title>mathqa: 22.8141</title></circle>
+<circle cx="655.0" cy="171.8" r="3.5" fill="#e377c2"><title>mathqa: 22.5126</title></circle>
+<circle cx="720.0" cy="222.7" r="3.5" fill="#e377c2"><title>mathqa: 22.0436</title></circle>
+<rect x="730" y="184" width="12" height="12" fill="#e377c2"/>
+<text x="748" y="194" font-size="10.5" fill="#111">MathQA</text>
+<path d="M 70.0,87.5 L 135.0,119.3 L 200.0,90.7 L 265.0,70.0 L 330.0,135.2 L 395.0,105.0 L 460.0,100.2 L 525.0,213.2 L 590.0,125.7 L 655.0,203.6 L 720.0,350.0" fill="none" stroke="#17becf" stroke-width="2.2"/>
+<circle cx="70.0" cy="87.5" r="3.5" fill="#17becf"><title>medmcqa: 31.7954</title></circle>
+<circle cx="135.0" cy="119.3" r="3.5" fill="#17becf"><title>medmcqa: 31.3172</title></circle>
+<circle cx="200.0" cy="90.7" r="3.5" fill="#17becf"><title>medmcqa: 31.7475</title></circle>
+<circle cx="265.0" cy="70.0" r="3.5" fill="#17becf"><title>medmcqa: 32.0583</title></circle>
+<circle cx="330.0" cy="135.2" r="3.5" fill="#17becf"><title>medmcqa: 31.0782</title></circle>
+<circle cx="395.0" cy="105.0" r="3.5" fill="#17becf"><title>medmcqa: 31.5324</title></circle>
+<circle cx="460.0" cy="100.2" r="3.5" fill="#17becf"><title>medmcqa: 31.6041</title></circle>
+<circle cx="525.0" cy="213.2" r="3.5" fill="#17becf"><title>medmcqa: 29.9068</title></circle>
+<circle cx="590.0" cy="125.7" r="3.5" fill="#17becf"><title>medmcqa: 31.2216</title></circle>
+<circle cx="655.0" cy="203.6" r="3.5" fill="#17becf"><title>medmcqa: 30.0502</title></circle>
+<circle cx="720.0" cy="350.0" r="3.5" fill="#17becf"><title>medmcqa: 27.8508</title></circle>
+<rect x="730" y="202" width="12" height="12" fill="#17becf"/>
+<text x="748" y="212" font-size="10.5" fill="#111">MedMCQA</text>
+</svg>
