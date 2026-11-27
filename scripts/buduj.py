@@ -4,7 +4,6 @@ import json
 import math
 import re
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,7 +38,7 @@ def norm_bench(name):
 
 def data_sha():
     h = hashlib.sha256()
-    for p in sorted(WYNIKI.glob("*.json")):
+    for p in sorted(WYNIKI.glob("*.json"), key=lambda p: p.name):
         h.update(p.name.encode("utf-8"))
         h.update(p.read_bytes().replace(b"\r\n", b"\n"))
     return h.hexdigest()
@@ -47,7 +46,7 @@ def data_sha():
 
 def load_records():
     recs = []
-    for p in sorted(WYNIKI.glob("*.json")):
+    for p in sorted(WYNIKI.glob("*.json"), key=lambda p: p.name):
         d = json.loads(p.read_text(encoding="utf-8"))
         d["benchmark"] = norm_bench(d.get("benchmark"))
         recs.append(d)
@@ -243,7 +242,8 @@ def build_slayer_svg(records):
 def build():
     records = load_records()
     DOCS.mkdir(parents=True, exist_ok=True)
-    now = datetime.now(timezone.utc).date().isoformat()
+    # Deterministic: newest record date, not the build date, so --check is stable across days/OSes.
+    now = max(str(r.get("date")) for r in records if r.get("date")) if records else "-"
     sha = data_sha()
     by_mb = Counter(r.get("measured_by") for r in records)
     adgr3 = [r for r in records if r.get("measured_by") == "adgr3"]
@@ -255,7 +255,7 @@ def build():
     lines.append("")
     lines.append("To repo zbiera wyniki benchmarków modeli w jednej, generowanej tabeli. Każdy rekord ma źródło (repo/ścieżka/commit/SHA256) i jest walidowany schematem. Główna sekcja pokazuje tylko pomiary tego projektu (`adgr3`); wyniki innych autorów z repo Bench są osobno, z linkami do źródeł. Nie ma ręcznie wpisanych liczb: `scripts/buduj.py --check` sprawdza spójność.")
     lines.append("")
-    lines.append(f"Wygenerowano: {now}  ")
+    lines.append(f"Najnowszy rekord: {now}  ")
     lines.append(f"Dane (SHA-256): `{sha}`  ")
     lines.append(f"Liczba rekordów: {len(records)} (adgr3: {by_mb.get('adgr3', 0)}, bench-team: {by_mb.get('bench-team', 0)}, model-card: {by_mb.get('model-card', 0)})  ")
     lines.append("")
@@ -389,7 +389,7 @@ def build():
 
     lines.append("## Stopka")
     lines.append("")
-    lines.append(f"- Data: {now}")
+    lines.append(f"- Najnowszy rekord: {now}")
     lines.append(f"- SHA-256 danych (`wyniki/*.json`): `{sha}`")
     lines.append(f"- Rekordy per measured_by: {dict(by_mb)}")
     lines.append("- Pełna lista: [docs/wszystkie_rekordy.md](docs/wszystkie_rekordy.md)")
@@ -397,7 +397,7 @@ def build():
 
     main = "\n".join(lines) + "\n"
 
-    all_lines = ["# Wszystkie rekordy", "", "Pełna lista rekordów z `wyniki/*.json`.", "", f"Data: {now}  ", f"SHA-256: `{sha}`  ", ""]
+    all_lines = ["# Wszystkie rekordy", "", "Pełna lista rekordów z `wyniki/*.json`.", "", f"Najnowszy rekord: {now}  ", f"SHA-256: `{sha}`  ", ""]
     all_lines.extend(md_table(["measured_by", "model", "benchmark", "metric", "score", "n", "status", "source", "deviations"],
         [[r.get("measured_by"), r.get("model"), r.get("benchmark"), r.get("metric"), fmt_score(r), r.get("n"), r.get("status"), src_link(r), "; ".join(r.get("deviations", [])) or "—"] for r in sorted(records, key=lambda x: (x.get("measured_by", ""), x.get("benchmark", ""), sort_key_model(x.get("model", ""))))]))
     all_lines.append("")

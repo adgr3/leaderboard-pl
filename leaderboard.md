@@ -2,8 +2,8 @@
 
 To repo zbiera wyniki benchmarków modeli w jednej, generowanej tabeli. Każdy rekord ma źródło (repo/ścieżka/commit/SHA256) i jest walidowany schematem. Główna sekcja pokazuje tylko pomiary tego projektu (`adgr3`); wyniki innych autorów z repo Bench są osobno, z linkami do źródeł. Nie ma ręcznie wpisanych liczb: `scripts/buduj.py --check` sprawdza spójność.
 
-Wygenerowano: 2026-11-27  
-Dane (SHA-256): `2d70c6627cf147a25cf1c42b5cc9283aa73f0efa7ed3322b62572d5764fa73b0`  
+Najnowszy rekord: 2026-11-26  
+Dane (SHA-256): `5009d2058ea6d4d0a922a272a78cff0e8d467ee42a213b842e5796f47fb039a6`  
 Liczba rekordów: 364 (adgr3: 37, bench-team: 327, model-card: 0)  
 
 ## Jak czytać
@@ -481,8 +481,8 @@ _Pokazano 120 z 327 rekordów bench-team. Pełna lista: [docs/wszystkie_rekordy.
 
 ## Stopka
 
-- Data: 2026-11-27
-- SHA-256 danych (`wyniki/*.json`): `2d70c6627cf147a25cf1c42b5cc9283aa73f0efa7ed3322b62572d5764fa73b0`
+- Najnowszy rekord: 2026-11-26
+- SHA-256 danych (`wyniki/*.json`): `5009d2058ea6d4d0a922a272a78cff0e8d467ee42a213b842e5796f47fb039a6`
 - Rekordy per measured_by: {'adgr3': 37, 'bench-team': 327}
 - Pełna lista: [docs/wszystkie_rekordy.md](docs/wszystkie_rekordy.md)
 
