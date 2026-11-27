@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>leaderboard-pl</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
   <style>
     :root{--bg:#ffffff;--fg:#111827;--muted:#6b7280;--card:#f8fafc;--border:#d1d5db;--accent:#2563eb;--good:#166534;--bad:#991b1b;--pill:#e5e7eb}
     [data-theme="dark"]{--bg:#0b1220;--fg:#e5e7eb;--muted:#9ca3af;--card:#111827;--border:#374151;--accent:#60a5fa;--good:#86efac;--bad:#fca5a5;--pill:#1f2937}
@@ -27,7 +28,7 @@
     th{position:sticky;top:0;background:var(--card);cursor:pointer;white-space:nowrap}
     .table-wrap{overflow:auto;border:1px solid var(--border);border-radius:10px}
     .muted{color:var(--muted)} .pill{display:inline-block;padding:1px 6px;border-radius:999px;background:var(--pill);font-size:.75rem;margin-left:4px}
-    .src a{color:var(--accent);text-decoration:none}.src a:hover{text-decoration:underline}
+    .src a{color:var(--accent);text-decoration:none}.src a:hover{text-decoration:underline} .best{font-weight:700;color:var(--good)}
     .chart-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;margin:12px 0}
     canvas{max-width:100%}
     details{border:1px solid var(--border);border-radius:8px;padding:8px 10px;background:var(--card);margin:8px 0}
@@ -42,6 +43,7 @@
   <div class="sub">Publiczny, generowany leaderboard wyników benchmarków. Dane: <code>results.json</code> + <code>benchmarks.json</code>.</div>
   <div class="row" id="tabs">
     <button class="tab active" data-tab="ranking">Ranking</button>
+    <button class="tab" data-tab="all">Wszystkie wyniki</button>
     <button class="tab" data-tab="families">Rodziny</button>
     <button class="tab" data-tab="polish">Polszczyzna</button>
     <button class="tab" data-tab="slayer">Slayer</button>
@@ -55,6 +57,12 @@
   <div class="cards" id="cards"></div>
 
   <section class="panel active" id="panel-ranking">
+    <div class="muted">Ranking główny: 15 benchmarków lm-eval, porównywalne ustawienia. Średnia znormalizowana (0–100) tylko przy komplecie 15/15. ★ = nasz pomiar. Kliknij nagłówek kolumny, żeby sortować.</div>
+    <div class="chart-box" id="avgChartBox" style="height:320px"><canvas id="avgChart"></canvas></div>
+    <div class="table-wrap"><table><thead><tr id="rank-head"></tr></thead><tbody id="rank-body"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="panel-all">
     <div class="filters">
       <label>Model<input id="f-model" placeholder="filtr modelu"></label>
       <label>Benchmark<select id="f-bench"><option value="">Wszystkie</option></select></label>
@@ -64,31 +72,30 @@
       <label>Status<select id="f-status"><option value="">Wszystkie</option><option value="measured">measured</option><option value="null">null</option></select></label>
     </div>
     <div class="muted" id="count"></div>
-    <div class="chart-box"><canvas id="avgChart" height="120"></canvas></div>
     <div class="table-wrap"><table><thead><tr id="head"></tr></thead><tbody id="body"></tbody></table></div>
   </section>
 
   <section class="panel" id="panel-families">
     <div class="filters"><label>Rodzina<select id="fam-family"></select></label></div>
     <div id="fam-desc"></div>
-    <div class="chart-box"><canvas id="famChart" height="120"></canvas></div>
+    <div class="chart-box" id="famChartBox"><canvas id="famChart"></canvas></div>
     <div class="table-wrap"><table><thead><tr><th>Model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Flagi</th><th>Źródło</th></tr></thead><tbody id="fam-body"></tbody></table></div>
   </section>
 
   <section class="panel" id="panel-polish">
     <p>Wyróżnik projektu: wyniki na polskich danych i lokalnych ewaluacjach PL.</p>
     <div id="pl-desc"></div>
-    <div class="chart-box"><canvas id="plChart" height="120"></canvas></div>
+    <div class="chart-box" id="plChartBox"><canvas id="plChart"></canvas></div>
     <div class="table-wrap"><table><thead><tr><th>Model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Flagi</th><th>Źródło</th></tr></thead><tbody id="pl-body"></tbody></table></div>
   </section>
 
   <section class="panel" id="panel-slayer">
-    <div class="chart-box"><canvas id="slChart" height="120"></canvas></div>
+    <div class="chart-box" id="slChartBox"><canvas id="slChart"></canvas></div>
     <div class="table-wrap"><table><thead><tr><th>Model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Flagi</th><th>Źródło</th></tr></thead><tbody id="sl-body"></tbody></table></div>
   </section>
 
   <section class="panel" id="panel-tokenizers">
-    <div class="chart-box"><canvas id="tokChart" height="120"></canvas></div>
+    <div class="chart-box" id="tokChartBox"><canvas id="tokChart"></canvas></div>
     <div class="table-wrap"><table><thead><tr><th>Tokenizer/model</th><th>Benchmark</th><th>Metryka</th><th>Wynik</th><th>n</th><th>Źródło</th></tr></thead><tbody id="tok-body"></tbody></table></div>
   </section>
 
@@ -102,9 +109,9 @@
   </section>
 </main>
 <script>
-
+if (window.ChartDataLabels) Chart.register(window.ChartDataLabels);
 const LM15=["arc-challenge","arc-easy","blimp","ewok","hellaswag","lambada","mathqa","medmcqa","multiblimp-pl","piqa","pubmedqa","social-iqa","wikitext-2","winogrande","wsc273"];
-const state={rows:[],bench:{},charts:{},sort:{k:'model',dir:1}};
+const state={rows:[],bench:{},charts:{},sort:{k:'model',dir:1},rankSort:{k:'avg',dir:-1},rankData:{models:[],chosen:{},avg:{},star:{}}};
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function fmt(r){ if(r.status!=='measured'||r.score==null){ const reason=r.null_reason||'brak powodu'; return r.status==='null'?`null (${esc(reason)})`:esc(reason);} const v=r.score_display??r.score; const pct=Math.abs(v)<=1000 && String(r.metric||'').match(/acc|pass|accuracy|rate|omniscience|exact_match|ewok/i) && (r.score<=1.5 || String(r.benchmark||'').match(/ifeval|ifbench|ruler|hle|lcr|automation|bfcl|humanity|terminal/i)); if(String(r.metric).match(/bytes per token|fertility|perplexity/i)) return Number(v).toFixed(4).replace(/0+$/,'').replace(/\.$/,''); if(pct) return `${Number(v).toFixed(1)}%`; return Number(v).toFixed(4).replace(/0+$/,'').replace(/\.$/,''); }
@@ -123,35 +130,158 @@ function renderTable(){ const rows=filtered().slice(); const k=state.sort.k, dir
   $('head').querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k; if(state.sort.k===k) state.sort.dir*=-1; else {state.sort.k=k; state.sort.dir=1;} renderTable();});
   $('body').innerHTML=rows.slice(0,800).map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}<div class="muted">${esc(r.benchmark_display_pl||'')}</div></td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)||' '}</span></td><td>${r.n??'—'}</td><td>${esc(r.measured_by||'')}</td><td>${esc(r.status||'')}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
 }
-function chart(id,type,data,opts){ if(state.charts[id]) state.charts[id].destroy(); state.charts[id]=new Chart($(id),{type,data,options:Object.assign({responsive:true,plugins:{legend:{labels:{color:getComputedStyle(document.body).color}}},scales:{x:{ticks:{color:getComputedStyle(document.body).color}},y:{ticks:{color:getComputedStyle(document.body).color}}}},opts||{})}); }
+function chart(id,type,data,opts){ if(state.charts[id]) state.charts[id].destroy(); const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:getComputedStyle(document.body).color}},datalabels:{display:false}},scales:{x:{ticks:{color:getComputedStyle(document.body).color}},y:{ticks:{color:getComputedStyle(document.body).color}}}}; const o=opts||{}; const merged=Object.assign({},base,o); merged.plugins=Object.assign({},base.plugins,o.plugins||{}); merged.scales=Object.assign({},base.scales,o.scales||{}); state.charts[id]=new Chart($(id),{type,data,options:merged}); }
 
-function buildMainChart(){ const byModel={}; for(const b of LM15){ const vals=state.rows.filter(r=>r.benchmark===b && isComparable(r) && r.score!=null).map(r=>r.score_display??r.score); if(!vals.length) continue; const min=Math.min(...vals), max=Math.max(...vals), span=(max-min)||1; const dir=(state.bench[b]||{}).direction||'higher'; for(const r of state.rows.filter(r=>r.benchmark===b && isComparable(r) && r.score!=null)){ let nv=((r.score_display??r.score)-min)/span; if(dir==='lower') nv=1-nv; (byModel[r.model]=byModel[r.model]||[]).push(nv); }}
-  const items=Object.entries(byModel).filter(([m,v])=>v.length===15).map(([m,v])=>({m,avg:100*v.reduce((a,b)=>a+b,0)/v.length})).sort((a,b)=>b.avg-a.avg).slice(0,20);
-  chart('avgChart','bar',{labels:items.map(i=>i.m),datasets:[{label:'Średnia znormalizowana (15 lm-eval, komplet)',data:items.map(i=>i.avg),backgroundColor:'#4c78a8'}]},{indexAxis:'y',scales:{x:{min:0,max:100,ticks:{color:getComputedStyle(document.body).color}},y:{ticks:{color:getComputedStyle(document.body).color}}}});
+function computeRanking(){
+  const byMB={};
+  for(const r of state.rows){
+    if(!LM15.includes(r.benchmark)) continue;
+    if(!isComparable(r)) continue;
+    const key=r.model+'||'+r.benchmark;
+    const cur=byMB[key];
+    if(!cur){ byMB[key]=r; }
+    else if(r.measured_by==='adgr3' && cur.measured_by!=='adgr3'){ byMB[key]=r; }
+    else if(r.measured_by===cur.measured_by && (r.file||'')<(cur.file||'')){ byMB[key]=r; }
+  }
+  const chosen={};
+  for(const key in byMB){
+    const [m,b]=key.split('||');
+    (chosen[m]=chosen[m]||{})[b]=byMB[key];
+  }
+  const benchStats={};
+  for(const b of LM15){
+    const vals=Object.values(chosen).map(m=>m[b]).filter(Boolean).map(r=>r.score_display??r.score).filter(v=>v!=null);
+    if(vals.length) benchStats[b]={min:Math.min(...vals),max:Math.max(...vals)};
+  }
+  const avg={};
+  for(const m in chosen){
+    const recs=chosen[m];
+    let complete=true; const norms=[];
+    for(const b of LM15){
+      const r=recs[b];
+      if(!r || (r.score_display??r.score)==null){ complete=false; break; }
+      const st=benchStats[b]; const v=r.score_display??r.score;
+      let nv=(v-st.min)/((st.max-st.min)||1);
+      const d=(state.bench[b]||{}).direction;
+      if(d==='lower') nv=1-nv;
+      norms.push(nv);
+    }
+    if(complete && norms.length===LM15.length) avg[m]=100*norms.reduce((a,b)=>a+b,0)/norms.length;
+  }
+  const star={};
+  for(const m in chosen) star[m]=Object.values(chosen[m]).some(r=>r.measured_by==='adgr3');
+  state.rankData={models:Object.keys(chosen),chosen,avg,star};
+  state.rankData.models.sort((a,b)=>{
+    const aHas=avg[a]!=null, bHas=avg[b]!=null;
+    if(aHas!==bHas) return aHas?-1:1;
+    if(aHas) return (avg[b]-avg[a]) || a.localeCompare(b);
+    return a.localeCompare(b);
+  });
+}
+function bestPerColumn(){
+  const best={avg:null};
+  for(const b of LM15) best[b]=null;
+  for(const b of LM15){
+    let bestVal=null,bestModel=null;
+    const dir=(state.bench[b]||{}).direction||'higher';
+    for(const m of state.rankData.models){
+      const r=(state.rankData.chosen[m]||{})[b];
+      if(!r) continue;
+      const v=r.score_display??r.score;
+      if(v==null) continue;
+      if(bestVal===null){bestVal=v;bestModel=m;}
+      else if(dir==='lower'){ if(v<bestVal){bestVal=v;bestModel=m;} }
+      else { if(v>bestVal){bestVal=v;bestModel=m;} }
+    }
+    best[b]=bestModel;
+  }
+  let ba=null,bm=null;
+  for(const m of state.rankData.models){
+    if(state.rankData.avg[m]==null) continue;
+    if(ba===null||state.rankData.avg[m]>ba){ba=state.rankData.avg[m];bm=m;}
+  }
+  best.avg=bm;
+  return best;
+}
+function renderRankingTable(){
+  const best=bestPerColumn();
+  const models=[...state.rankData.models];
+  const k=state.rankSort.k, dir=state.rankSort.dir;
+  const getVal=(m,col)=>{
+    if(col==='model') return m;
+    if(col==='avg') return state.rankData.avg[m];
+    const r=(state.rankData.chosen[m]||{})[col];
+    return r?(r.score_display??r.score):null;
+  };
+  models.sort((a,b)=>{
+    const va=getVal(a,k),vb=getVal(b,k);
+    if(va==null&&vb==null) return 0;
+    if(va==null) return 1;
+    if(vb==null) return -1;
+    if(typeof va==='string') return va.localeCompare(vb)*dir;
+    return (va<vb?-1:va>vb?1:0)*dir;
+  });
+  const shortBench=(b)=>(state.bench[b]||{}).display_pl||b;
+  const cols=[{k:'model',l:'Model'},{k:'avg',l:'Średnia'}].concat(LM15.map(b=>({k:b,l:shortBench(b)})));
+  $('rank-head').innerHTML=cols.map(c=>`<th data-k="${c.k}">${esc(c.l)}${state.rankSort.k===c.k?(state.rankSort.dir>0?' ▲':' ▼'):''}</th>`).join('');
+  $('rank-head').querySelectorAll('th').forEach(th=>th.onclick=()=>{const kk=th.dataset.k; if(state.rankSort.k===kk) state.rankSort.dir*=-1; else {state.rankSort.k=kk; state.rankSort.dir=(kk==='model'?1:-1);} renderRankingTable();});
+  const complete=models.filter(m=>state.rankData.avg[m]!=null);
+  const incomplete=models.filter(m=>state.rankData.avg[m]==null);
+  const renderRow=(m)=>{
+    const star=state.rankData.star[m]?' ★':'';
+    const avg=state.rankData.avg[m];
+    const avgStr=avg==null?'—':avg.toFixed(1);
+    const avgClass=best.avg===m?'best':'';
+    let cells=`<td>${esc(m)}${star}</td><td class="${avgClass}">${avgStr}</td>`;
+    for(const b of LM15){
+      const r=(state.rankData.chosen[m]||{})[b];
+      const v=r?(r.score_display??r.score):null;
+      const txt=v==null?'—':fmt(r);
+      const isBest=best[b]===m;
+      const flag=r?flags(r):'';
+      cells+=`<td class="${isBest?'best':''}">${esc(txt)} ${flag?`<span class="pill">${flag}</span>`:''}</td>`;
+    }
+    return `<tr>${cells}</tr>`;
+  };
+  let html=complete.map(renderRow).join('');
+  if(incomplete.length){ html+=`<tr><td colspan="${2+LM15.length}" class="muted" style="padding:10px 6px;border-top:2px solid var(--border)">Poza średnią (brak kompletnego, porównywalnego zestawu 15/15)</td></tr>`; html+=incomplete.map(renderRow).join(''); }
+  $('rank-body').innerHTML=html;
+}
+function buildMainChart(){
+  const items=state.rankData.models.filter(m=>state.rankData.avg[m]!=null).map(m=>({m,avg:state.rankData.avg[m]})).sort((a,b)=>b.avg-a.avg);
+  const n=items.length;
+  const h=Math.max(240,n*22+60);
+  $('avgChartBox').style.height=h+'px';
+  chart('avgChart','bar',{labels:items.map(i=>i.m),datasets:[{label:'Średnia znormalizowana (15 lm-eval, komplet)',data:items.map(i=>i.avg),backgroundColor:'#4c78a8',datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(1),color:getComputedStyle(document.body).color,display:true}}]},{indexAxis:'y',scales:{x:{min:0,max:100,ticks:{color:getComputedStyle(document.body).color}},y:{ticks:{color:getComputedStyle(document.body).color,autoSkip:false}}},plugins:{datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(1),display:true}}});
 }
 function renderFamilies(){ const fams=[...new Set(state.rows.map(r=>r.benchmark_family).filter(Boolean))].sort(); const sel=$('fam-family'); sel.innerHTML=''; fams.forEach(f=>{const o=document.createElement('option');o.value=f;o.textContent=f;sel.appendChild(o);}); sel.onchange=drawFamily; drawFamily(); }
 function drawFamily(){ const fam=$('fam-family').value; const rows=state.rows.filter(r=>r.benchmark_family===fam).sort((a,b)=> (a.benchmark||'').localeCompare(b.benchmark||'') || String(b.score_display??-1e18).localeCompare(String(a.score_display??-1e18))); $('fam-desc').innerHTML=[...new Set(rows.map(r=>r.benchmark))].map(b=>{const d=state.bench[b]||{}; return `<details><summary>${esc(d.display_pl||b)}</summary><div>${esc(d.measures_pl||'')}</div><div class="muted">${esc(d.measures_en||'')}</div><div class="muted">Metryka: <code>${esc(d.metric||'')}</code>, kierunek: ${esc(d.direction||'')}, n=${esc(d.n_items||'')}, język: ${esc(d.language||'')}</div><div class="src">Źródło: ${d.source_url?`<a href="${esc(d.source_url)}" target="_blank">${esc(d.source_url)}</a>`:''}</div></details>`;}).join('');
   $('fam-body').innerHTML=rows.slice(0,500).map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)}</span></td><td>${r.n??'—'}</td><td>${flags(r)}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
   const b0=[...new Set(rows.filter(r=>r.status==='measured'&&r.score!=null).map(r=>r.benchmark))][0];
-  const br=rows.filter(r=>r.benchmark===b0 && r.status==='measured' && r.score!=null).slice().sort((a,b)=>(b.score_display??b.score)-(a.score_display??a.score)).slice(0,20);
-  chart('famChart','bar',{labels:br.map(r=>r.model),datasets:[{label:b0||'brak',data:br.map(r=>r.score_display??r.score),backgroundColor:'#72b7b2'}]},{indexAxis:'y'});
+  const br=rows.filter(r=>r.benchmark===b0 && r.status==='measured' && r.score!=null).slice().sort((a,b)=>(b.score_display??b.score)-(a.score_display??a.score));
+  const h=Math.max(240,br.length*22+60); $('famChartBox').style.height=h+'px';
+  chart('famChart','bar',{labels:br.map(r=>r.model),datasets:[{label:b0||'brak',data:br.map(r=>r.score_display??r.score),backgroundColor:'#72b7b2',datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(1),display:true}}]},{indexAxis:'y',plugins:{datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(1),display:true}},scales:{y:{ticks:{color:getComputedStyle(document.body).color,autoSkip:false}}}});
 }
 function renderPolish(){ const pl=["multiblimp-pl","IFBench (Bielik IF-PL local)","IFEval (Bielik IF-PL local)","Token fertility (tokens per word, 7 Polish domains)","Held-out corpus (bytes per token)"]; const rows=state.rows.filter(r=>pl.includes(r.benchmark)); $('pl-desc').innerHTML=pl.map(b=>{const d=state.bench[b]||{}; return `<details ${b==='multiblimp-pl'?'open':''}><summary>${esc(d.display_pl||b)}</summary><div>${esc(d.measures_pl||'')}</div><div class="src">Źródło: ${d.source_url?`<a href="${esc(d.source_url)}" target="_blank">${esc(d.source_url)}</a>`:''}</div></details>`}).join('');
   $('pl-body').innerHTML=rows.map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)}</span></td><td>${r.n??'—'}</td><td>${flags(r)}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
   const br=rows.filter(r=>r.benchmark==='multiblimp-pl'&&r.status==='measured'&&r.score!=null).slice().sort((a,b)=>(b.score_display??b.score)-(a.score_display??a.score));
-  chart('plChart','bar',{labels:br.map(r=>r.model),datasets:[{label:'MultiBLiMP PL accuracy',data:br.map(r=>r.score_display??r.score),backgroundColor:'#4c78a8'}]},{indexAxis:'y'});
+  const h=Math.max(240,br.length*22+60); $('plChartBox').style.height=h+'px';
+  chart('plChart','bar',{labels:br.map(r=>r.model),datasets:[{label:'MultiBLiMP PL accuracy',data:br.map(r=>r.score_display??r.score),backgroundColor:'#4c78a8',datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(1),display:true}}]},{indexAxis:'y',plugins:{datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(1),display:true}},scales:{y:{ticks:{color:getComputedStyle(document.body).color,autoSkip:false}}}});
 }
 
 function renderSlayer(){ const rows=state.rows.filter(r=>String(r.model).toLowerCase().startsWith('slayer') && r.benchmark_family!=='tokenizers').sort((a,b)=>a.model.localeCompare(b.model)||a.benchmark.localeCompare(b.benchmark)); $('sl-body').innerHTML=rows.map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)} <span class="pill">${flags(r)}</span></td><td>${r.n??'—'}</td><td>${flags(r)}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
-  const bench='arc-easy'; const br=rows.filter(r=>r.benchmark===bench && r.status==='measured').sort((a,b)=>a.model.localeCompare(b.model)); chart('slChart','line',{labels:br.map(r=>r.model),datasets:[{label:bench,data:br.map(r=>r.score_display??r.score),borderColor:'#d62728',backgroundColor:'#d6272840'}]},{scales:{y:{ticks:{color:getComputedStyle(document.body).color}}}});
+  const bench='arc-easy'; const br=rows.filter(r=>r.benchmark===bench && r.status==='measured').sort((a,b)=>a.model.localeCompare(b.model)); $('slChartBox').style.height=Math.max(240,br.length*28+60)+'px'; chart('slChart','line',{labels:br.map(r=>r.model),datasets:[{label:bench,data:br.map(r=>r.score_display??r.score),borderColor:'#d62728',backgroundColor:'#d6272840'}]},{plugins:{datalabels:{display:false}},scales:{y:{ticks:{color:getComputedStyle(document.body).color}}}});
 }
 function renderTok(){ const rows=state.rows.filter(r=>r.benchmark_family==='tokenizers').sort((a,b)=>a.benchmark.localeCompare(b.benchmark)||(a.score_display??a.score)-(b.score_display??b.score)); $('tok-body').innerHTML=rows.map(r=>`<tr><td>${esc(r.model)}</td><td>${esc(r.benchmark)}</td><td>${esc(r.metric)}</td><td>${fmt(r)}</td><td>${r.n??'—'}</td><td class="src">${srcCell(r)}</td></tr>`).join('');
   const br=rows.filter(r=>r.benchmark==='Token fertility (tokens per word, 7 Polish domains)'&&r.status==='measured').sort((a,b)=>(a.score_display??a.score)-(b.score_display??b.score));
-  chart('tokChart','bar',{labels:br.map(r=>r.model),datasets:[{label:'Fertility (↓ lepiej)',data:br.map(r=>r.score_display??r.score),backgroundColor:'#8c564b'}]},{indexAxis:'y'});
+  $('tokChartBox').style.height=Math.max(240,br.length*22+60)+'px';
+  chart('tokChart','bar',{labels:br.map(r=>r.model),datasets:[{label:'Fertility (↓ lepiej)',data:br.map(r=>r.score_display??r.score),backgroundColor:'#8c564b',datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(3),display:true}}]},{indexAxis:'y',plugins:{datalabels:{anchor:'end',align:'end',formatter:v=>Number(v).toFixed(3),display:true}},scales:{y:{ticks:{color:getComputedStyle(document.body).color,autoSkip:false}}}});
 }
 function renderAbout(){ $('bench-list').innerHTML=Object.values(state.bench).sort((a,b)=>(a.display_pl||'').localeCompare(b.display_pl||'')).map(d=>`<details><summary>${esc(d.display_pl||d.benchmark)} <span class="muted">(${esc(d.family)})</span></summary><div><b>PL:</b> ${esc(d.measures_pl||'')}</div><div><b>EN:</b> ${esc(d.measures_en||'')}</div><div class="muted">Język: ${esc(d.language||'')} · Metryka: <code>${esc(d.metric||'')}</code> · Kierunek: ${esc(d.direction||'')} · n=${esc(d.n_items||'')}</div><div class="src">Źródło: ${d.source_url?`<a href="${esc(d.source_url)}" target="_blank" rel="noopener">${esc(d.source_url)}</a>`:''}</div></details>`).join(''); }
-function wire(){ document.querySelectorAll('.tab').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));$('panel-'+btn.dataset.tab).classList.add('active');}); ['f-model','f-bench','f-family','f-author','f-comp','f-status'].forEach(id=>$(id).addEventListener('input',renderTable)); $('themeBtn').onclick=()=>{const html=document.documentElement; const dark=html.getAttribute('data-theme')==='dark'; html.setAttribute('data-theme', dark?'light':'dark'); $('themeBtn').textContent='Motyw: '+(dark?'jasny':'ciemny'); buildMainChart(); drawFamily(); renderPolish(); renderSlayer(); renderTok();}; }
-async function main(){ const [r1,r2]=await Promise.all([fetch('results.json'),fetch('benchmarks.json')]); state.rows=await r1.json(); const bl=await r2.json(); bl.forEach(b=>state.bench[b.benchmark]=b); setCards(); fillSel('f-bench',[...new Set(state.rows.map(r=>r.benchmark))].sort()); fillSel('f-family',[...new Set(state.rows.map(r=>r.benchmark_family).filter(Boolean))].sort()); wire(); renderTable(); buildMainChart(); renderFamilies(); renderPolish(); renderSlayer(); renderTok(); renderAbout(); }
+function wire(){ document.querySelectorAll('.tab').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));$('panel-'+btn.dataset.tab).classList.add('active');}); ['f-model','f-bench','f-family','f-author','f-comp','f-status'].forEach(id=>$(id).addEventListener('input',renderTable)); $('themeBtn').onclick=()=>{const html=document.documentElement; const dark=html.getAttribute('data-theme')==='dark'; html.setAttribute('data-theme', dark?'light':'dark'); $('themeBtn').textContent='Motyw: '+(dark?'jasny':'ciemny'); renderRanking(); drawFamily(); renderPolish(); renderSlayer(); renderTok();}; }
+function renderRanking(){ computeRanking(); renderRankingTable(); buildMainChart(); }
+function onResize(){ Object.values(state.charts).forEach(c=>{try{c.resize();}catch(e){}}); }
+async function main(){ const [r1,r2]=await Promise.all([fetch('results.json'),fetch('benchmarks.json')]); state.rows=await r1.json(); const bl=await r2.json(); bl.forEach(b=>state.bench[b.benchmark]=b); setCards(); fillSel('f-bench',[...new Set(state.rows.map(r=>r.benchmark))].sort()); fillSel('f-family',[...new Set(state.rows.map(r=>r.benchmark_family).filter(Boolean))].sort()); wire(); window.addEventListener('resize', onResize); if(window.ResizeObserver){ const ro=new ResizeObserver(()=>onResize()); ['avgChartBox','famChartBox','plChartBox','slChartBox','tokChartBox'].forEach(id=>{const el=$(id); if(el) ro.observe(el);}); } renderTable(); renderRanking(); renderFamilies(); renderPolish(); renderSlayer(); renderTok(); renderAbout(); }
 main().catch(e=>{ $('count').textContent='Błąd ładowania danych: '+e; console.error(e); });
 </script>
 </body>

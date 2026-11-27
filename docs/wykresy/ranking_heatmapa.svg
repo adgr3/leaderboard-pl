@@ -1,555 +1,555 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="534" viewBox="0 0 1070 534" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="636" viewBox="0 0 1210 636" font-family="Arial, sans-serif">
 <rect width="100%" height="100%" fill="white"/>
 <text x="20" y="28" font-size="16" font-weight="bold" fill="#111">Ranking główny – heatmapa (15 benchmarków lm-eval)</text>
 <text x="20" y="46" font-size="11" fill="#444">Kolor = wynik znormalizowany w kolumnie; obwódka = najlepszy wynik w kolumnie.</text>
-<text x="247.0" y="72" font-size="9" text-anchor="middle" fill="#111">ARC-Challe</text>
-<text x="301.0" y="72" font-size="9" text-anchor="middle" fill="#111">ARC-Easy</text>
-<text x="355.0" y="72" font-size="9" text-anchor="middle" fill="#111">BLiMP</text>
-<text x="409.0" y="72" font-size="9" text-anchor="middle" fill="#111">EWoK</text>
-<text x="463.0" y="72" font-size="9" text-anchor="middle" fill="#111">HellaSwag</text>
-<text x="517.0" y="72" font-size="9" text-anchor="middle" fill="#111">LAMBADA</text>
-<text x="571.0" y="72" font-size="9" text-anchor="middle" fill="#111">MathQA</text>
-<text x="625.0" y="72" font-size="9" text-anchor="middle" fill="#111">MedMCQA</text>
-<text x="679.0" y="72" font-size="9" text-anchor="middle" fill="#111">MultiBLiMP</text>
-<text x="733.0" y="72" font-size="9" text-anchor="middle" fill="#111">PIQA</text>
-<text x="787.0" y="72" font-size="9" text-anchor="middle" fill="#111">PubMedQA</text>
-<text x="841.0" y="72" font-size="9" text-anchor="middle" fill="#111">Social IQa</text>
-<text x="895.0" y="72" font-size="9" text-anchor="middle" fill="#111">WikiText-2</text>
-<text x="949.0" y="72" font-size="9" text-anchor="middle" fill="#111">WinoGrande</text>
-<text x="1003.0" y="72" font-size="9" text-anchor="middle" fill="#111">WSC273</text>
-<text x="212" y="105" font-size="10" text-anchor="end" fill="#111">bielik-1.5b-v3</text>
-<rect x="220" y="90" width="54" height="22" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">36.1%</text>
-<rect x="274" y="90" width="54" height="22" fill="rgb(220,186,201)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">54.6%</text>
-<rect x="328" y="90" width="54" height="22" fill="rgb(175,108,123)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="104" font-size="8.5" text-anchor="middle" fill="#fff">81.9%</text>
-<rect x="382" y="90" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="409.0" y="104" font-size="8.5" text-anchor="middle" fill="#fff">69.5%</text>
-<rect x="436" y="90" width="54" height="22" fill="rgb(189,133,148)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">63.7%</text>
-<rect x="490" y="90" width="54" height="22" fill="rgb(181,118,133)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="104" font-size="8.5" text-anchor="middle" fill="#fff">61.1%</text>
-<rect x="544" y="90" width="54" height="22" fill="rgb(211,171,186)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">32.4%</text>
-<rect x="598" y="90" width="54" height="22" fill="rgb(206,162,177)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">39.1%</text>
-<rect x="652" y="90" width="54" height="22" fill="rgb(186,126,141)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">94.4682</text>
-<rect x="706" y="90" width="54" height="22" fill="rgb(191,136,151)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">71.9%</text>
-<rect x="760" y="90" width="54" height="22" fill="rgb(193,140,155)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">62.4%</text>
-<rect x="814" y="90" width="54" height="22" fill="rgb(204,158,173)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">43.6%</text>
-<rect x="868" y="90" width="54" height="22" fill="rgb(182,119,134)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="104" font-size="8.5" text-anchor="middle" fill="#fff">1.6736</text>
-<rect x="922" y="90" width="54" height="22" fill="rgb(202,156,171)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="104" font-size="8.5" text-anchor="middle" fill="#111">62.4%</text>
-<rect x="976" y="90" width="54" height="22" fill="rgb(181,118,133)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="104" font-size="8.5" text-anchor="middle" fill="#fff">76.6%</text>
-<text x="212" y="127" font-size="10" text-anchor="end" fill="#111">lfm3-1.7b-base</text>
-<rect x="220" y="112" width="54" height="22" fill="rgb(198,148,163)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">42.9%</text>
-<rect x="274" y="112" width="54" height="22" fill="rgb(185,126,141)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">71.7%</text>
-<rect x="328" y="112" width="54" height="22" fill="rgb(198,147,162)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">79.3%</text>
-<rect x="382" y="112" width="54" height="22" fill="rgb(181,119,134)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="126" font-size="8.5" text-anchor="middle" fill="#fff">66.0%</text>
-<rect x="436" y="112" width="54" height="22" fill="rgb(197,146,161)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">58.9%</text>
-<rect x="490" y="112" width="54" height="22" fill="rgb(197,147,162)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">50.7%</text>
-<rect x="544" y="112" width="54" height="22" fill="rgb(192,137,152)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">39.1%</text>
-<rect x="598" y="112" width="54" height="22" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">37.8%</text>
-<rect x="652" y="112" width="54" height="22" fill="rgb(207,165,180)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">89.1504</text>
-<rect x="706" y="112" width="54" height="22" fill="rgb(203,158,173)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">68.6%</text>
-<rect x="760" y="112" width="54" height="22" fill="rgb(201,154,169)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">59.4%</text>
-<rect x="814" y="112" width="54" height="22" fill="rgb(194,141,156)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">45.4%</text>
-<rect x="868" y="112" width="54" height="22" fill="rgb(172,103,118)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="126" font-size="8.5" text-anchor="middle" fill="#fff">1.6157</text>
-<rect x="922" y="112" width="54" height="22" fill="rgb(216,179,194)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">58.6%</text>
-<rect x="976" y="112" width="54" height="22" fill="rgb(195,143,158)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="126" font-size="8.5" text-anchor="middle" fill="#111">71.4%</text>
-<text x="212" y="149" font-size="10" text-anchor="end" fill="#111">qwen3.5-0.8b-base</text>
-<rect x="220" y="134" width="54" height="22" fill="rgb(203,158,173)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">40.4%</text>
-<rect x="274" y="134" width="54" height="22" fill="rgb(187,130,145)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">70.5%</text>
-<rect x="328" y="134" width="54" height="22" fill="rgb(193,139,154)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">79.9%</text>
-<rect x="382" y="134" width="54" height="22" fill="rgb(174,106,121)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="148" font-size="8.5" text-anchor="middle" fill="#fff">67.6%</text>
-<rect x="436" y="134" width="54" height="22" fill="rgb(203,157,172)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">54.8%</text>
-<rect x="490" y="134" width="54" height="22" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">51.2%</text>
-<rect x="544" y="134" width="54" height="22" fill="rgb(208,166,181)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">33.4%</text>
-<rect x="598" y="134" width="54" height="22" fill="rgb(203,157,172)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">40.3%</text>
-<rect x="652" y="134" width="54" height="22" fill="rgb(227,198,213)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">84.5049</text>
-<rect x="706" y="134" width="54" height="22" fill="rgb(193,139,154)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">71.3%</text>
-<rect x="760" y="134" width="54" height="22" fill="rgb(179,115,130)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="148" font-size="8.5" text-anchor="middle" fill="#fff">67.6%</text>
-<rect x="814" y="134" width="54" height="22" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">41.9%</text>
-<rect x="868" y="134" width="54" height="22" fill="rgb(189,132,147)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">1.7174</text>
-<rect x="922" y="134" width="54" height="22" fill="rgb(211,170,185)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">60.1%</text>
-<rect x="976" y="134" width="54" height="22" fill="rgb(195,143,158)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="148" font-size="8.5" text-anchor="middle" fill="#111">71.4%</text>
-<text x="212" y="171" font-size="10" text-anchor="end" fill="#111">eurollm-1.7b</text>
-<rect x="220" y="156" width="54" height="22" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">37.5%</text>
-<rect x="274" y="156" width="54" height="22" fill="rgb(192,137,152)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">68.5%</text>
-<rect x="328" y="156" width="54" height="22" fill="rgb(189,132,147)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">80.4%</text>
-<rect x="382" y="156" width="54" height="22" fill="rgb(180,117,132)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="170" font-size="8.5" text-anchor="middle" fill="#fff">66.2%</text>
-<rect x="436" y="156" width="54" height="22" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">59.3%</text>
-<rect x="490" y="156" width="54" height="22" fill="rgb(194,140,155)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">53.0%</text>
-<rect x="544" y="156" width="54" height="22" fill="rgb(235,213,228)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">24.2%</text>
-<rect x="598" y="156" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">25.8%</text>
-<rect x="652" y="156" width="54" height="22" fill="rgb(188,131,146)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">93.857</text>
-<rect x="706" y="156" width="54" height="22" fill="rgb(185,125,140)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">73.4%</text>
-<rect x="760" y="156" width="54" height="22" fill="rgb(219,184,199)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">53.0%</text>
-<rect x="814" y="156" width="54" height="22" fill="rgb(215,177,192)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">41.5%</text>
-<rect x="868" y="156" width="54" height="22" fill="rgb(171,101,116)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="170" font-size="8.5" text-anchor="middle" fill="#fff">1.6077</text>
-<rect x="922" y="156" width="54" height="22" fill="rgb(214,176,191)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">59.0%</text>
-<rect x="976" y="156" width="54" height="22" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="170" font-size="8.5" text-anchor="middle" fill="#111">71.1%</text>
-<text x="212" y="193" font-size="10" text-anchor="end" fill="#111">slayer1b-1.09-k70000</text>
-<rect x="220" y="178" width="54" height="22" fill="rgb(214,177,192)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">35.4%</text>
-<rect x="274" y="178" width="54" height="22" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">66.2%</text>
-<rect x="328" y="178" width="54" height="22" fill="rgb(179,115,130)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="192" font-size="8.5" text-anchor="middle" fill="#fff">81.5%</text>
-<rect x="382" y="178" width="54" height="22" fill="rgb(191,136,151)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">63.9%</text>
-<rect x="436" y="178" width="54" height="22" fill="rgb(202,156,171)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">55.3%</text>
-<rect x="490" y="178" width="54" height="22" fill="rgb(205,160,175)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">45.8%</text>
-<rect x="544" y="178" width="54" height="22" fill="rgb(241,224,239)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">22.0%</text>
-<rect x="598" y="178" width="54" height="22" fill="rgb(239,219,234)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">27.9%</text>
-<rect x="652" y="178" width="54" height="22" fill="rgb(170,100,115)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="192" font-size="8.5" text-anchor="middle" fill="#fff">98.1663</text>
-<rect x="706" y="178" width="54" height="22" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">72.7%</text>
-<rect x="760" y="178" width="54" height="22" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">55.2%</text>
-<rect x="814" y="178" width="54" height="22" fill="rgb(213,175,190)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">41.8%</text>
-<rect x="868" y="178" width="54" height="22" fill="rgb(188,131,146)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">1.7141</text>
-<rect x="922" y="178" width="54" height="22" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">57.4%</text>
-<rect x="976" y="178" width="54" height="22" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="192" font-size="8.5" text-anchor="middle" fill="#111">63.7%</text>
-<text x="212" y="215" font-size="10" text-anchor="end" fill="#111">slayer1b-1.09-k40000</text>
-<rect x="220" y="200" width="54" height="22" fill="rgb(215,179,194)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">35.0%</text>
-<rect x="274" y="200" width="54" height="22" fill="rgb(195,144,159)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">66.6%</text>
-<rect x="328" y="200" width="54" height="22" fill="rgb(179,115,130)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="214" font-size="8.5" text-anchor="middle" fill="#fff">81.5%</text>
-<rect x="382" y="200" width="54" height="22" fill="rgb(197,146,161)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">62.8%</text>
-<rect x="436" y="200" width="54" height="22" fill="rgb(206,163,178)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">52.8%</text>
-<rect x="490" y="200" width="54" height="22" fill="rgb(206,161,176)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">45.4%</text>
-<rect x="544" y="200" width="54" height="22" fill="rgb(240,221,236)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">22.5%</text>
-<rect x="598" y="200" width="54" height="22" fill="rgb(232,208,223)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">30.1%</text>
-<rect x="652" y="200" width="54" height="22" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="214" font-size="8.5" text-anchor="middle" fill="#fff">98.5636</text>
-<rect x="706" y="200" width="54" height="22" fill="rgb(193,140,155)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">71.2%</text>
-<rect x="760" y="200" width="54" height="22" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">56.2%</text>
-<rect x="814" y="200" width="54" height="22" fill="rgb(218,183,198)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">40.9%</text>
-<rect x="868" y="200" width="54" height="22" fill="rgb(186,127,142)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">1.7023</text>
-<rect x="922" y="200" width="54" height="22" fill="rgb(219,185,200)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">57.7%</text>
-<rect x="976" y="200" width="54" height="22" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="214" font-size="8.5" text-anchor="middle" fill="#111">63.7%</text>
-<text x="212" y="237" font-size="10" text-anchor="end" fill="#111">pythia-1b-v0</text>
-<rect x="220" y="222" width="54" height="22" fill="rgb(232,207,222)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">27.5%</text>
-<rect x="274" y="222" width="54" height="22" fill="rgb(217,182,197)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">55.9%</text>
-<rect x="328" y="222" width="54" height="22" fill="rgb(171,101,116)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="236" font-size="8.5" text-anchor="middle" fill="#fff">82.4%</text>
-<rect x="382" y="222" width="54" height="22" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">64.7%</text>
-<rect x="436" y="222" width="54" height="22" fill="rgb(216,179,194)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">46.8%</text>
-<rect x="490" y="222" width="54" height="22" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">56.6%</text>
-<rect x="544" y="222" width="54" height="22" fill="rgb(237,216,231)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">23.5%</text>
-<rect x="598" y="222" width="54" height="22" fill="rgb(238,218,233)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">28.1%</text>
-<rect x="652" y="222" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">80.1345</text>
-<rect x="706" y="222" width="54" height="22" fill="rgb(194,142,157)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">70.9%</text>
-<rect x="760" y="222" width="54" height="22" fill="rgb(209,167,182)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">56.6%</text>
-<rect x="814" y="222" width="54" height="22" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">40.2%</text>
-<rect x="868" y="222" width="54" height="22" fill="rgb(184,123,138)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="236" font-size="8.5" text-anchor="middle" fill="#fff">1.6877</text>
-<rect x="922" y="222" width="54" height="22" fill="rgb(230,205,220)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">54.5%</text>
-<rect x="976" y="222" width="54" height="22" fill="rgb(207,163,178)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="236" font-size="8.5" text-anchor="middle" fill="#111">67.4%</text>
-<text x="212" y="259" font-size="10" text-anchor="end" fill="#111">slayer1b-1.07-hf</text>
-<rect x="220" y="244" width="54" height="22" fill="rgb(232,208,223)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">27.3%</text>
-<rect x="274" y="244" width="54" height="22" fill="rgb(209,168,183)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">59.8%</text>
-<rect x="328" y="244" width="54" height="22" fill="rgb(193,140,155)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">79.8%</text>
-<rect x="382" y="244" width="54" height="22" fill="rgb(206,162,177)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">60.9%</text>
-<rect x="436" y="244" width="54" height="22" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">43.4%</text>
-<rect x="490" y="244" width="54" height="22" fill="rgb(212,173,188)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">41.2%</text>
-<rect x="544" y="244" width="54" height="22" fill="rgb(237,216,231)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">23.5%</text>
-<rect x="598" y="244" width="54" height="22" fill="rgb(233,209,224)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">29.9%</text>
-<rect x="652" y="244" width="54" height="22" fill="rgb(167,95,110)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="258" font-size="8.5" text-anchor="middle" fill="#fff">98.8692</text>
-<rect x="706" y="244" width="54" height="22" fill="rgb(209,168,183)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">67.0%</text>
-<rect x="760" y="244" width="54" height="22" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">53.6%</text>
-<rect x="814" y="244" width="54" height="22" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">39.1%</text>
-<rect x="868" y="244" width="54" height="22" fill="rgb(199,149,164)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">1.7817</text>
-<rect x="922" y="244" width="54" height="22" fill="rgb(234,210,225)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">53.6%</text>
-<rect x="976" y="244" width="54" height="22" fill="rgb(223,192,207)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="258" font-size="8.5" text-anchor="middle" fill="#111">61.5%</text>
-<text x="212" y="281" font-size="10" text-anchor="end" fill="#111">slayer1b-1.08</text>
-<rect x="220" y="266" width="54" height="22" fill="rgb(226,198,213)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">30.0%</text>
-<rect x="274" y="266" width="54" height="22" fill="rgb(212,173,188)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">58.4%</text>
-<rect x="328" y="266" width="54" height="22" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">80.5%</text>
-<rect x="382" y="266" width="54" height="22" fill="rgb(211,171,186)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">59.9%</text>
-<rect x="436" y="266" width="54" height="22" fill="rgb(221,188,203)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">43.4%</text>
-<rect x="490" y="266" width="54" height="22" fill="rgb(214,176,191)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">40.1%</text>
-<rect x="544" y="266" width="54" height="22" fill="rgb(239,220,235)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">22.8%</text>
-<rect x="598" y="266" width="54" height="22" fill="rgb(229,202,217)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">31.2%</text>
-<rect x="652" y="266" width="54" height="22" fill="rgb(168,95,110)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="280" font-size="8.5" text-anchor="middle" fill="#fff">98.7469</text>
-<rect x="706" y="266" width="54" height="22" fill="rgb(212,173,188)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">66.2%</text>
-<rect x="760" y="266" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">43.4%</text>
-<rect x="814" y="266" width="54" height="22" fill="rgb(224,194,209)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">39.7%</text>
-<rect x="868" y="266" width="54" height="22" fill="rgb(198,149,164)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">1.7802</text>
-<rect x="922" y="266" width="54" height="22" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">53.7%</text>
-<rect x="976" y="266" width="54" height="22" fill="rgb(223,192,207)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="280" font-size="8.5" text-anchor="middle" fill="#111">61.5%</text>
-<text x="212" y="303" font-size="10" text-anchor="end" fill="#111">slayer1b-1.05</text>
-<rect x="220" y="288" width="54" height="22" fill="rgb(235,213,228)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">26.0%</text>
-<rect x="274" y="288" width="54" height="22" fill="rgb(223,191,206)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">53.2%</text>
-<rect x="328" y="288" width="54" height="22" fill="rgb(199,150,165)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">79.2%</text>
-<rect x="382" y="288" width="54" height="22" fill="rgb(218,183,198)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">58.4%</text>
-<rect x="436" y="288" width="54" height="22" fill="rgb(229,203,218)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">38.2%</text>
-<rect x="490" y="288" width="54" height="22" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">36.3%</text>
-<rect x="544" y="288" width="54" height="22" fill="rgb(242,226,241)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">21.6%</text>
-<rect x="598" y="288" width="54" height="22" fill="rgb(228,201,216)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">31.5%</text>
-<rect x="652" y="288" width="54" height="22" fill="rgb(168,95,110)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="302" font-size="8.5" text-anchor="middle" fill="#fff">98.7469</text>
-<rect x="706" y="288" width="54" height="22" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">63.8%</text>
-<rect x="760" y="288" width="54" height="22" fill="rgb(227,198,213)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">50.0%</text>
-<rect x="814" y="288" width="54" height="22" fill="rgb(227,200,215)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">39.0%</text>
-<rect x="868" y="288" width="54" height="22" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">1.8513</text>
-<rect x="922" y="288" width="54" height="22" fill="rgb(238,219,234)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">52.2%</text>
-<rect x="976" y="288" width="54" height="22" fill="rgb(231,206,221)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="302" font-size="8.5" text-anchor="middle" fill="#111">58.6%</text>
-<text x="212" y="325" font-size="10" text-anchor="end" fill="#111">slayer1b-1.06</text>
-<rect x="220" y="310" width="54" height="22" fill="rgb(236,214,229)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">25.8%</text>
-<rect x="274" y="310" width="54" height="22" fill="rgb(224,193,208)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">52.6%</text>
-<rect x="328" y="310" width="54" height="22" fill="rgb(198,149,164)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">79.2%</text>
-<rect x="382" y="310" width="54" height="22" fill="rgb(215,178,193)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">59.0%</text>
-<rect x="436" y="310" width="54" height="22" fill="rgb(227,200,215)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">39.3%</text>
-<rect x="490" y="310" width="54" height="22" fill="rgb(220,186,201)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">36.4%</text>
-<rect x="544" y="310" width="54" height="22" fill="rgb(242,224,239)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">21.9%</text>
-<rect x="598" y="310" width="54" height="22" fill="rgb(228,200,215)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">31.6%</text>
-<rect x="652" y="310" width="54" height="22" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="324" font-size="8.5" text-anchor="middle" fill="#fff">98.5941</text>
-<rect x="706" y="310" width="54" height="22" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">64.1%</text>
-<rect x="760" y="310" width="54" height="22" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">47.6%</text>
-<rect x="814" y="310" width="54" height="22" fill="rgb(228,201,216)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">38.9%</text>
-<rect x="868" y="310" width="54" height="22" fill="rgb(209,167,182)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">1.8463</text>
-<rect x="922" y="310" width="54" height="22" fill="rgb(239,219,234)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">52.2%</text>
-<rect x="976" y="310" width="54" height="22" fill="rgb(230,204,219)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="324" font-size="8.5" text-anchor="middle" fill="#111">59.0%</text>
-<text x="212" y="347" font-size="10" text-anchor="end" fill="#111">slayer1b-1.04</text>
-<rect x="220" y="332" width="54" height="22" fill="rgb(236,215,230)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">25.5%</text>
-<rect x="274" y="332" width="54" height="22" fill="rgb(226,197,212)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">51.5%</text>
-<rect x="328" y="332" width="54" height="22" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">77.1%</text>
-<rect x="382" y="332" width="54" height="22" fill="rgb(223,192,207)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">57.4%</text>
-<rect x="436" y="332" width="54" height="22" fill="rgb(232,207,222)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">36.7%</text>
-<rect x="490" y="332" width="54" height="22" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">35.3%</text>
-<rect x="544" y="332" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">20.9%</text>
-<rect x="598" y="332" width="54" height="22" fill="rgb(229,203,218)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">31.1%</text>
-<rect x="652" y="332" width="54" height="22" fill="rgb(166,92,107)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="346" font-size="8.5" text-anchor="middle" fill="#fff">99.2359</text>
-<rect x="706" y="332" width="54" height="22" fill="rgb(226,197,212)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">62.6%</text>
-<rect x="760" y="332" width="54" height="22" fill="rgb(219,185,200)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">52.8%</text>
-<rect x="814" y="332" width="54" height="22" fill="rgb(233,209,224)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">38.0%</text>
-<rect x="868" y="332" width="54" height="22" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">1.8705</text>
-<rect x="922" y="332" width="54" height="22" fill="rgb(242,226,241)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">51.1%</text>
-<rect x="976" y="332" width="54" height="22" fill="rgb(238,219,234)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="346" font-size="8.5" text-anchor="middle" fill="#111">56.0%</text>
-<text x="212" y="369" font-size="10" text-anchor="end" fill="#111">slayer1b-1.03</text>
-<rect x="220" y="354" width="54" height="22" fill="rgb(236,215,230)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">25.6%</text>
-<rect x="274" y="354" width="54" height="22" fill="rgb(230,205,220)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">49.5%</text>
-<rect x="328" y="354" width="54" height="22" fill="rgb(214,175,190)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">77.4%</text>
-<rect x="382" y="354" width="54" height="22" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">56.6%</text>
-<rect x="436" y="354" width="54" height="22" fill="rgb(234,211,226)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">35.1%</text>
-<rect x="490" y="354" width="54" height="22" fill="rgb(225,195,210)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">33.1%</text>
-<rect x="544" y="354" width="54" height="22" fill="rgb(243,226,241)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">21.5%</text>
-<rect x="598" y="354" width="54" height="22" fill="rgb(227,198,213)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">32.1%</text>
-<rect x="652" y="354" width="54" height="22" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="368" font-size="8.5" text-anchor="middle" fill="#fff">98.5636</text>
-<rect x="706" y="354" width="54" height="22" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">62.2%</text>
-<rect x="760" y="354" width="54" height="22" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">52.4%</text>
-<rect x="814" y="354" width="54" height="22" fill="rgb(236,215,230)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">37.4%</text>
-<rect x="868" y="354" width="54" height="22" fill="rgb(217,182,197)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">1.8988</text>
-<rect x="922" y="354" width="54" height="22" fill="rgb(234,211,226)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">53.5%</text>
-<rect x="976" y="354" width="54" height="22" fill="rgb(238,219,234)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="368" font-size="8.5" text-anchor="middle" fill="#111">56.0%</text>
-<text x="212" y="391" font-size="10" text-anchor="end" fill="#111">slayer1b-1.02</text>
-<rect x="220" y="376" width="54" height="22" fill="rgb(238,218,233)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">24.7%</text>
-<rect x="274" y="376" width="54" height="22" fill="rgb(232,208,223)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">48.4%</text>
-<rect x="328" y="376" width="54" height="22" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">76.7%</text>
-<rect x="382" y="376" width="54" height="22" fill="rgb(229,202,217)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">56.2%</text>
-<rect x="436" y="376" width="54" height="22" fill="rgb(236,214,229)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">34.0%</text>
-<rect x="490" y="376" width="54" height="22" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">31.9%</text>
-<rect x="544" y="376" width="54" height="22" fill="rgb(242,225,240)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">21.7%</text>
-<rect x="598" y="376" width="54" height="22" fill="rgb(227,200,215)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">31.7%</text>
-<rect x="652" y="376" width="54" height="22" fill="rgb(168,96,111)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="390" font-size="8.5" text-anchor="middle" fill="#fff">98.6858</text>
-<rect x="706" y="376" width="54" height="22" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">60.6%</text>
-<rect x="760" y="376" width="54" height="22" fill="rgb(216,180,195)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">53.8%</text>
-<rect x="814" y="376" width="54" height="22" fill="rgb(239,219,234)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">36.9%</text>
-<rect x="868" y="376" width="54" height="22" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">1.9169</text>
-<rect x="922" y="376" width="54" height="22" fill="rgb(243,226,241)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">51.1%</text>
-<rect x="976" y="376" width="54" height="22" fill="rgb(235,213,228)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="390" font-size="8.5" text-anchor="middle" fill="#111">57.1%</text>
-<text x="212" y="413" font-size="10" text-anchor="end" fill="#111">slayer1b-1.01</text>
-<rect x="220" y="398" width="54" height="22" fill="rgb(239,220,235)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">24.1%</text>
-<rect x="274" y="398" width="54" height="22" fill="rgb(235,212,227)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">47.3%</text>
-<rect x="328" y="398" width="54" height="22" fill="rgb(224,194,209)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">76.2%</text>
-<rect x="382" y="398" width="54" height="22" fill="rgb(233,209,224)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">55.4%</text>
-<rect x="436" y="398" width="54" height="22" fill="rgb(241,223,238)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">30.8%</text>
-<rect x="490" y="398" width="54" height="22" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">27.8%</text>
-<rect x="544" y="398" width="54" height="22" fill="rgb(242,226,241)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">21.6%</text>
-<rect x="598" y="398" width="54" height="22" fill="rgb(229,202,217)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">31.3%</text>
-<rect x="652" y="398" width="54" height="22" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="412" font-size="8.5" text-anchor="middle" fill="#fff">98.5024</text>
-<rect x="706" y="398" width="54" height="22" fill="rgb(240,222,237)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">58.8%</text>
-<rect x="760" y="398" width="54" height="22" fill="rgb(215,177,192)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">54.4%</text>
-<rect x="814" y="398" width="54" height="22" fill="rgb(244,229,244)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">35.8%</text>
-<rect x="868" y="398" width="54" height="22" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">1.9591</text>
-<rect x="922" y="398" width="54" height="22" fill="rgb(239,220,235)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">52.0%</text>
-<rect x="976" y="398" width="54" height="22" fill="rgb(240,222,237)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="412" font-size="8.5" text-anchor="middle" fill="#111">55.3%</text>
-<text x="212" y="435" font-size="10" text-anchor="end" fill="#111">slayer1b-1.00</text>
-<rect x="220" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="247.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">21.8%</text>
-<rect x="274" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="301.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">42.4%</text>
-<rect x="328" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="355.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">73.8%</text>
-<rect x="382" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">53.0%</text>
-<rect x="436" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="463.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">28.5%</text>
-<rect x="490" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="517.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">20.7%</text>
-<rect x="544" y="420" width="54" height="22" fill="rgb(244,229,244)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="571.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">21.0%</text>
-<rect x="598" y="420" width="54" height="22" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="625.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">31.8%</text>
-<rect x="652" y="420" width="54" height="22" fill="rgb(171,101,116)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="679.0" y="434" font-size="8.5" text-anchor="middle" fill="#fff">97.9829</text>
-<rect x="706" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="733.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">57.6%</text>
-<rect x="760" y="420" width="54" height="22" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="787.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">49.8%</text>
-<rect x="814" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="841.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">35.8%</text>
-<rect x="868" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="895.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">2.0706</text>
-<rect x="922" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="949.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">50.5%</text>
-<rect x="976" y="420" width="54" height="22" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
-<text x="1003.0" y="434" font-size="8.5" text-anchor="middle" fill="#111">53.8%</text>
-<text x="212" y="457" font-size="10" text-anchor="end" fill="#111">bielik-11b-v3-instruct</text>
-<rect x="220" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="247.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">58.1%</text>
-<rect x="274" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="301.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">81.9%</text>
-<rect x="328" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="355.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">83.2%</text>
-<rect x="382" y="442" width="54" height="22" fill="#f3f3f3" stroke="#ffffff" stroke-width="0.5"/>
-<text x="409.0" y="456" font-size="8.5" text-anchor="middle" fill="#777">—</text>
-<rect x="436" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="463.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">79.4%</text>
-<rect x="490" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="517.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">71.4%</text>
-<rect x="544" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="571.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">48.5%</text>
-<rect x="598" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="625.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">53.6%</text>
-<rect x="652" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="679.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">99.5721</text>
-<rect x="706" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="733.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">78.9%</text>
-<rect x="760" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="787.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">73.0%</text>
-<rect x="814" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="841.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">51.1%</text>
-<rect x="868" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="895.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">1.5659</text>
-<rect x="922" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="949.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">73.0%</text>
-<rect x="976" y="442" width="54" height="22" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="1003.0" y="456" font-size="8.5" text-anchor="middle" fill="#fff">82.4%</text>
-<rect x="220" y="506" width="30" height="10" fill="rgb(245,230,245)" stroke="#ccc"/>
-<rect x="250" y="506" width="30" height="10" fill="rgb(229,202,217)" stroke="#ccc"/>
-<rect x="280" y="506" width="30" height="10" fill="rgb(213,174,189)" stroke="#ccc"/>
-<rect x="310" y="506" width="30" height="10" fill="rgb(197,146,161)" stroke="#ccc"/>
-<rect x="340" y="506" width="30" height="10" fill="rgb(181,118,133)" stroke="#ccc"/>
-<rect x="370" y="506" width="30" height="10" fill="rgb(165,90,105)" stroke="#ccc"/>
-<text x="220" y="502" font-size="10" fill="#444">gorzej</text>
-<text x="370" y="502" font-size="10" fill="#444">lepiej (w kolumnie)</text>
+<text x="271.0" y="72" font-size="10" text-anchor="middle" fill="#111">ARC-Challe</text>
+<text x="333.0" y="72" font-size="10" text-anchor="middle" fill="#111">ARC-Easy</text>
+<text x="395.0" y="72" font-size="10" text-anchor="middle" fill="#111">BLiMP</text>
+<text x="457.0" y="72" font-size="10" text-anchor="middle" fill="#111">EWoK</text>
+<text x="519.0" y="72" font-size="10" text-anchor="middle" fill="#111">HellaSwag</text>
+<text x="581.0" y="72" font-size="10" text-anchor="middle" fill="#111">LAMBADA</text>
+<text x="643.0" y="72" font-size="10" text-anchor="middle" fill="#111">MathQA</text>
+<text x="705.0" y="72" font-size="10" text-anchor="middle" fill="#111">MedMCQA</text>
+<text x="767.0" y="72" font-size="10" text-anchor="middle" fill="#111">MultiBLiMP</text>
+<text x="829.0" y="72" font-size="10" text-anchor="middle" fill="#111">PIQA</text>
+<text x="891.0" y="72" font-size="10" text-anchor="middle" fill="#111">PubMedQA</text>
+<text x="953.0" y="72" font-size="10" text-anchor="middle" fill="#111">Social IQa</text>
+<text x="1015.0" y="72" font-size="10" text-anchor="middle" fill="#111">WikiText-2</text>
+<text x="1077.0" y="72" font-size="10" text-anchor="middle" fill="#111">WinoGrande</text>
+<text x="1139.0" y="72" font-size="10" text-anchor="middle" fill="#111">WSC273</text>
+<text x="232" y="108" font-size="11" text-anchor="end" fill="#111">bielik-1.5b-v3</text>
+<rect x="240" y="90" width="62" height="28" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="109" font-size="11" text-anchor="middle" fill="#111">36.1%</text>
+<rect x="302" y="90" width="62" height="28" fill="rgb(220,186,201)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="109" font-size="11" text-anchor="middle" fill="#111">54.6%</text>
+<rect x="364" y="90" width="62" height="28" fill="rgb(175,108,123)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="109" font-size="11" text-anchor="middle" fill="#fff">81.9%</text>
+<rect x="426" y="90" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="457.0" y="109" font-size="11" text-anchor="middle" fill="#fff">69.5%</text>
+<rect x="488" y="90" width="62" height="28" fill="rgb(189,133,148)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="109" font-size="11" text-anchor="middle" fill="#111">63.7%</text>
+<rect x="550" y="90" width="62" height="28" fill="rgb(181,118,133)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="109" font-size="11" text-anchor="middle" fill="#fff">61.1%</text>
+<rect x="612" y="90" width="62" height="28" fill="rgb(211,171,186)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="109" font-size="11" text-anchor="middle" fill="#111">32.4%</text>
+<rect x="674" y="90" width="62" height="28" fill="rgb(206,162,177)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="109" font-size="11" text-anchor="middle" fill="#111">39.1%</text>
+<rect x="736" y="90" width="62" height="28" fill="rgb(186,126,141)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="109" font-size="11" text-anchor="middle" fill="#111">94.5</text>
+<rect x="798" y="90" width="62" height="28" fill="rgb(191,136,151)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="109" font-size="11" text-anchor="middle" fill="#111">71.9%</text>
+<rect x="860" y="90" width="62" height="28" fill="rgb(193,140,155)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="109" font-size="11" text-anchor="middle" fill="#111">62.4%</text>
+<rect x="922" y="90" width="62" height="28" fill="rgb(204,158,173)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="109" font-size="11" text-anchor="middle" fill="#111">43.6%</text>
+<rect x="984" y="90" width="62" height="28" fill="rgb(182,119,134)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="109" font-size="11" text-anchor="middle" fill="#fff">1.67</text>
+<rect x="1046" y="90" width="62" height="28" fill="rgb(202,156,171)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="109" font-size="11" text-anchor="middle" fill="#111">62.4%</text>
+<rect x="1108" y="90" width="62" height="28" fill="rgb(181,118,133)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="109" font-size="11" text-anchor="middle" fill="#fff">76.6%</text>
+<text x="232" y="136" font-size="11" text-anchor="end" fill="#111">lfm3-1.7b-base</text>
+<rect x="240" y="118" width="62" height="28" fill="rgb(198,148,163)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="137" font-size="11" text-anchor="middle" fill="#111">42.9%</text>
+<rect x="302" y="118" width="62" height="28" fill="rgb(185,126,141)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="137" font-size="11" text-anchor="middle" fill="#111">71.7%</text>
+<rect x="364" y="118" width="62" height="28" fill="rgb(198,147,162)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="137" font-size="11" text-anchor="middle" fill="#111">79.3%</text>
+<rect x="426" y="118" width="62" height="28" fill="rgb(181,119,134)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="137" font-size="11" text-anchor="middle" fill="#fff">66.0%</text>
+<rect x="488" y="118" width="62" height="28" fill="rgb(197,146,161)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="137" font-size="11" text-anchor="middle" fill="#111">58.9%</text>
+<rect x="550" y="118" width="62" height="28" fill="rgb(197,147,162)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="137" font-size="11" text-anchor="middle" fill="#111">50.7%</text>
+<rect x="612" y="118" width="62" height="28" fill="rgb(192,137,152)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="137" font-size="11" text-anchor="middle" fill="#111">39.1%</text>
+<rect x="674" y="118" width="62" height="28" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="137" font-size="11" text-anchor="middle" fill="#111">37.8%</text>
+<rect x="736" y="118" width="62" height="28" fill="rgb(207,165,180)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="137" font-size="11" text-anchor="middle" fill="#111">89.2</text>
+<rect x="798" y="118" width="62" height="28" fill="rgb(203,158,173)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="137" font-size="11" text-anchor="middle" fill="#111">68.6%</text>
+<rect x="860" y="118" width="62" height="28" fill="rgb(201,154,169)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="137" font-size="11" text-anchor="middle" fill="#111">59.4%</text>
+<rect x="922" y="118" width="62" height="28" fill="rgb(194,141,156)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="137" font-size="11" text-anchor="middle" fill="#111">45.4%</text>
+<rect x="984" y="118" width="62" height="28" fill="rgb(172,103,118)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="137" font-size="11" text-anchor="middle" fill="#fff">1.62</text>
+<rect x="1046" y="118" width="62" height="28" fill="rgb(216,179,194)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="137" font-size="11" text-anchor="middle" fill="#111">58.6%</text>
+<rect x="1108" y="118" width="62" height="28" fill="rgb(195,143,158)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="137" font-size="11" text-anchor="middle" fill="#111">71.4%</text>
+<text x="232" y="164" font-size="11" text-anchor="end" fill="#111">qwen3.5-0.8b-base</text>
+<rect x="240" y="146" width="62" height="28" fill="rgb(203,158,173)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="165" font-size="11" text-anchor="middle" fill="#111">40.4%</text>
+<rect x="302" y="146" width="62" height="28" fill="rgb(187,130,145)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="165" font-size="11" text-anchor="middle" fill="#111">70.5%</text>
+<rect x="364" y="146" width="62" height="28" fill="rgb(193,139,154)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="165" font-size="11" text-anchor="middle" fill="#111">79.9%</text>
+<rect x="426" y="146" width="62" height="28" fill="rgb(174,106,121)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="165" font-size="11" text-anchor="middle" fill="#fff">67.6%</text>
+<rect x="488" y="146" width="62" height="28" fill="rgb(203,157,172)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="165" font-size="11" text-anchor="middle" fill="#111">54.8%</text>
+<rect x="550" y="146" width="62" height="28" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="165" font-size="11" text-anchor="middle" fill="#111">51.2%</text>
+<rect x="612" y="146" width="62" height="28" fill="rgb(208,166,181)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="165" font-size="11" text-anchor="middle" fill="#111">33.4%</text>
+<rect x="674" y="146" width="62" height="28" fill="rgb(203,157,172)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="165" font-size="11" text-anchor="middle" fill="#111">40.3%</text>
+<rect x="736" y="146" width="62" height="28" fill="rgb(227,198,213)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="165" font-size="11" text-anchor="middle" fill="#111">84.5</text>
+<rect x="798" y="146" width="62" height="28" fill="rgb(193,139,154)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="165" font-size="11" text-anchor="middle" fill="#111">71.3%</text>
+<rect x="860" y="146" width="62" height="28" fill="rgb(179,115,130)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="165" font-size="11" text-anchor="middle" fill="#fff">67.6%</text>
+<rect x="922" y="146" width="62" height="28" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="165" font-size="11" text-anchor="middle" fill="#111">41.9%</text>
+<rect x="984" y="146" width="62" height="28" fill="rgb(189,132,147)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="165" font-size="11" text-anchor="middle" fill="#111">1.72</text>
+<rect x="1046" y="146" width="62" height="28" fill="rgb(211,170,185)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="165" font-size="11" text-anchor="middle" fill="#111">60.1%</text>
+<rect x="1108" y="146" width="62" height="28" fill="rgb(195,143,158)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="165" font-size="11" text-anchor="middle" fill="#111">71.4%</text>
+<text x="232" y="192" font-size="11" text-anchor="end" fill="#111">eurollm-1.7b</text>
+<rect x="240" y="174" width="62" height="28" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="193" font-size="11" text-anchor="middle" fill="#111">37.5%</text>
+<rect x="302" y="174" width="62" height="28" fill="rgb(192,137,152)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="193" font-size="11" text-anchor="middle" fill="#111">68.5%</text>
+<rect x="364" y="174" width="62" height="28" fill="rgb(189,132,147)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="193" font-size="11" text-anchor="middle" fill="#111">80.4%</text>
+<rect x="426" y="174" width="62" height="28" fill="rgb(180,117,132)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="193" font-size="11" text-anchor="middle" fill="#fff">66.2%</text>
+<rect x="488" y="174" width="62" height="28" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="193" font-size="11" text-anchor="middle" fill="#111">59.3%</text>
+<rect x="550" y="174" width="62" height="28" fill="rgb(194,140,155)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="193" font-size="11" text-anchor="middle" fill="#111">53.0%</text>
+<rect x="612" y="174" width="62" height="28" fill="rgb(235,213,228)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="193" font-size="11" text-anchor="middle" fill="#111">24.2%</text>
+<rect x="674" y="174" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="193" font-size="11" text-anchor="middle" fill="#111">25.8%</text>
+<rect x="736" y="174" width="62" height="28" fill="rgb(188,131,146)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="193" font-size="11" text-anchor="middle" fill="#111">93.9</text>
+<rect x="798" y="174" width="62" height="28" fill="rgb(185,125,140)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="193" font-size="11" text-anchor="middle" fill="#111">73.4%</text>
+<rect x="860" y="174" width="62" height="28" fill="rgb(219,184,199)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="193" font-size="11" text-anchor="middle" fill="#111">53.0%</text>
+<rect x="922" y="174" width="62" height="28" fill="rgb(215,177,192)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="193" font-size="11" text-anchor="middle" fill="#111">41.5%</text>
+<rect x="984" y="174" width="62" height="28" fill="rgb(171,101,116)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="193" font-size="11" text-anchor="middle" fill="#fff">1.61</text>
+<rect x="1046" y="174" width="62" height="28" fill="rgb(214,176,191)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="193" font-size="11" text-anchor="middle" fill="#111">59.0%</text>
+<rect x="1108" y="174" width="62" height="28" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="193" font-size="11" text-anchor="middle" fill="#111">71.1%</text>
+<text x="232" y="220" font-size="11" text-anchor="end" fill="#111">slayer1b-1.09-k70000</text>
+<rect x="240" y="202" width="62" height="28" fill="rgb(214,177,192)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="221" font-size="11" text-anchor="middle" fill="#111">35.4%</text>
+<rect x="302" y="202" width="62" height="28" fill="rgb(196,145,160)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="221" font-size="11" text-anchor="middle" fill="#111">66.2%</text>
+<rect x="364" y="202" width="62" height="28" fill="rgb(179,115,130)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="221" font-size="11" text-anchor="middle" fill="#fff">81.5%</text>
+<rect x="426" y="202" width="62" height="28" fill="rgb(191,136,151)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="221" font-size="11" text-anchor="middle" fill="#111">63.9%</text>
+<rect x="488" y="202" width="62" height="28" fill="rgb(202,156,171)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="221" font-size="11" text-anchor="middle" fill="#111">55.3%</text>
+<rect x="550" y="202" width="62" height="28" fill="rgb(205,160,175)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="221" font-size="11" text-anchor="middle" fill="#111">45.8%</text>
+<rect x="612" y="202" width="62" height="28" fill="rgb(241,224,239)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="221" font-size="11" text-anchor="middle" fill="#111">22.0%</text>
+<rect x="674" y="202" width="62" height="28" fill="rgb(239,219,234)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="221" font-size="11" text-anchor="middle" fill="#111">27.9%</text>
+<rect x="736" y="202" width="62" height="28" fill="rgb(170,100,115)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="221" font-size="11" text-anchor="middle" fill="#fff">98.2</text>
+<rect x="798" y="202" width="62" height="28" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="221" font-size="11" text-anchor="middle" fill="#111">72.7%</text>
+<rect x="860" y="202" width="62" height="28" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="221" font-size="11" text-anchor="middle" fill="#111">55.2%</text>
+<rect x="922" y="202" width="62" height="28" fill="rgb(213,175,190)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="221" font-size="11" text-anchor="middle" fill="#111">41.8%</text>
+<rect x="984" y="202" width="62" height="28" fill="rgb(188,131,146)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="221" font-size="11" text-anchor="middle" fill="#111">1.71</text>
+<rect x="1046" y="202" width="62" height="28" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="221" font-size="11" text-anchor="middle" fill="#111">57.4%</text>
+<rect x="1108" y="202" width="62" height="28" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="221" font-size="11" text-anchor="middle" fill="#111">63.7%</text>
+<text x="232" y="248" font-size="11" text-anchor="end" fill="#111">slayer1b-1.09-k40000</text>
+<rect x="240" y="230" width="62" height="28" fill="rgb(215,179,194)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="249" font-size="11" text-anchor="middle" fill="#111">35.0%</text>
+<rect x="302" y="230" width="62" height="28" fill="rgb(195,144,159)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="249" font-size="11" text-anchor="middle" fill="#111">66.6%</text>
+<rect x="364" y="230" width="62" height="28" fill="rgb(179,115,130)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="249" font-size="11" text-anchor="middle" fill="#fff">81.5%</text>
+<rect x="426" y="230" width="62" height="28" fill="rgb(197,146,161)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="249" font-size="11" text-anchor="middle" fill="#111">62.8%</text>
+<rect x="488" y="230" width="62" height="28" fill="rgb(206,163,178)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="249" font-size="11" text-anchor="middle" fill="#111">52.8%</text>
+<rect x="550" y="230" width="62" height="28" fill="rgb(206,161,176)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="249" font-size="11" text-anchor="middle" fill="#111">45.4%</text>
+<rect x="612" y="230" width="62" height="28" fill="rgb(240,221,236)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="249" font-size="11" text-anchor="middle" fill="#111">22.5%</text>
+<rect x="674" y="230" width="62" height="28" fill="rgb(232,208,223)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="249" font-size="11" text-anchor="middle" fill="#111">30.1%</text>
+<rect x="736" y="230" width="62" height="28" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="249" font-size="11" text-anchor="middle" fill="#fff">98.6</text>
+<rect x="798" y="230" width="62" height="28" fill="rgb(193,140,155)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="249" font-size="11" text-anchor="middle" fill="#111">71.2%</text>
+<rect x="860" y="230" width="62" height="28" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="249" font-size="11" text-anchor="middle" fill="#111">56.2%</text>
+<rect x="922" y="230" width="62" height="28" fill="rgb(218,183,198)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="249" font-size="11" text-anchor="middle" fill="#111">40.9%</text>
+<rect x="984" y="230" width="62" height="28" fill="rgb(186,127,142)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="249" font-size="11" text-anchor="middle" fill="#111">1.7</text>
+<rect x="1046" y="230" width="62" height="28" fill="rgb(219,185,200)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="249" font-size="11" text-anchor="middle" fill="#111">57.7%</text>
+<rect x="1108" y="230" width="62" height="28" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="249" font-size="11" text-anchor="middle" fill="#111">63.7%</text>
+<text x="232" y="276" font-size="11" text-anchor="end" fill="#111">pythia-1b-v0</text>
+<rect x="240" y="258" width="62" height="28" fill="rgb(232,207,222)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="277" font-size="11" text-anchor="middle" fill="#111">27.5%</text>
+<rect x="302" y="258" width="62" height="28" fill="rgb(217,182,197)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="277" font-size="11" text-anchor="middle" fill="#111">55.9%</text>
+<rect x="364" y="258" width="62" height="28" fill="rgb(171,101,116)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="277" font-size="11" text-anchor="middle" fill="#fff">82.4%</text>
+<rect x="426" y="258" width="62" height="28" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="277" font-size="11" text-anchor="middle" fill="#111">64.7%</text>
+<rect x="488" y="258" width="62" height="28" fill="rgb(216,179,194)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="277" font-size="11" text-anchor="middle" fill="#111">46.8%</text>
+<rect x="550" y="258" width="62" height="28" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="277" font-size="11" text-anchor="middle" fill="#111">56.6%</text>
+<rect x="612" y="258" width="62" height="28" fill="rgb(237,216,231)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="277" font-size="11" text-anchor="middle" fill="#111">23.5%</text>
+<rect x="674" y="258" width="62" height="28" fill="rgb(238,218,233)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="277" font-size="11" text-anchor="middle" fill="#111">28.1%</text>
+<rect x="736" y="258" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="277" font-size="11" text-anchor="middle" fill="#111">80.1</text>
+<rect x="798" y="258" width="62" height="28" fill="rgb(194,142,157)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="277" font-size="11" text-anchor="middle" fill="#111">70.9%</text>
+<rect x="860" y="258" width="62" height="28" fill="rgb(209,167,182)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="277" font-size="11" text-anchor="middle" fill="#111">56.6%</text>
+<rect x="922" y="258" width="62" height="28" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="277" font-size="11" text-anchor="middle" fill="#111">40.2%</text>
+<rect x="984" y="258" width="62" height="28" fill="rgb(184,123,138)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="277" font-size="11" text-anchor="middle" fill="#fff">1.69</text>
+<rect x="1046" y="258" width="62" height="28" fill="rgb(230,205,220)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="277" font-size="11" text-anchor="middle" fill="#111">54.5%</text>
+<rect x="1108" y="258" width="62" height="28" fill="rgb(207,163,178)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="277" font-size="11" text-anchor="middle" fill="#111">67.4%</text>
+<text x="232" y="304" font-size="11" text-anchor="end" fill="#111">slayer1b-1.07-hf</text>
+<rect x="240" y="286" width="62" height="28" fill="rgb(232,208,223)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="305" font-size="11" text-anchor="middle" fill="#111">27.3%</text>
+<rect x="302" y="286" width="62" height="28" fill="rgb(209,168,183)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="305" font-size="11" text-anchor="middle" fill="#111">59.8%</text>
+<rect x="364" y="286" width="62" height="28" fill="rgb(193,140,155)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="305" font-size="11" text-anchor="middle" fill="#111">79.8%</text>
+<rect x="426" y="286" width="62" height="28" fill="rgb(206,162,177)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="305" font-size="11" text-anchor="middle" fill="#111">60.9%</text>
+<rect x="488" y="286" width="62" height="28" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="305" font-size="11" text-anchor="middle" fill="#111">43.4%</text>
+<rect x="550" y="286" width="62" height="28" fill="rgb(212,173,188)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="305" font-size="11" text-anchor="middle" fill="#111">41.2%</text>
+<rect x="612" y="286" width="62" height="28" fill="rgb(237,216,231)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="305" font-size="11" text-anchor="middle" fill="#111">23.5%</text>
+<rect x="674" y="286" width="62" height="28" fill="rgb(233,209,224)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="305" font-size="11" text-anchor="middle" fill="#111">29.9%</text>
+<rect x="736" y="286" width="62" height="28" fill="rgb(167,95,110)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="305" font-size="11" text-anchor="middle" fill="#fff">98.9</text>
+<rect x="798" y="286" width="62" height="28" fill="rgb(209,168,183)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="305" font-size="11" text-anchor="middle" fill="#111">67.0%</text>
+<rect x="860" y="286" width="62" height="28" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="305" font-size="11" text-anchor="middle" fill="#111">53.6%</text>
+<rect x="922" y="286" width="62" height="28" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="305" font-size="11" text-anchor="middle" fill="#111">39.1%</text>
+<rect x="984" y="286" width="62" height="28" fill="rgb(199,149,164)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="305" font-size="11" text-anchor="middle" fill="#111">1.78</text>
+<rect x="1046" y="286" width="62" height="28" fill="rgb(234,210,225)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="305" font-size="11" text-anchor="middle" fill="#111">53.6%</text>
+<rect x="1108" y="286" width="62" height="28" fill="rgb(223,192,207)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="305" font-size="11" text-anchor="middle" fill="#111">61.5%</text>
+<text x="232" y="332" font-size="11" text-anchor="end" fill="#111">slayer1b-1.08</text>
+<rect x="240" y="314" width="62" height="28" fill="rgb(226,198,213)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="333" font-size="11" text-anchor="middle" fill="#111">30.0%</text>
+<rect x="302" y="314" width="62" height="28" fill="rgb(212,173,188)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="333" font-size="11" text-anchor="middle" fill="#111">58.4%</text>
+<rect x="364" y="314" width="62" height="28" fill="rgb(188,130,145)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="333" font-size="11" text-anchor="middle" fill="#111">80.5%</text>
+<rect x="426" y="314" width="62" height="28" fill="rgb(211,171,186)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="333" font-size="11" text-anchor="middle" fill="#111">59.9%</text>
+<rect x="488" y="314" width="62" height="28" fill="rgb(221,188,203)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="333" font-size="11" text-anchor="middle" fill="#111">43.4%</text>
+<rect x="550" y="314" width="62" height="28" fill="rgb(214,176,191)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="333" font-size="11" text-anchor="middle" fill="#111">40.1%</text>
+<rect x="612" y="314" width="62" height="28" fill="rgb(239,220,235)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="333" font-size="11" text-anchor="middle" fill="#111">22.8%</text>
+<rect x="674" y="314" width="62" height="28" fill="rgb(229,202,217)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="333" font-size="11" text-anchor="middle" fill="#111">31.2%</text>
+<rect x="736" y="314" width="62" height="28" fill="rgb(168,95,110)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="333" font-size="11" text-anchor="middle" fill="#fff">98.7</text>
+<rect x="798" y="314" width="62" height="28" fill="rgb(212,173,188)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="333" font-size="11" text-anchor="middle" fill="#111">66.2%</text>
+<rect x="860" y="314" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="333" font-size="11" text-anchor="middle" fill="#111">43.4%</text>
+<rect x="922" y="314" width="62" height="28" fill="rgb(224,194,209)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="333" font-size="11" text-anchor="middle" fill="#111">39.7%</text>
+<rect x="984" y="314" width="62" height="28" fill="rgb(198,149,164)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="333" font-size="11" text-anchor="middle" fill="#111">1.78</text>
+<rect x="1046" y="314" width="62" height="28" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="333" font-size="11" text-anchor="middle" fill="#111">53.7%</text>
+<rect x="1108" y="314" width="62" height="28" fill="rgb(223,192,207)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="333" font-size="11" text-anchor="middle" fill="#111">61.5%</text>
+<text x="232" y="360" font-size="11" text-anchor="end" fill="#111">slayer1b-1.05</text>
+<rect x="240" y="342" width="62" height="28" fill="rgb(235,213,228)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="361" font-size="11" text-anchor="middle" fill="#111">26.0%</text>
+<rect x="302" y="342" width="62" height="28" fill="rgb(223,191,206)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="361" font-size="11" text-anchor="middle" fill="#111">53.2%</text>
+<rect x="364" y="342" width="62" height="28" fill="rgb(199,150,165)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="361" font-size="11" text-anchor="middle" fill="#111">79.2%</text>
+<rect x="426" y="342" width="62" height="28" fill="rgb(218,183,198)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="361" font-size="11" text-anchor="middle" fill="#111">58.4%</text>
+<rect x="488" y="342" width="62" height="28" fill="rgb(229,203,218)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="361" font-size="11" text-anchor="middle" fill="#111">38.2%</text>
+<rect x="550" y="342" width="62" height="28" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="361" font-size="11" text-anchor="middle" fill="#111">36.3%</text>
+<rect x="612" y="342" width="62" height="28" fill="rgb(242,226,241)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="361" font-size="11" text-anchor="middle" fill="#111">21.6%</text>
+<rect x="674" y="342" width="62" height="28" fill="rgb(228,201,216)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="361" font-size="11" text-anchor="middle" fill="#111">31.5%</text>
+<rect x="736" y="342" width="62" height="28" fill="rgb(168,95,110)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="361" font-size="11" text-anchor="middle" fill="#fff">98.7</text>
+<rect x="798" y="342" width="62" height="28" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="361" font-size="11" text-anchor="middle" fill="#111">63.8%</text>
+<rect x="860" y="342" width="62" height="28" fill="rgb(227,198,213)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="361" font-size="11" text-anchor="middle" fill="#111">50.0%</text>
+<rect x="922" y="342" width="62" height="28" fill="rgb(227,200,215)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="361" font-size="11" text-anchor="middle" fill="#111">39.0%</text>
+<rect x="984" y="342" width="62" height="28" fill="rgb(210,169,184)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="361" font-size="11" text-anchor="middle" fill="#111">1.85</text>
+<rect x="1046" y="342" width="62" height="28" fill="rgb(238,219,234)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="361" font-size="11" text-anchor="middle" fill="#111">52.2%</text>
+<rect x="1108" y="342" width="62" height="28" fill="rgb(231,206,221)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="361" font-size="11" text-anchor="middle" fill="#111">58.6%</text>
+<text x="232" y="388" font-size="11" text-anchor="end" fill="#111">slayer1b-1.06</text>
+<rect x="240" y="370" width="62" height="28" fill="rgb(236,214,229)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="389" font-size="11" text-anchor="middle" fill="#111">25.8%</text>
+<rect x="302" y="370" width="62" height="28" fill="rgb(224,193,208)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="389" font-size="11" text-anchor="middle" fill="#111">52.6%</text>
+<rect x="364" y="370" width="62" height="28" fill="rgb(198,149,164)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="389" font-size="11" text-anchor="middle" fill="#111">79.2%</text>
+<rect x="426" y="370" width="62" height="28" fill="rgb(215,178,193)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="389" font-size="11" text-anchor="middle" fill="#111">59.0%</text>
+<rect x="488" y="370" width="62" height="28" fill="rgb(227,200,215)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="389" font-size="11" text-anchor="middle" fill="#111">39.3%</text>
+<rect x="550" y="370" width="62" height="28" fill="rgb(220,186,201)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="389" font-size="11" text-anchor="middle" fill="#111">36.4%</text>
+<rect x="612" y="370" width="62" height="28" fill="rgb(242,224,239)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="389" font-size="11" text-anchor="middle" fill="#111">21.9%</text>
+<rect x="674" y="370" width="62" height="28" fill="rgb(228,200,215)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="389" font-size="11" text-anchor="middle" fill="#111">31.6%</text>
+<rect x="736" y="370" width="62" height="28" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="389" font-size="11" text-anchor="middle" fill="#fff">98.6</text>
+<rect x="798" y="370" width="62" height="28" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="389" font-size="11" text-anchor="middle" fill="#111">64.1%</text>
+<rect x="860" y="370" width="62" height="28" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="389" font-size="11" text-anchor="middle" fill="#111">47.6%</text>
+<rect x="922" y="370" width="62" height="28" fill="rgb(228,201,216)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="389" font-size="11" text-anchor="middle" fill="#111">38.9%</text>
+<rect x="984" y="370" width="62" height="28" fill="rgb(209,167,182)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="389" font-size="11" text-anchor="middle" fill="#111">1.85</text>
+<rect x="1046" y="370" width="62" height="28" fill="rgb(239,219,234)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="389" font-size="11" text-anchor="middle" fill="#111">52.2%</text>
+<rect x="1108" y="370" width="62" height="28" fill="rgb(230,204,219)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="389" font-size="11" text-anchor="middle" fill="#111">59.0%</text>
+<text x="232" y="416" font-size="11" text-anchor="end" fill="#111">slayer1b-1.04</text>
+<rect x="240" y="398" width="62" height="28" fill="rgb(236,215,230)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="417" font-size="11" text-anchor="middle" fill="#111">25.5%</text>
+<rect x="302" y="398" width="62" height="28" fill="rgb(226,197,212)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="417" font-size="11" text-anchor="middle" fill="#111">51.5%</text>
+<rect x="364" y="398" width="62" height="28" fill="rgb(217,181,196)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="417" font-size="11" text-anchor="middle" fill="#111">77.1%</text>
+<rect x="426" y="398" width="62" height="28" fill="rgb(223,192,207)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="417" font-size="11" text-anchor="middle" fill="#111">57.4%</text>
+<rect x="488" y="398" width="62" height="28" fill="rgb(232,207,222)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="417" font-size="11" text-anchor="middle" fill="#111">36.7%</text>
+<rect x="550" y="398" width="62" height="28" fill="rgb(221,189,204)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="417" font-size="11" text-anchor="middle" fill="#111">35.3%</text>
+<rect x="612" y="398" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="417" font-size="11" text-anchor="middle" fill="#111">20.9%</text>
+<rect x="674" y="398" width="62" height="28" fill="rgb(229,203,218)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="417" font-size="11" text-anchor="middle" fill="#111">31.1%</text>
+<rect x="736" y="398" width="62" height="28" fill="rgb(166,92,107)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="417" font-size="11" text-anchor="middle" fill="#fff">99.2</text>
+<rect x="798" y="398" width="62" height="28" fill="rgb(226,197,212)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="417" font-size="11" text-anchor="middle" fill="#111">62.6%</text>
+<rect x="860" y="398" width="62" height="28" fill="rgb(219,185,200)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="417" font-size="11" text-anchor="middle" fill="#111">52.8%</text>
+<rect x="922" y="398" width="62" height="28" fill="rgb(233,209,224)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="417" font-size="11" text-anchor="middle" fill="#111">38.0%</text>
+<rect x="984" y="398" width="62" height="28" fill="rgb(213,174,189)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="417" font-size="11" text-anchor="middle" fill="#111">1.87</text>
+<rect x="1046" y="398" width="62" height="28" fill="rgb(242,226,241)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="417" font-size="11" text-anchor="middle" fill="#111">51.1%</text>
+<rect x="1108" y="398" width="62" height="28" fill="rgb(238,219,234)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="417" font-size="11" text-anchor="middle" fill="#111">56.0%</text>
+<text x="232" y="444" font-size="11" text-anchor="end" fill="#111">slayer1b-1.03</text>
+<rect x="240" y="426" width="62" height="28" fill="rgb(236,215,230)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="445" font-size="11" text-anchor="middle" fill="#111">25.6%</text>
+<rect x="302" y="426" width="62" height="28" fill="rgb(230,205,220)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="445" font-size="11" text-anchor="middle" fill="#111">49.5%</text>
+<rect x="364" y="426" width="62" height="28" fill="rgb(214,175,190)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="445" font-size="11" text-anchor="middle" fill="#111">77.4%</text>
+<rect x="426" y="426" width="62" height="28" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="445" font-size="11" text-anchor="middle" fill="#111">56.6%</text>
+<rect x="488" y="426" width="62" height="28" fill="rgb(234,211,226)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="445" font-size="11" text-anchor="middle" fill="#111">35.1%</text>
+<rect x="550" y="426" width="62" height="28" fill="rgb(225,195,210)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="445" font-size="11" text-anchor="middle" fill="#111">33.1%</text>
+<rect x="612" y="426" width="62" height="28" fill="rgb(243,226,241)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="445" font-size="11" text-anchor="middle" fill="#111">21.5%</text>
+<rect x="674" y="426" width="62" height="28" fill="rgb(227,198,213)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="445" font-size="11" text-anchor="middle" fill="#111">32.1%</text>
+<rect x="736" y="426" width="62" height="28" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="445" font-size="11" text-anchor="middle" fill="#fff">98.6</text>
+<rect x="798" y="426" width="62" height="28" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="445" font-size="11" text-anchor="middle" fill="#111">62.2%</text>
+<rect x="860" y="426" width="62" height="28" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="445" font-size="11" text-anchor="middle" fill="#111">52.4%</text>
+<rect x="922" y="426" width="62" height="28" fill="rgb(236,215,230)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="445" font-size="11" text-anchor="middle" fill="#111">37.4%</text>
+<rect x="984" y="426" width="62" height="28" fill="rgb(217,182,197)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="445" font-size="11" text-anchor="middle" fill="#111">1.9</text>
+<rect x="1046" y="426" width="62" height="28" fill="rgb(234,211,226)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="445" font-size="11" text-anchor="middle" fill="#111">53.5%</text>
+<rect x="1108" y="426" width="62" height="28" fill="rgb(238,219,234)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="445" font-size="11" text-anchor="middle" fill="#111">56.0%</text>
+<text x="232" y="472" font-size="11" text-anchor="end" fill="#111">slayer1b-1.02</text>
+<rect x="240" y="454" width="62" height="28" fill="rgb(238,218,233)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="473" font-size="11" text-anchor="middle" fill="#111">24.7%</text>
+<rect x="302" y="454" width="62" height="28" fill="rgb(232,208,223)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="473" font-size="11" text-anchor="middle" fill="#111">48.4%</text>
+<rect x="364" y="454" width="62" height="28" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="473" font-size="11" text-anchor="middle" fill="#111">76.7%</text>
+<rect x="426" y="454" width="62" height="28" fill="rgb(229,202,217)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="473" font-size="11" text-anchor="middle" fill="#111">56.2%</text>
+<rect x="488" y="454" width="62" height="28" fill="rgb(236,214,229)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="473" font-size="11" text-anchor="middle" fill="#111">34.0%</text>
+<rect x="550" y="454" width="62" height="28" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="473" font-size="11" text-anchor="middle" fill="#111">31.9%</text>
+<rect x="612" y="454" width="62" height="28" fill="rgb(242,225,240)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="473" font-size="11" text-anchor="middle" fill="#111">21.7%</text>
+<rect x="674" y="454" width="62" height="28" fill="rgb(227,200,215)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="473" font-size="11" text-anchor="middle" fill="#111">31.7%</text>
+<rect x="736" y="454" width="62" height="28" fill="rgb(168,96,111)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="473" font-size="11" text-anchor="middle" fill="#fff">98.7</text>
+<rect x="798" y="454" width="62" height="28" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="473" font-size="11" text-anchor="middle" fill="#111">60.6%</text>
+<rect x="860" y="454" width="62" height="28" fill="rgb(216,180,195)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="473" font-size="11" text-anchor="middle" fill="#111">53.8%</text>
+<rect x="922" y="454" width="62" height="28" fill="rgb(239,219,234)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="473" font-size="11" text-anchor="middle" fill="#111">36.9%</text>
+<rect x="984" y="454" width="62" height="28" fill="rgb(220,187,202)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="473" font-size="11" text-anchor="middle" fill="#111">1.92</text>
+<rect x="1046" y="454" width="62" height="28" fill="rgb(243,226,241)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="473" font-size="11" text-anchor="middle" fill="#111">51.1%</text>
+<rect x="1108" y="454" width="62" height="28" fill="rgb(235,213,228)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="473" font-size="11" text-anchor="middle" fill="#111">57.1%</text>
+<text x="232" y="500" font-size="11" text-anchor="end" fill="#111">slayer1b-1.01</text>
+<rect x="240" y="482" width="62" height="28" fill="rgb(239,220,235)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="501" font-size="11" text-anchor="middle" fill="#111">24.1%</text>
+<rect x="302" y="482" width="62" height="28" fill="rgb(235,212,227)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="501" font-size="11" text-anchor="middle" fill="#111">47.3%</text>
+<rect x="364" y="482" width="62" height="28" fill="rgb(224,194,209)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="501" font-size="11" text-anchor="middle" fill="#111">76.2%</text>
+<rect x="426" y="482" width="62" height="28" fill="rgb(233,209,224)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="501" font-size="11" text-anchor="middle" fill="#111">55.4%</text>
+<rect x="488" y="482" width="62" height="28" fill="rgb(241,223,238)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="501" font-size="11" text-anchor="middle" fill="#111">30.8%</text>
+<rect x="550" y="482" width="62" height="28" fill="rgb(233,210,225)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="501" font-size="11" text-anchor="middle" fill="#111">27.8%</text>
+<rect x="612" y="482" width="62" height="28" fill="rgb(242,226,241)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="501" font-size="11" text-anchor="middle" fill="#111">21.6%</text>
+<rect x="674" y="482" width="62" height="28" fill="rgb(229,202,217)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="501" font-size="11" text-anchor="middle" fill="#111">31.3%</text>
+<rect x="736" y="482" width="62" height="28" fill="rgb(169,97,112)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="501" font-size="11" text-anchor="middle" fill="#fff">98.5</text>
+<rect x="798" y="482" width="62" height="28" fill="rgb(240,222,237)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="501" font-size="11" text-anchor="middle" fill="#111">58.8%</text>
+<rect x="860" y="482" width="62" height="28" fill="rgb(215,177,192)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="501" font-size="11" text-anchor="middle" fill="#111">54.4%</text>
+<rect x="922" y="482" width="62" height="28" fill="rgb(244,229,244)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="501" font-size="11" text-anchor="middle" fill="#111">35.8%</text>
+<rect x="984" y="482" width="62" height="28" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="501" font-size="11" text-anchor="middle" fill="#111">1.96</text>
+<rect x="1046" y="482" width="62" height="28" fill="rgb(239,220,235)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="501" font-size="11" text-anchor="middle" fill="#111">52.0%</text>
+<rect x="1108" y="482" width="62" height="28" fill="rgb(240,222,237)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="501" font-size="11" text-anchor="middle" fill="#111">55.3%</text>
+<text x="232" y="528" font-size="11" text-anchor="end" fill="#111">slayer1b-1.00</text>
+<rect x="240" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="271.0" y="529" font-size="11" text-anchor="middle" fill="#111">21.8%</text>
+<rect x="302" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="333.0" y="529" font-size="11" text-anchor="middle" fill="#111">42.4%</text>
+<rect x="364" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="395.0" y="529" font-size="11" text-anchor="middle" fill="#111">73.8%</text>
+<rect x="426" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="529" font-size="11" text-anchor="middle" fill="#111">53.0%</text>
+<rect x="488" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="519.0" y="529" font-size="11" text-anchor="middle" fill="#111">28.5%</text>
+<rect x="550" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="581.0" y="529" font-size="11" text-anchor="middle" fill="#111">20.7%</text>
+<rect x="612" y="510" width="62" height="28" fill="rgb(244,229,244)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="643.0" y="529" font-size="11" text-anchor="middle" fill="#111">21.0%</text>
+<rect x="674" y="510" width="62" height="28" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="705.0" y="529" font-size="11" text-anchor="middle" fill="#111">31.8%</text>
+<rect x="736" y="510" width="62" height="28" fill="rgb(171,101,116)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="767.0" y="529" font-size="11" text-anchor="middle" fill="#fff">98</text>
+<rect x="798" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="829.0" y="529" font-size="11" text-anchor="middle" fill="#111">57.6%</text>
+<rect x="860" y="510" width="62" height="28" fill="rgb(227,199,214)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="891.0" y="529" font-size="11" text-anchor="middle" fill="#111">49.8%</text>
+<rect x="922" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="953.0" y="529" font-size="11" text-anchor="middle" fill="#111">35.8%</text>
+<rect x="984" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1015.0" y="529" font-size="11" text-anchor="middle" fill="#111">2.07</text>
+<rect x="1046" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1077.0" y="529" font-size="11" text-anchor="middle" fill="#111">50.5%</text>
+<rect x="1108" y="510" width="62" height="28" fill="rgb(245,230,245)" stroke="#ffffff" stroke-width="0.5"/>
+<text x="1139.0" y="529" font-size="11" text-anchor="middle" fill="#111">53.8%</text>
+<text x="232" y="556" font-size="11" text-anchor="end" fill="#111">bielik-11b-v3-instruct</text>
+<rect x="240" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="271.0" y="557" font-size="11" text-anchor="middle" fill="#fff">58.1%</text>
+<rect x="302" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="333.0" y="557" font-size="11" text-anchor="middle" fill="#fff">81.9%</text>
+<rect x="364" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="395.0" y="557" font-size="11" text-anchor="middle" fill="#fff">83.2%</text>
+<rect x="426" y="538" width="62" height="28" fill="#f3f3f3" stroke="#ffffff" stroke-width="0.5"/>
+<text x="457.0" y="557" font-size="11" text-anchor="middle" fill="#777">—</text>
+<rect x="488" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="519.0" y="557" font-size="11" text-anchor="middle" fill="#fff">79.4%</text>
+<rect x="550" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="581.0" y="557" font-size="11" text-anchor="middle" fill="#fff">71.4%</text>
+<rect x="612" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="643.0" y="557" font-size="11" text-anchor="middle" fill="#fff">48.5%</text>
+<rect x="674" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="705.0" y="557" font-size="11" text-anchor="middle" fill="#fff">53.6%</text>
+<rect x="736" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="767.0" y="557" font-size="11" text-anchor="middle" fill="#fff">99.6</text>
+<rect x="798" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="829.0" y="557" font-size="11" text-anchor="middle" fill="#fff">78.9%</text>
+<rect x="860" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="891.0" y="557" font-size="11" text-anchor="middle" fill="#fff">73.0%</text>
+<rect x="922" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="953.0" y="557" font-size="11" text-anchor="middle" fill="#fff">51.1%</text>
+<rect x="984" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="1015.0" y="557" font-size="11" text-anchor="middle" fill="#fff">1.57</text>
+<rect x="1046" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="1077.0" y="557" font-size="11" text-anchor="middle" fill="#fff">73.0%</text>
+<rect x="1108" y="538" width="62" height="28" fill="rgb(165,90,105)" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="1139.0" y="557" font-size="11" text-anchor="middle" fill="#fff">82.4%</text>
+<rect x="240" y="608" width="30" height="10" fill="rgb(245,230,245)" stroke="#ccc"/>
+<rect x="270" y="608" width="30" height="10" fill="rgb(229,202,217)" stroke="#ccc"/>
+<rect x="300" y="608" width="30" height="10" fill="rgb(213,174,189)" stroke="#ccc"/>
+<rect x="330" y="608" width="30" height="10" fill="rgb(197,146,161)" stroke="#ccc"/>
+<rect x="360" y="608" width="30" height="10" fill="rgb(181,118,133)" stroke="#ccc"/>
+<rect x="390" y="608" width="30" height="10" fill="rgb(165,90,105)" stroke="#ccc"/>
+<text x="240" y="604" font-size="10" fill="#444">gorzej</text>
+<text x="390" y="604" font-size="10" fill="#444">lepiej (w kolumnie)</text>
 </svg>
