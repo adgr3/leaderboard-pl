@@ -1,3 +1,4 @@
+import sys
 import json
 import subprocess
 from pathlib import Path
@@ -75,9 +76,9 @@ def test_import_twice_identical():
     def snapshot():
         return {p.name: p.read_bytes() for p in WYNIKI.glob("*.json")}
     cmds = [
-        ["python", "scripts/importuj_bench.py"],
-        ["python", "scripts/importuj_tokenizatorex.py"],
-        ["python", "scripts/importuj_bielik_ifpl.py"],
+        [sys.executable, "scripts/importuj_bench.py"],
+        [sys.executable, "scripts/importuj_tokenizatorex.py"],
+        [sys.executable, "scripts/importuj_bielik_ifpl.py"],
     ]
     for c in cmds:
         subprocess.run(c, cwd=ROOT, check=True)

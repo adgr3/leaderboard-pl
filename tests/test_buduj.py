@@ -1,3 +1,4 @@
+import sys
 import subprocess
 from pathlib import Path
 
@@ -5,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_buduj_check():
-    r = subprocess.run(["python", "scripts/buduj.py", "--check"], cwd=ROOT, capture_output=True, text=True)
+    r = subprocess.run([sys.executable, "scripts/buduj.py", "--check"], cwd=ROOT, capture_output=True, text=True)
     assert r.returncode == 0, r.stdout + r.stderr
 
 
