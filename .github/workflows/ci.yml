@@ -32,5 +32,7 @@ jobs:
           PY
       - name: Check generated leaderboard files
         run: python scripts/buduj.py --check
+      - name: Check HF export files
+        run: python scripts/eksport_hf.py --check
       - name: Run tests
         run: python -m pytest -q

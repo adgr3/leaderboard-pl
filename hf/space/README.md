@@ -2,10 +2,11 @@
 title: leaderboard-pl
 emoji: 📊
 colorFrom: blue
-colorTo: gray
+colorTo: green
 sdk: static
 pinned: false
+license: mit
+app_file: index.html
 ---
 
-Lokalnie przygotowany lekki Space statyczny. Docelowa nazwa: `adegier/leaderboard-pl`.
-Źródło danych: `wyniki.json` (eksport rekordów `wyniki/*.json`).
+Statyczny podgląd leaderboard-pl. Dane generowane z repo `adgr3/leaderboard-pl`.

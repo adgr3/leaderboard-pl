@@ -25,4 +25,4 @@ def test_no_lost_polish_chars():
 def test_leaderboard_has_markers():
     text = (ROOT / "leaderboard.md").read_text(encoding="utf-8")
     assert "★" in text
-    assert "Przegląd" in text
+    assert "Ranking główny" in text

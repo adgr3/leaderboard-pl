@@ -309,10 +309,16 @@ def svg_header(w,h,title,subtitle=None):
     return lines
 
 
-def write_svg(path, lines):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+WRITE_SVG = True
+SVG_WRITTEN = {}
 
+
+def write_svg(path, lines):
+    content = "\n".join(lines) + "\n"
+    SVG_WRITTEN[str(path.relative_to(ROOT)).replace("\\", "/")] = content
+    if WRITE_SVG:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
 
 def build_bar_svg(path, title, subtitle, items, value_label, lower_better=False):
     # items: [(label, value, se, note, color)]
@@ -884,13 +890,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
+    global WRITE_SVG
+    WRITE_SVG = not args.check
+    SVG_WRITTEN.clear()
     main_md, all_md = build()
     expected = {
         OUT: main_md,
         ALL_REC: all_md,
     }
-    # generated svg files are part of check
-    svg_files = sorted(WYKRESY.glob('*.svg'))
     if args.check:
         for pth, content in expected.items():
             if not pth.exists():
@@ -899,17 +906,30 @@ def main():
             if pth.read_text(encoding='utf-8') != content:
                 print(f"{pth.relative_to(ROOT)} out of date")
                 raise SystemExit(1)
-        required_svgs = [SLAYER_SVG, HEATMAP_SVG, AVG_SVG]
-        for s in required_svgs:
-            if not s.exists():
-                print(f"{s.relative_to(ROOT)} missing")
+        # SVGs must match exactly
+        on_disk = {str(p.relative_to(ROOT)).replace("\\","/"): p.read_text(encoding='utf-8') for p in sorted(WYKRESY.glob('*.svg'))}
+        if set(on_disk.keys()) != set(SVG_WRITTEN.keys()):
+            print("docs/wykresy svg set differs")
+            extra = sorted(set(on_disk)-set(SVG_WRITTEN))
+            missing = sorted(set(SVG_WRITTEN)-set(on_disk))
+            if extra: print(' extra', extra[:10])
+            if missing: print(' missing', missing[:10])
+            raise SystemExit(1)
+        for k in sorted(SVG_WRITTEN):
+            if on_disk[k] != SVG_WRITTEN[k]:
+                print(f"{k} out of date")
                 raise SystemExit(1)
         print("OK: leaderboard files match data")
         return
     OUT.write_text(main_md, encoding='utf-8')
     ALL_REC.write_text(all_md, encoding='utf-8')
+    # remove stale svgs
+    for pth in WYKRESY.glob('*.svg'):
+        rel = str(pth.relative_to(ROOT)).replace("\\","/")
+        if rel not in SVG_WRITTEN:
+            pth.unlink()
     print("written", OUT, ALL_REC)
-    print("svgs", len(list(WYKRESY.glob('*.svg'))))
+    print("svgs", len(SVG_WRITTEN))
 
 
 if __name__ == "__main__":

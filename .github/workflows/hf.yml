@@ -1,0 +1,46 @@
+name: Publish HF
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  publish:
+    if: ${{ secrets.HF_TOKEN != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install huggingface_hub pyyaml pyarrow pandas
+      - name: Generate exports
+        run: |
+          python scripts/buduj.py --check
+          python scripts/eksport_hf.py --check
+      - name: Upload dataset
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          api.upload_folder(folder_path="hf/dataset", repo_id="adegier/leaderboard-pl-results", repo_type="dataset", commit_message="Update dataset from leaderboard-pl")
+          print("dataset uploaded")
+          PY
+      - name: Upload space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          api.upload_folder(folder_path="hf/space", repo_id="adegier/leaderboard-pl", repo_type="space", commit_message="Update space from leaderboard-pl")
+          print("space uploaded")
+          PY
