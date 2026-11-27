@@ -2,8 +2,8 @@
 
 Pełna lista rekordów z `wyniki/*.json`.
 
-Data: 2026-11-27  
-SHA-256: `2d70c6627cf147a25cf1c42b5cc9283aa73f0efa7ed3322b62572d5764fa73b0`  
+Najnowszy rekord: 2026-11-26  
+SHA-256: `5009d2058ea6d4d0a922a272a78cff0e8d467ee42a213b842e5796f47fb039a6`  
 
 | measured_by | model | benchmark | metric | score | n | status | source | deviations |
 |---|---|---|---|---|---|---|---|---|
