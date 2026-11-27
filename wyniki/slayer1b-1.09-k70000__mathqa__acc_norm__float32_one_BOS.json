@@ -1,0 +1,58 @@
+{
+  "benchmark": "mathqa",
+  "benchmark_version": "T19",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.20569514237855946,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.23518425460636502
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "6b8fb528fccf7dd0e0fdd3b06465b4af95507ec8",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "slayer1b-1.09-k70000",
+  "model_revision": "adfaf3fd5402bc7f3adbfe077798f20262979433",
+  "n": 2985,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.2204355108877722,
+  "settings": {
+    "category": "Reasoning and science",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.09-checkpoints",
+    "review_flag": "ok",
+    "review_notes": [
+      "1.09, step 70 000, training in progress, preliminary result (RTX 4090, slayer-1.09-k70000/PROTOKOL.md)"
+    ],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/mathqa/slayer1b-1.09-k70000/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "b372c6f6b3a6725cf922cf1b620b36b513323f153d72958f6f7888aec45b37cc",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/mathqa/slayer1b-1.09-k70000/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.007588700159871077,
+  "subset": "test split"
+}

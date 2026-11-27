@@ -1,0 +1,51 @@
+{
+  "benchmark": "ewok",
+  "benchmark_version": "T53",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "full-run-2026-11",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "own code (research/benchmarks/ewok/)"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "ewok",
+  "model": "slayer1b-1.08",
+  "model_revision": "5f854a0cc7160594d54d1788d37a44e8ebabe16c",
+  "n": 4374,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.5989940557841792,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "own code (research/benchmarks/ewok/)",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.08",
+    "review_flag": "ok",
+    "review_notes": [
+      "bramka przyjęcia niezaliczona (ARC-Easy); kontynuacja 1.07, punkt startowy 1.09"
+    ],
+    "unit": "score",
+    "variant": "float32, BOS as the card's rule gives it (tokenizer-dependent)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/ewok/slayer1b-1.08/results_rozszerzone.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "bd722e5671fc2b7cff4f1efd082c36fc7ba54898c3c75716453d2eb2ee8a6c86",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/ewok/slayer1b-1.08/results_rozszerzone.json"
+  },
+  "status": "measured",
+  "stderr": 0.007483609277870822,
+  "subset": "full test set"
+}

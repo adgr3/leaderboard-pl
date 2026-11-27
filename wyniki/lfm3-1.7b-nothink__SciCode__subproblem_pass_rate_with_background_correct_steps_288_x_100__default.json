@@ -1,0 +1,79 @@
+{
+  "benchmark": "SciCode",
+  "benchmark_version": "https://huggingface.co/datasets/SciCode1/SciCode @ 4510f6a6aa27c43fad7b43da2c59602a86e88480, test; test_data.h5 sha256 48b0272a88b17dbd29777c217e1b4fb2b019b92e11cc2add847409db9541b890",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/SciCode1/SciCode @ 4510f6a6aa27c43fad7b43da2c59602a86e88480, test; test_data.h5 sha256 48b0272a88b17dbd29777c217e1b4fb2b019b92e11cc2add847409db9541b890",
+  "date": "2026-11-22",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "LFM",
+  "harness": "https://github.com/scicode-bench/SciCode @ e3158ea011d4235245a547460d3688d7ccbf9900",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "subproblem pass rate, with background (correct steps / 288 x 100, test_generated_code.py)",
+  "model": "lfm3-1.7b-nothink",
+  "model_revision": null,
+  "n": 288,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 24.65,
+  "settings": {
+    "blas_threads": 1,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "context": 262144,
+    "effective": {
+      "frequency_penalty": 0,
+      "n": 1,
+      "presence_penalty": 0,
+      "repetition_penalty": 1.0,
+      "seed": 20261122,
+      "temperature": 0.6,
+      "top_k": 0,
+      "top_p": 0.95
+    },
+    "max_tokens": "context minus prompt tokens",
+    "prompt": "SciCode Gencode (eval/scripts/gencode.py), one user message per subproblem, no system message",
+    "request_sampling": {
+      "frequency_penalty": 0,
+      "n": 1,
+      "presence_penalty": 0,
+      "repetition_penalty": 1.0,
+      "seed": 20261122,
+      "temperature": 0.6,
+      "top_k": 0,
+      "top_p": 0.95
+    },
+    "scored_text": "extract_python_script of the text after the last </think> (empty when unfinished with thinking on)",
+    "scorer_timeout_s": 1800,
+    "seed": 20261122,
+    "server_defaults": {},
+    "server_defaults_source": "vLLM generation_config=auto: LiquidAI/LFM3-1.7B@1da06bec6a819da10b54c67e5c90972b46d81871 generation_config.json",
+    "settings_run": [
+      "with_background",
+      "without_background"
+    ],
+    "temperature": 0.6,
+    "thinking": false,
+    "top_p": 0.95,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/scicode/results/lfm3-1.7b-nothink.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "b39933e3d8b68988bfeb947eac6cadb6bffa7b26e335a1f03d6a36be76037e11",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/scicode/results/lfm3-1.7b-nothink.json"
+  },
+  "status": "measured",
+  "stderr": 2.54,
+  "subset": null
+}

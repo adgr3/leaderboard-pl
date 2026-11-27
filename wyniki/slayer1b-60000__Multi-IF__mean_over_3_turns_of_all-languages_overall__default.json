@@ -1,0 +1,44 @@
+{
+  "benchmark": "Multi-IF",
+  "benchmark_version": "https://huggingface.co/datasets/facebook/Multi-IF @ 0ab97ce0b45c7f57772e8ba2ac1616f4b00bd3aa (multiIF_20241018.csv)",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/facebook/Multi-IF @ 0ab97ce0b45c7f57772e8ba2ac1616f4b00bd3aa (multiIF_20241018.csv)",
+  "date": "2026-11-19",
+  "deviations": [
+    "run stopped after 2 of 3 turns (compute budget); turn 3 ran at about 10 conversations per minute"
+  ],
+  "family": "Slayer",
+  "harness": "https://github.com/facebookresearch/Multi-IF @ 1cdb53ed18499ad729e0766e5d3099dd5344406f; api_client.py @ 1cdb53ed18499ad729e0766e5d3099dd5344406f patched by patch_api_client.py",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "mean over 3 turns of all-languages overall",
+  "model": "slayer1b-60000",
+  "model_revision": null,
+  "n": 0,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "run stopped after 2 of 3 turns (compute budget); turn 3 ran at about 10 conversations per minute",
+  "score": null,
+  "settings": {
+    "chat_template": false,
+    "max_tokens_per_turn": 1280,
+    "max_turns": 3,
+    "temperature": 0,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/multi-if/results/slayer1b-60000.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "bb2deebcf7c176196a29a5e64dbc7b3df2c329bb619d527b76c18f996536d77d",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/multi-if/results/slayer1b-60000.json"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": null
+}

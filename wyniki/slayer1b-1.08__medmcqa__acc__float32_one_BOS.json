@@ -1,0 +1,58 @@
+{
+  "benchmark": "medmcqa",
+  "benchmark_version": "T45",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.2983504661726034,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.3260817595027492
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "slayer1b-1.08",
+  "model_revision": "5f854a0cc7160594d54d1788d37a44e8ebabe16c",
+  "n": 4183,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.3122161128376763,
+  "settings": {
+    "category": "Knowledge (medical)",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.08",
+    "review_flag": "ok",
+    "review_notes": [
+      "bramka przyjęcia niezaliczona (ARC-Easy); kontynuacja 1.07, punkt startowy 1.09"
+    ],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/medmcqa/slayer1b-1.08/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "7ae6df42272e864a648bba377ca4a17ef4a25b5d7bb3327dbd923576f0101b81",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/medmcqa/slayer1b-1.08/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.007165749806034923,
+  "subset": "validation split"
+}

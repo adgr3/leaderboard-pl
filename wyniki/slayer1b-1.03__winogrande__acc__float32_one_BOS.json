@@ -1,0 +1,56 @@
+{
+  "benchmark": "winogrande",
+  "benchmark_version": "T07",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.5095783149095309,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.5602225830772626
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "slayer1b-1.03",
+  "model_revision": "fee113efcad47f48dd0b80aa37952434f00bed43",
+  "n": 1267,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.5351223362273086,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.03",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/winogrande/slayer1b-1.03/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "f333a7bbe31fc7134c910158c51e8e4d3f7cb4a26c08768e4b48a743c9ef4490",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/winogrande/slayer1b-1.03/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.012923415314508345,
+  "subset": "validation split"
+}

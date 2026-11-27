@@ -1,0 +1,56 @@
+{
+  "benchmark": "RULER",
+  "benchmark_version": "RULER synthetic tasks generated with the model's tokenizer, seed 20261122, 50 samples per task and length; source files sha256: PaulGrahamEssays.json 8d31e1b660e0f2180bcca6d238e18f77921df9d158611582b860da1762b6d3dd, english_words.json affcd6d45fdf3cc843d585c99c97ad615094e760e6c4756b654bab6c73bc2eca, hotpotqa.json e3da074df24e8369009918aa5cdbdd254dadcde4c63f7569d36afd6f2268caa8, squad.json 80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "RULER synthetic tasks generated with the model's tokenizer, seed 20261122, 50 samples per task and length; source files sha256: PaulGrahamEssays.json 8d31e1b660e0f2180bcca6d238e18f77921df9d158611582b860da1762b6d3dd, english_words.json affcd6d45fdf3cc843d585c99c97ad615094e760e6c4756b654bab6c73bc2eca, hotpotqa.json e3da074df24e8369009918aa5cdbdd254dadcde4c63f7569d36afd6f2268caa8, squad.json 80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "date": "2026-11-22",
+  "deviations": [
+    "the 4096-token context window does not hold a 131072-token RULER sample"
+  ],
+  "family": "Slayer",
+  "harness": "https://github.com/NVIDIA/RULER @ db43f92ff634bbce1c33d1fb15858aec4bba509a (data: scripts/data/prepare.py, scoring: scripts/eval/evaluate.py)",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "mean of the 13 RULER task scores at 131072 tokens (percent)",
+  "model": "slayer1b-1.09-k70000",
+  "model_revision": null,
+  "n": null,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "the 4096-token context window does not hold a 131072-token RULER sample",
+  "score": null,
+  "settings": {
+    "context_window": 4096,
+    "max_tokens": "RULER per-task answer budget",
+    "prompt": "RULER raw prompt (base template), BOS",
+    "sampling": {
+      "effective": {
+        "decoding": "greedy (research/common/slayer_lm.py SlayerLM.generate, argmax)",
+        "max_tokens": "RULER per-task answer budget"
+      },
+      "recorded": "by summarize.py from the pinned revision, not at generation (no generation.jsonl)",
+      "sent": {
+        "max_tokens": "RULER per-task answer budget"
+      }
+    },
+    "seed": 20261122,
+    "serving": "research/common/slayer_lm.py, bfloat16",
+    "temperature": 0.0,
+    "weights": "SlayerLab/Slayer1B-1.09-checkpoints @ adfaf3fd5402bc7f3adbfe077798f20262979433 wagi_70000.pt (sha256 9ed73494fc139422f5314f72b4f970242454a7ab9d8caceee6b52fe5bdfc40c0), converted with research/tools/konwertuj.py against SlayerLab/Slayer1B-1.08 @ 5f854a0cc7160594d54d1788d37a44e8ebabe16c to model.safetensors sha256 b9e31fc953af44638fd64ca163dd8d5658cfe02928445fa9a412f11a618bb24e"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/ruler-128k/results/slayer1b-1.09-k70000.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "71e914aaac692daf8a26b1d8eb1be1f2d31713ac393baec08e37906c0a9b86e0",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/ruler-128k/results/slayer1b-1.09-k70000.json"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": null
+}

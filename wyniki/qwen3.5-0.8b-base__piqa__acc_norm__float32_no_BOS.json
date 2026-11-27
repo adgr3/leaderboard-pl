@@ -1,0 +1,56 @@
+{
+  "benchmark": "piqa",
+  "benchmark_version": "T06",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.6926006528835691,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.733949945593036
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Qwen",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.13"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "qwen3.5-0.8b-base",
+  "model_revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+  "n": 1838,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.7132752992383025,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.13",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "Qwen/Qwen3.5-0.8B-Base",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/piqa/qwen3.5-0.8b-base/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "856dddcf2aa5e851373062dc45d1487773e8fc44291650c002a449b5a2c69011",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/piqa/qwen3.5-0.8b-base/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.01055131450310821,
+  "subset": "validation split"
+}

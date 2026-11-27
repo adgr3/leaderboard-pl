@@ -1,0 +1,62 @@
+{
+  "benchmark": "LiveCodeBench v6 (code generation, release_v6)",
+  "benchmark_version": "https://huggingface.co/datasets/livecodebench/code_generation_lite @ 0fe84c3912ea0c4d4a78037083943e8f0c4dd505, release_v6",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/livecodebench/code_generation_lite @ 0fe84c3912ea0c4d4a78037083943e8f0c4dd505, release_v6",
+  "date": "2026-11-22",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "LFM",
+  "harness": "https://github.com/LiveCodeBench/LiveCodeBench @ 28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "pass@1",
+  "model": "lfm3-1.7b",
+  "model_revision": null,
+  "n": 1055,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 72.04,
+  "settings": {
+    "context": 262144,
+    "eval_processes": 12,
+    "eval_timeout_s": 6,
+    "max_tokens": "context minus prompt tokens",
+    "prompt_style": "OpenAIChat",
+    "request_sampling": {
+      "frequency_penalty": 0,
+      "n": 1,
+      "presence_penalty": 0,
+      "seed": 20261122,
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "scored_text": "after the last </think>",
+    "seed": 20261122,
+    "server_defaults": {
+      "repetition_penalty": 1.1,
+      "top_k": 50
+    },
+    "server_defaults_source": "vLLM generation_config=auto: LiquidAI/LFM3-1.7B@1da06bec6a819da10b54c67e5c90972b46d81871 generation_config.json (effective values, recorded after the run from that file; PROTOCOL.md, Amendment 3)",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/livecodebench-v6/results/lfm3-1.7b.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "567b0fadf7a4ea536bd1cc543e2ab199343384e623b6ff6a9e19c48e448660ac",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/livecodebench-v6/results/lfm3-1.7b.json"
+  },
+  "status": "measured",
+  "stderr": 1.38,
+  "subset": null
+}

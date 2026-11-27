@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest jsonschema
+      - name: Validate wynik JSON files against schema
+        run: |
+          python - <<'PY'
+          import json, glob
+          from pathlib import Path
+          import jsonschema
+          schema = json.loads(Path('schema/wynik.schema.json').read_text(encoding='utf-8'))
+          files = sorted(glob.glob('wyniki/*.json'))
+          assert files, 'no wynik files'
+          for f in files:
+              data = json.loads(Path(f).read_text(encoding='utf-8'))
+              jsonschema.validate(data, schema)
+          print(f'validated {len(files)} files')
+          PY
+      - name: Check generated leaderboard files
+        run: python scripts/buduj.py --check
+      - name: Run tests
+        run: python -m pytest -q

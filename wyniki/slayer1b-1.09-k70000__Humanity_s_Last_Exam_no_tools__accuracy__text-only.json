@@ -1,0 +1,38 @@
+{
+  "benchmark": "Humanity's Last Exam (no tools)",
+  "benchmark_version": "cais/hle test @ 5a81a4c7271a2a2a312b9a690f0c2fde837e4c29, text-only subset (2158/2500)",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": false,
+    "reason": "not run"
+  },
+  "data_revision": "cais/hle test @ 5a81a4c7271a2a2a312b9a690f0c2fde837e4c29, text-only subset (2158/2500)",
+  "date": "2026-11-23",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": "centerforaisafety/hle @ 22ed3074b1e7b134bcbc09028d0ba320839b0655 (adapted: predict_api.py/judge_batches.py, Anthropic Message Batches)",
+  "judge": null,
+  "measured_by": "adgr3",
+  "metric": "accuracy",
+  "model": "slayer1b-1.09-k70000",
+  "model_revision": "adfaf3fd5402bc7f3adbfe077798f20262979433",
+  "n": null,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "not run — maintainer decision (Slayer not run in PR #358)",
+  "score": null,
+  "settings": {
+    "note": "Slayer not run — maintainer decision / no GPU"
+  },
+  "source": {
+    "commit": "89f4667ecedf0cfdd8741162435484d552b72afb",
+    "path": "research/api-benchmarks/hle/results/bielik-11b-v3.1.json",
+    "pr_status": "open (#358)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "929bbce1e18ce9660a43ca5a6ddbafa08e4ca2e1316a482624de69a11a4345bc",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/pull/358"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": "text-only"
+}

@@ -1,0 +1,81 @@
+{
+  "benchmark": "LiveCodeBench Pro 25Q2 (quater_2025_4_6)",
+  "benchmark_version": "https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro @ adebffce047dddb7768a86bace6aea4f7425e3bc, split quater_2025_4_6; tests https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro-Testcase @ 5257736c0a4e30ba0949d41c56a257c323d9c600",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro @ adebffce047dddb7768a86bace6aea4f7425e3bc, split quater_2025_4_6; tests https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro-Testcase @ 5257736c0a4e30ba0949d41c56a257c323d9c600",
+  "date": "2026-11-24",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "Slayer",
+  "harness": "https://github.com/GavinZhengOI/LiveCodeBench-Pro @ d614eef4f95b3654bf0758c64e1194b2575850b8 (LightCPVerifier @ 021d121c882e70856b66113142495e31b9fe1d80)",
+  "judge": {
+    "go_judge_version": "v1.9.6",
+    "image": "lightcpverifier",
+    "image_created": "2026-11-24T18:21:30.531806671Z",
+    "image_id": "sha256:915d76e2ecc40759a3af865f8df656c3b40d01d1c7e3504f497d5694efeb5cf0",
+    "image_repo_digests": [],
+    "workers": 8
+  },
+  "measured_by": "bench-team",
+  "metric": "pass@1 (accepted / all problems, percent)",
+  "model": "slayer1b-1.09-k70000",
+  "model_revision": null,
+  "n": 167,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.0,
+  "settings": {
+    "context": 4096,
+    "dtype": "bfloat16",
+    "judge": {
+      "go_judge_version": "v1.9.6",
+      "image": "lightcpverifier",
+      "image_created": "2026-11-24T18:21:30.531806671Z",
+      "image_id": "sha256:915d76e2ecc40759a3af865f8df656c3b40d01d1c7e3504f497d5694efeb5cf0",
+      "image_repo_digests": [],
+      "workers": 8
+    },
+    "judge_machine": {
+      "cpu": "AMD EPYC 7B13 64-Core Processor",
+      "cpu_count": 30,
+      "platform": "Linux-6.8.0-59-generic-x86_64-with-glibc2.35"
+    },
+    "judge_workers": 8,
+    "max_tokens": "context minus prompt tokens",
+    "prompt": "api_interface.LLMInterface().prompt + problem_statement, the only user message",
+    "request_sampling": {
+      "greedy": true,
+      "seed": null,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "scored_text": "after the last </think>, code by util.extract_longest_cpp_code",
+    "seed": 20261122,
+    "server_defaults": "none (local Slayer greedy generation)",
+    "slayer_batch_size": 8,
+    "slayer_loader": "research/common/slayer_lm.py (slayer_model.Slayer)",
+    "slayer_pretrained": "/root/slayer1b-1.09-k70000",
+    "temperature": 0.6,
+    "thinking": false,
+    "top_p": 0.95,
+    "trials": 1,
+    "unfinished": "thinking on: no </think> or finish_reason other than stop; counted as not accepted"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/livecodebench-pro-25q2/results/slayer1b-1.09-k70000.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "27612fbdda99ca405688e6c85e415d1c24f4445cab7842502d1795e23c98ce06",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/livecodebench-pro-25q2/results/slayer1b-1.09-k70000.json"
+  },
+  "status": "measured",
+  "stderr": 0.0,
+  "subset": null
+}

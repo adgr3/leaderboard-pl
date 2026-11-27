@@ -1,0 +1,56 @@
+{
+  "benchmark": "pubmedqa",
+  "benchmark_version": "T44",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.55,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.636
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "LFM",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.13"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "lfm3-1.7b-base",
+  "model_revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+  "n": 500,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.594,
+  "settings": {
+    "category": "Knowledge (medical)",
+    "harness": "lm-eval 0.4.13",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "LiquidAI/LFM3-1.7B-Base",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/pubmedqa/lfm3-1.7b-base/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "3c110307f06c2e16c415576d68587d465e4a990bc040af2d6fed13947b7482d8",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/pubmedqa/lfm3-1.7b-base/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.021983962090086417,
+  "subset": "test split"
+}

@@ -1,0 +1,49 @@
+{
+  "benchmark": "ewok",
+  "benchmark_version": "T53",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "full-run-2026-11",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "own code (research/benchmarks/ewok/)"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "ewok",
+  "model": "slayer1b-1.05",
+  "model_revision": "21a05bc59932b54ac90da995e3ffb994c427ae16",
+  "n": 4374,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.5841335162322817,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "own code (research/benchmarks/ewok/)",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.05",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, BOS as the card's rule gives it (tokenizer-dependent)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/ewok/slayer1b-1.05/results_rozszerzone.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "1c10599f70397103bc4342f70fcccda16f440432a99665406315ac40ba5eeed3",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/ewok/slayer1b-1.05/results_rozszerzone.json"
+  },
+  "status": "measured",
+  "stderr": 0.007204525106929162,
+  "subset": "full test set"
+}

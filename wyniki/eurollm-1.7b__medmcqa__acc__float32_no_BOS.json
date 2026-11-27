@@ -1,0 +1,56 @@
+{
+  "benchmark": "medmcqa",
+  "benchmark_version": "T45",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.24503944537413339,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.2713363614630648
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "EuroLLM",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "eurollm-1.7b",
+  "model_revision": "c730cd9b616799ace3c65e927d63191446f59374",
+  "n": 4183,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.2581879034185991,
+  "settings": {
+    "category": "Knowledge (medical)",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "utter-project/EuroLLM-1.7B",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/medmcqa/eurollm-1.7b/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "3ecfaae4eea61fa52d837b90a8b874fa8b4c029cae5f78a3cb6a5e68433fc376",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/medmcqa/eurollm-1.7b/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.006767416200749882,
+  "subset": "validation split"
+}

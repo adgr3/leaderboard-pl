@@ -1,0 +1,46 @@
+{
+  "benchmark": "IFBench (Bielik IF-PL local)",
+  "benchmark_version": "ifbench",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.17333333333333334,
+    "method": "percentile bootstrap of the mean",
+    "upper": 0.26666666666666666
+  },
+  "comparable_to_reference": {
+    "comparable": false,
+    "reason": "different harness from Bench IFEval"
+  },
+  "data_revision": "dane/IFBench_test.jsonl",
+  "date": "2026-11-18",
+  "deviations": [
+    "local Bielik IF-PL protocol; not part of Bench Team harness"
+  ],
+  "family": "Bielik",
+  "harness": "Bielik IF-PL evaluation",
+  "judge": null,
+  "measured_by": "adgr3",
+  "metric": "prompt_level_loose",
+  "model": "bielik-11b-v3.1",
+  "model_revision": null,
+  "n": 300,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.22,
+  "settings": {
+    "errors": [],
+    "path": "ifbench.instructions_registry.INSTRUCTION_DICT"
+  },
+  "source": {
+    "commit": null,
+    "path": "wyniki/ifbench.json",
+    "pr_status": null,
+    "repo": "local:bielik-if-pl",
+    "sha256": "2d83d5b19c7aa7b7b81996ba36a532fd0323ba3c98e3c17bf8aeb5d69f36c765",
+    "url": "local://bielik-if-pl/wyniki/ifbench.json"
+  },
+  "status": "measured",
+  "stderr": null,
+  "subset": "full test set"
+}

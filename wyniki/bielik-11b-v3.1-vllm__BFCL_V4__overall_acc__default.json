@@ -1,0 +1,67 @@
+{
+  "benchmark": "BFCL V4",
+  "benchmark_version": "bundled with the harness: berkeley-function-call-leaderboard/bfcl_eval/data @ 6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "bundled with the harness: berkeley-function-call-leaderboard/bfcl_eval/data @ 6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+  "date": "2026-11-19",
+  "deviations": [
+    "Overall Acc needs the web_search categories (200 tasks, 40% x 1/2 of the weight), which were not run: they need a search API key. See other_metrics."
+  ],
+  "family": "Bielik",
+  "harness": "https://github.com/ShishirPatil/gorilla @ 6ea57973c7a6097fd7c5915698c54c17c5b1b6c8 (berkeley-function-call-leaderboard)",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "overall_acc",
+  "model": "bielik-11b-v3.1-vllm",
+  "model_revision": null,
+  "n": 4906,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "Overall Acc needs the web_search categories (200 tasks, 40% x 1/2 of the weight), which were not run: they need a search API key. See other_metrics.",
+  "score": null,
+  "settings": {
+    "effective_temperature": 0.01,
+    "max_model_len": 32768,
+    "max_tokens_per_turn": null,
+    "mode": "FC (native function calling through the vLLM tool parser)",
+    "temperature": 0.001,
+    "test_categories": [
+      "simple_python",
+      "simple_java",
+      "simple_javascript",
+      "multiple",
+      "parallel",
+      "parallel_multiple",
+      "irrelevance",
+      "live_simple",
+      "live_multiple",
+      "live_parallel",
+      "live_parallel_multiple",
+      "live_irrelevance",
+      "live_relevance",
+      "multi_turn_base",
+      "multi_turn_miss_func",
+      "multi_turn_miss_param",
+      "multi_turn_long_context",
+      "memory_kv",
+      "memory_vector",
+      "memory_rec_sum"
+    ],
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/bfcl-v4/results/bielik-11b-v3.1-vllm.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "5440ee44c207d2cfc927e45fd539f5b661fd5f1a312615c51a0672c5dc738331",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/bfcl-v4/results/bielik-11b-v3.1-vllm.json"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": null
+}

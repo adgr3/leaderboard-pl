@@ -1,0 +1,45 @@
+{
+  "benchmark": "Multi-IF",
+  "benchmark_version": "https://huggingface.co/datasets/facebook/Multi-IF @ 0ab97ce0b45c7f57772e8ba2ac1616f4b00bd3aa (multiIF_20241018.csv)",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/facebook/Multi-IF @ 0ab97ce0b45c7f57772e8ba2ac1616f4b00bd3aa (multiIF_20241018.csv)",
+  "date": "2026-11-19",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "Bielik",
+  "harness": "https://github.com/facebookresearch/Multi-IF @ 1cdb53ed18499ad729e0766e5d3099dd5344406f; api_client.py @ 1cdb53ed18499ad729e0766e5d3099dd5344406f patched by patch_api_client.py",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "mean over 3 turns of all-languages overall",
+  "model": "bielik-11b-v3.1-vllm",
+  "model_revision": null,
+  "n": 13447,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 48.66,
+  "settings": {
+    "max_tokens_per_turn": 8192,
+    "max_turns": 3,
+    "seed": 20261119,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/multi-if/results/bielik-11b-v3.1-vllm.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "8e0f46149a957b1f391ab1c0b3ea3acc83fc28dfee81d48501abc2409589d35c",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/multi-if/results/bielik-11b-v3.1-vllm.json"
+  },
+  "status": "measured",
+  "stderr": 0.44,
+  "subset": null
+}

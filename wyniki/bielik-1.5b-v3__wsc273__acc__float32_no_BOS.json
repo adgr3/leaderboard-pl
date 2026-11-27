@@ -1,0 +1,56 @@
+{
+  "benchmark": "wsc273",
+  "benchmark_version": "T14",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.7158671586715867,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.8118081180811808
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Bielik",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "bielik-1.5b-v3",
+  "model_revision": "4b25049621bf3952a1fc9314c89773102eda0333",
+  "n": 273,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.7655677655677655,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "speakleash/Bielik-1.5B-v3",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/wsc273/bielik-1.5b-v3/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "b632d59cc0f21bfe224148cea7b0d89cef8738153b7c33f15e775743285ba70c",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/wsc273/bielik-1.5b-v3/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.02429355983788547,
+  "subset": "test split"
+}

@@ -1,0 +1,59 @@
+{
+  "benchmark": "piqa",
+  "benchmark_version": "T06",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.7704026115342764,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.8073993471164309
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Bielik",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "bielik-11b-v3-instruct",
+  "model_revision": "735bfee1125fe8b497ac2769de94822a11f77167",
+  "n": 1838,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.7889009793253536,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "speakleash/Bielik-11B-v3.0-Instruct",
+    "review_flag": "ok",
+    "review_notes": [
+      "bfloat16, instruct, klasa 11B; bez EWoK (T53 liczy tylko fp32)",
+      "model instruct liczony na surowym tekście, bez chat template"
+    ],
+    "unit": "score",
+    "variant": "bfloat16, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/piqa/bielik-11b-v3-instruct/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "1200590f442f0d3ba410932f1abee9ff06da004f0e1212086a6157a9073d51c9",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/piqa/bielik-11b-v3-instruct/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.009521377378734116,
+  "subset": "validation split"
+}

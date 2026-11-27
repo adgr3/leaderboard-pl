@@ -1,0 +1,58 @@
+{
+  "benchmark": "multiblimp-pl",
+  "benchmark_version": "T04",
+  "ci95": {
+    "level": 0.95,
+    "lower": 98.2885085574572,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 99.05256723716381
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "accuracy",
+  "model": "slayer1b-1.02",
+  "model_revision": "bf7117b97417b22c6a76710a91038724f2be927d",
+  "n": 3272,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 98.68581907090464,
+  "settings": {
+    "category": "Polish",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "PL",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.02",
+    "review_flag": "ok",
+    "review_notes": [
+      "wartosc w procentach (0-100)"
+    ],
+    "unit": "percent",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/multiblimp-pl/slayer1b-1.02/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "557c7bee24fc8c7aff042837d3cfa9f34b5e2e68e203f4026c53cedfd58df308",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/multiblimp-pl/slayer1b-1.02/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.1991199081350098,
+  "subset": "pol/data.tsv split"
+}

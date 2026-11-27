@@ -1,0 +1,58 @@
+{
+  "benchmark": "wikitext-2",
+  "benchmark_version": "T03",
+  "ci95": {
+    "level": 0.95,
+    "lower": 1.8852749954792165,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 1.950838923762311
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "byte_perplexity",
+  "model": "slayer1b-1.02",
+  "model_revision": "bf7117b97417b22c6a76710a91038724f2be927d",
+  "n": 62,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 1.9169030896085106,
+  "settings": {
+    "category": "Language modeling and linguistics",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.02",
+    "review_flag": "ok",
+    "review_notes": [
+      "byte perplexity, nizej = lepiej"
+    ],
+    "unit": "byte_ppl",
+    "variant": "float32, BOS not applicable (empty context or rolling windows)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/wikitext-2/slayer1b-1.02/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "741b718b3ef78b0309d37834024e47d814a270562cb485c7741299ed81561d3b",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/wikitext-2/slayer1b-1.02/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.016800837150187778,
+  "subset": "test split"
+}

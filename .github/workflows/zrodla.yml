@@ -1,0 +1,78 @@
+name: Sprawdz zrodla
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check source file hashes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, urllib.request, urllib.error
+          from pathlib import Path
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          token = os.environ.get('GITHUB_TOKEN')
+          mismatches = []
+          checked = 0
+          for p in sorted(Path('wyniki').glob('*.json')):
+              rec = json.loads(p.read_text(encoding='utf-8'))
+              src = rec.get('source', {})
+              srepo = src.get('repo')
+              spath = src.get('path')
+              commit = src.get('commit')
+              expected = src.get('sha256')
+              if not (srepo and spath and commit and expected):
+                  continue
+              if srepo not in {'slayerlabs/benchmarks-fabryka-ai', 'adgr3/tokenizatorex'}:
+                  continue
+              url = f'https://raw.githubusercontent.com/{srepo}/{commit}/{spath}'
+              req = urllib.request.Request(url, headers={'User-Agent': 'leaderboard-pl-source-check'})
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as resp:
+                      data = resp.read()
+              except Exception as e:
+                  mismatches.append(f'- {p.name}: cannot fetch {url} ({e})')
+                  continue
+              checked += 1
+              got = hashlib.sha256(data).hexdigest()
+              if got != expected:
+                  mismatches.append(f'- {p.name}: expected {expected}, got {got}, source {url}')
+
+          print(f'checked={checked} mismatches={len(mismatches)}')
+          if not mismatches:
+              raise SystemExit(0)
+
+          body = 'Wykryto rozbieżności SHA-256 źródeł:\n\n' + '\n'.join(mismatches[:100])
+          if len(mismatches) > 100:
+              body += f'\n\n... i {len(mismatches)-100} więcej.'
+          api = f'https://api.github.com/repos/{repo}/issues'
+          payload = json.dumps({
+              'title': 'Rozbieżność SHA-256 w źródłach wyników',
+              'body': body,
+          }).encode('utf-8')
+          req = urllib.request.Request(api, data=payload, method='POST', headers={
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github+json',
+              'Content-Type': 'application/json',
+              'User-Agent': 'leaderboard-pl-source-check',
+          })
+          with urllib.request.urlopen(req, timeout=30) as resp:
+              print('issue_status', resp.status)
+          raise SystemExit(1)
+          PY

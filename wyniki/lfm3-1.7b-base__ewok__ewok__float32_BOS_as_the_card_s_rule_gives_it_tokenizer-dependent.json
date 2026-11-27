@@ -1,0 +1,49 @@
+{
+  "benchmark": "ewok",
+  "benchmark_version": "T53",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "full-run-2026-11",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "LFM",
+  "harness": {
+    "commit": null,
+    "name": "own code (research/benchmarks/ewok/)"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "ewok",
+  "model": "lfm3-1.7b-base",
+  "model_revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+  "n": 4374,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.6595793324188386,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "own code (research/benchmarks/ewok/)",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "LiquidAI/LFM3-1.7B-Base",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, BOS as the card's rule gives it (tokenizer-dependent)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/ewok/lfm3-1.7b-base/results_rozszerzone.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "76cd36f19a9e462e24528cc773ea767c70c7801d2477778cdf0add578a1142b1",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/ewok/lfm3-1.7b-base/results_rozszerzone.json"
+  },
+  "status": "measured",
+  "stderr": 0.007666918354600936,
+  "subset": "full test set"
+}

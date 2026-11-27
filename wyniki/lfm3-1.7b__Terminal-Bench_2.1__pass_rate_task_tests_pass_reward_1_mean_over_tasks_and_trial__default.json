@@ -1,0 +1,175 @@
+{
+  "benchmark": "Terminal-Bench 2.1",
+  "benchmark_version": "https://github.com/harbor-framework/terminal-bench-2-1 @ 12b7565679ce5006230b820666353673a133db93, 89 tasks",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://github.com/harbor-framework/terminal-bench-2-1 @ 12b7565679ce5006230b820666353673a133db93, 89 tasks",
+  "date": "2026-11-23",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "LFM",
+  "harness": "https://github.com/harbor-framework/harbor v0.27.0, agent opencode (opencode-ai 1.19.6)",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "pass rate (task tests pass, reward 1), mean over tasks and trials",
+  "model": "lfm3-1.7b",
+  "model_revision": null,
+  "n": 89,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 10.56,
+  "settings": {
+    "jobs": [
+      {
+        "agent_import_path": null,
+        "job": "lfm3-1.7b",
+        "n_attempts": 5,
+        "n_concurrent_trials": 8
+      },
+      {
+        "agent_import_path": "opencode_agent:OpenCodeAptFallback",
+        "job": "lfm3-1.7b-rerun-a",
+        "n_attempts": null,
+        "n_concurrent_trials": 4
+      },
+      {
+        "agent_import_path": "opencode_agent:OpenCodeAptFallback",
+        "job": "lfm3-1.7b-rerun-b",
+        "n_attempts": null,
+        "n_concurrent_trials": 4
+      },
+      {
+        "agent_import_path": "opencode_agent:OpenCodeAptFallback",
+        "job": "lfm3-1.7b-rerun-c",
+        "n_attempts": null,
+        "n_concurrent_trials": 4
+      }
+    ],
+    "jobs_note": "serving and jobs were added from the run log after the run; n_attempts of the re-run jobs differs per job (see README, Reproduce)",
+    "rerun_jobs": [
+      "lfm3-1.7b-rerun-a",
+      "lfm3-1.7b-rerun-b",
+      "lfm3-1.7b-rerun-c"
+    ],
+    "serving": {
+      "server": "vllm 0.34.0, bf16",
+      "weights": "LiquidAI/LFM3-1.7B @ 1da06bec6a819da10b54c67e5c90972b46d81871"
+    },
+    "trial_config_example": {
+      "agent": {
+        "base_url": null,
+        "concurrency_group": null,
+        "extra_allowed_hosts": [],
+        "import_path": null,
+        "kwargs": {
+          "opencode_config": {
+            "agent": {
+              "build": {
+                "steps": 100,
+                "temperature": 0.6,
+                "top_p": 0.95
+              }
+            },
+            "provider": {
+              "local": {
+                "models": {
+                  "lfm3": {
+                    "limit": {
+                      "context": 262144,
+                      "output": 262144
+                    }
+                  }
+                },
+                "npm": "@ai-sdk/openai-compatible",
+                "options": {
+                  "apiKey": "EMPTY",
+                  "baseURL": "http://10.0.2.15:8000/v1"
+                }
+              }
+            }
+          },
+          "version": "1.19.6"
+        },
+        "load_trajectory": null,
+        "max_timeout_sec": null,
+        "mcp_servers": [],
+        "model_api_format": null,
+        "model_api_key_name": null,
+        "model_name": "local/lfm3",
+        "n_concurrent": null,
+        "name": "opencode",
+        "override_setup_timeout_sec": null,
+        "override_timeout_sec": null,
+        "resume_trajectory": false,
+        "skills": [],
+        "skip_model_parsing": false
+      },
+      "agent_setup_timeout_multiplier": null,
+      "agent_timeout_multiplier": null,
+      "artifacts": [],
+      "environment": {
+        "cpu_enforcement_policy": "auto",
+        "delete": true,
+        "extra_allowed_hosts": [],
+        "extra_docker_compose": [],
+        "force_build": false,
+        "import_path": null,
+        "kwargs": {},
+        "memory_enforcement_policy": "auto",
+        "mounts": null,
+        "override_cpus": null,
+        "override_gpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_tpu": null,
+        "stream": false,
+        "type": "docker"
+      },
+      "environment_build_timeout_multiplier": null,
+      "extra_instruction_paths": [],
+      "extra_instructions": [],
+      "install_only": false,
+      "job_id": "72c9ed51-fb6c-477d-a48e-edddf7b928b1",
+      "override_error_policy": {},
+      "schema_version": 1,
+      "source_trial": null,
+      "task": {
+        "download_dir": null,
+        "git_commit_id": null,
+        "git_url": null,
+        "name": null,
+        "overwrite": false,
+        "path": "/root/tb/terminal-bench-2-1/out/terminal-bench-2-1/tasks/password-recovery",
+        "ref": null,
+        "source": "tasks"
+      },
+      "timeout_multiplier": 1.0,
+      "trial_name": "password-recovery__9DLfoGe",
+      "trials_dir": "/root/tb/terminal-bench-2-1/out/jobs/lfm3-1.7b",
+      "user_agent": null,
+      "verifier": {
+        "disable": false,
+        "max_timeout_sec": null,
+        "override_timeout_sec": null
+      },
+      "verifier_timeout_multiplier": null
+    },
+    "trials_per_task": 5
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/terminal-bench-2-1/results/lfm3-1.7b.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "db91bbddee482e8deb7e30ba677f2dfd6588bb33cb1f723fdd8366c1b6f9591d",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/terminal-bench-2-1/results/lfm3-1.7b.json"
+  },
+  "status": "measured",
+  "stderr": 2.69,
+  "subset": null
+}

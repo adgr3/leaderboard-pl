@@ -1,0 +1,58 @@
+{
+  "benchmark": "wikitext-2",
+  "benchmark_version": "T03",
+  "ci95": {
+    "level": 0.95,
+    "lower": 1.6732955402432272,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 1.7340123792440665
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "full-run-2026-11",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "byte_perplexity",
+  "model": "slayer1b-1.09-k40000",
+  "model_revision": "cff81fdcc05f0d91e9ba45b09fe78f769d7e0903",
+  "n": 62,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 1.7023145973049194,
+  "settings": {
+    "category": "Language modeling and linguistics",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.09-checkpoints",
+    "review_flag": "ok",
+    "review_notes": [
+      "1.09, krok 40 000 (~67 mld tokenów), trening w toku, wynik wstępny"
+    ],
+    "unit": "byte_ppl",
+    "variant": "float32, BOS not applicable (empty context or rolling windows)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/wikitext-2/slayer1b-1.09-k40000/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "478e4776e6031b517a02b773e75d7a797d02ed5101c55b76a9be340455fb03c6",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/wikitext-2/slayer1b-1.09-k40000/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.015611197655273919,
+  "subset": "test split"
+}

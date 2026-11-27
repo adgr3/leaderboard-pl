@@ -1,0 +1,58 @@
+{
+  "benchmark": "wikitext-2",
+  "benchmark_version": "T03",
+  "ci95": {
+    "level": 0.95,
+    "lower": 1.6865638486280954,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 1.7438097521400946
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "6b8fb528fccf7dd0e0fdd3b06465b4af95507ec8",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "byte_perplexity",
+  "model": "slayer1b-1.09-k70000",
+  "model_revision": "adfaf3fd5402bc7f3adbfe077798f20262979433",
+  "n": 62,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 1.7141499307215788,
+  "settings": {
+    "category": "Language modeling and linguistics",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.09-checkpoints",
+    "review_flag": "ok",
+    "review_notes": [
+      "1.09, step 70 000, training in progress, preliminary result (RTX 4090, slayer-1.09-k70000/PROTOKOL.md)"
+    ],
+    "unit": "byte_ppl",
+    "variant": "float32, BOS not applicable (empty context or rolling windows)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/wikitext-2/slayer1b-1.09-k70000/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "b00a303efddf52525a22771a332b410219ae37a02f904f563c2e27969393f212",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/wikitext-2/slayer1b-1.09-k70000/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.014710420488791455,
+  "subset": "test split"
+}

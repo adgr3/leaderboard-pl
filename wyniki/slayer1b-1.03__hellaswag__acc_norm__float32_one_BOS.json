@@ -1,0 +1,56 @@
+{
+  "benchmark": "hellaswag",
+  "benchmark_version": "T05",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.3413662617008564,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.3602867954590719
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "slayer1b-1.03",
+  "model_revision": "fee113efcad47f48dd0b80aa37952434f00bed43",
+  "n": 10042,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.350726946823342,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.03",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/hellaswag/slayer1b-1.03/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "9d98e024f859808fbb0ae334b29727655e043c616ba06d75ead8fa86f0ff918d",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/hellaswag/slayer1b-1.03/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.004762223492435551,
+  "subset": "validation split"
+}

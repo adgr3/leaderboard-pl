@@ -1,0 +1,58 @@
+{
+  "benchmark": "blimp",
+  "benchmark_version": "T01",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.7827287313432836,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.8627470149253732
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Pythia",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "pythia-1b-v0",
+  "model_revision": "f3f1b6d5a78e32208be0866398d0b2d32c0e1ce0",
+  "n": 67000,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.8243880597014925,
+  "settings": {
+    "category": "Language modeling and linguistics",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "EleutherAI/pythia-1b-v0",
+    "review_flag": "ok",
+    "review_notes": [
+      "kontrola: identyczne z lokalnym przebiegiem kontrolnym"
+    ],
+    "unit": "score",
+    "variant": "float32, BOS not applicable (empty context or rolling windows)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/blimp/pythia-1b-v0/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "a79e6baaff9ec475b622312c88dde1a7114b752a3847cb2aca399d267ee175bf",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/blimp/pythia-1b-v0/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.020845254357487446,
+  "subset": "train split"
+}

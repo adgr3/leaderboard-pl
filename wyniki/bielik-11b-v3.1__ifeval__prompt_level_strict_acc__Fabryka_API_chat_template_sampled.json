@@ -1,0 +1,49 @@
+{
+  "benchmark": "IFEval",
+  "benchmark_version": "T36",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "ifeval-api",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Bielik",
+  "harness": {
+    "commit": null,
+    "name": "lm-evaluation-harness v0.4.9.1 (data 966cd89545d6)"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "prompt_level_strict_acc",
+  "model": "bielik-11b-v3.1",
+  "model_revision": null,
+  "n": 541,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 55.27,
+  "settings": {
+    "category": "Instruction following",
+    "harness": "lm-evaluation-harness v0.4.9.1 (data 966cd89545d6)",
+    "language": "EN",
+    "protocol": "ifeval-api",
+    "repo": null,
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "percent",
+    "variant": "Fabryka API, chat template, sampled"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/ifeval/results/bielik-11b-v3.1.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "0a037c54a9dc28cd79a5691df0e1d0ac97246c7771beda14f515ad2e323f0c23",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/ifeval/results/bielik-11b-v3.1.json"
+  },
+  "status": "measured",
+  "stderr": 2.14,
+  "subset": "full test set"
+}

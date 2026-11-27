@@ -1,0 +1,49 @@
+{
+  "benchmark": "ewok",
+  "benchmark_version": "T53",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "full-run-2026-11",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "EuroLLM",
+  "harness": {
+    "commit": null,
+    "name": "own code (research/benchmarks/ewok/)"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "ewok",
+  "model": "eurollm-1.7b",
+  "model_revision": "c730cd9b616799ace3c65e927d63191446f59374",
+  "n": 4374,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.6620941929583904,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "own code (research/benchmarks/ewok/)",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "utter-project/EuroLLM-1.7B",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, BOS as the card's rule gives it (tokenizer-dependent)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/ewok/eurollm-1.7b/results_rozszerzone.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "682b74843b3eaecaa8912252bf72d8ad19bd2d45ade9dfd442d5017158465a3d",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/ewok/eurollm-1.7b/results_rozszerzone.json"
+  },
+  "status": "measured",
+  "stderr": 0.007969330981725625,
+  "subset": "full test set"
+}

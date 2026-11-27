@@ -1,0 +1,56 @@
+{
+  "benchmark": "social-iqa",
+  "benchmark_version": "T46",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.3526100307062436,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.39508700102354144
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "slayer1b-1.03",
+  "model_revision": "fee113efcad47f48dd0b80aa37952434f00bed43",
+  "n": 1954,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.3741044012282497,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.03",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/social-iqa/slayer1b-1.03/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "89b93ab963e2cdde8c53d6c15ca9e5cf964370735f552f7073b6ccbc74de5021",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/social-iqa/slayer1b-1.03/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.010949549114530789,
+  "subset": "validation split"
+}

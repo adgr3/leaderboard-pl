@@ -1,0 +1,56 @@
+{
+  "benchmark": "arc-challenge",
+  "benchmark_version": "T02",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.33361774744027306,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.3890784982935154
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Bielik",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "bielik-1.5b-v3",
+  "model_revision": "4b25049621bf3952a1fc9314c89773102eda0333",
+  "n": 1172,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.3609215017064846,
+  "settings": {
+    "category": "Reasoning and science",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "speakleash/Bielik-1.5B-v3",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/arc-challenge/bielik-1.5b-v3/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "4fe7a95d46f435bd53fa39c6e19724b3b78949944ce0bd903466eaee5e2cf16e",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/arc-challenge/bielik-1.5b-v3/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.014034761386175525,
+  "subset": "test split"
+}

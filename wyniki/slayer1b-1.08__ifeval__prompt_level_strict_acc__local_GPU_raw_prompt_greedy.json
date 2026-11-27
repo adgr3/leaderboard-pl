@@ -1,0 +1,49 @@
+{
+  "benchmark": "IFEval",
+  "benchmark_version": "T36",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "ifeval-api",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-evaluation-harness v0.4.9.1 (data 966cd89545d6)"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "prompt_level_strict_acc",
+  "model": "slayer1b-1.08",
+  "model_revision": null,
+  "n": 541,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 18.11,
+  "settings": {
+    "category": "Instruction following",
+    "harness": "lm-evaluation-harness v0.4.9.1 (data 966cd89545d6)",
+    "language": "EN",
+    "protocol": "ifeval-api",
+    "repo": null,
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "percent",
+    "variant": "local GPU, raw prompt, greedy"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/ifeval/results/slayer1b-1.08.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "298e043438af89c381e3299719f1b8931395e15bf87587b91588fc7c3ffbe47f",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/ifeval/results/slayer1b-1.08.json"
+  },
+  "status": "measured",
+  "stderr": 1.66,
+  "subset": "full test set"
+}

@@ -1,0 +1,59 @@
+{
+  "benchmark": "RULER",
+  "benchmark_version": "RULER synthetic tasks generated with the model's tokenizer, seed 20261122, 50 samples per task and length; source files sha256: PaulGrahamEssays.json 58e352531a80cef2d22c205dbebfbfd64a8afe55a32434de845f200718756c65, english_words.json affcd6d45fdf3cc843d585c99c97ad615094e760e6c4756b654bab6c73bc2eca, hotpotqa.json e3da074df24e8369009918aa5cdbdd254dadcde4c63f7569d36afd6f2268caa8, squad.json 80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "RULER synthetic tasks generated with the model's tokenizer, seed 20261122, 50 samples per task and length; source files sha256: PaulGrahamEssays.json 58e352531a80cef2d22c205dbebfbfd64a8afe55a32434de845f200718756c65, english_words.json affcd6d45fdf3cc843d585c99c97ad615094e760e6c4756b654bab6c73bc2eca, hotpotqa.json e3da074df24e8369009918aa5cdbdd254dadcde4c63f7569d36afd6f2268caa8, squad.json 80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "date": "2026-11-22",
+  "deviations": [
+    "the 32768-token context window does not hold a 131072-token RULER sample"
+  ],
+  "family": "Bielik",
+  "harness": "https://github.com/NVIDIA/RULER @ db43f92ff634bbce1c33d1fb15858aec4bba509a (data: scripts/data/prepare.py, scoring: scripts/eval/evaluate.py)",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "mean of the 13 RULER task scores at 131072 tokens (percent)",
+  "model": "bielik-11b-v3.1",
+  "model_revision": null,
+  "n": null,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "the 32768-token context window does not hold a 131072-token RULER sample",
+  "score": null,
+  "settings": {
+    "context_window": 32768,
+    "margin": 256,
+    "max_tokens": "context window minus the templated input counted locally minus a 256-token margin",
+    "prompt": "RULER input + answer prefix as one user message, model chat template with its defaults",
+    "prompt_count": "the model's tokenizer and chat template at the pinned revision, template defaults (provider system prompt on, live date)",
+    "sampling": {
+      "sent": {
+        "max_tokens": "per request: context window minus the templated input counted locally minus a 256-token margin",
+        "seed": 20261122,
+        "temperature": 0.6,
+        "top_p": 0.95
+      },
+      "server_defaults": "unknown (Fabryka API)"
+    },
+    "scored": "text after the last </think>",
+    "seed": 20261122,
+    "serving": "Fabryka AI API, https://fabryka.ai/v1/chat/completions, model bielik-11b-v3.1, concurrency 2",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "weights": "speakleash/Bielik-11B-v3.1-Instruct @ d6e755d356ad418d0f0e30b8c428db267415ddb9"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/ruler-128k/results/bielik-11b-v3.1.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "eb24d960c7eb17e9fe8b0ab83e09e767b37986fc1110b547641945d71eb62885",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/ruler-128k/results/bielik-11b-v3.1.json"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": null
+}

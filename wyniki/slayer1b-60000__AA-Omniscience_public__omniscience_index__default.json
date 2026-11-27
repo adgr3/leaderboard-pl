@@ -1,0 +1,57 @@
+{
+  "benchmark": "AA-Omniscience (public)",
+  "benchmark_version": "https://huggingface.co/datasets/ArtificialAnalysis/AA-Omniscience-Public @ e4883edbb9f5ccf2b2a8fdc6fb65e01a58e99849",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/ArtificialAnalysis/AA-Omniscience-Public @ e4883edbb9f5ccf2b2a8fdc6fb65e01a58e99849",
+  "date": "2026-11-19",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "Slayer",
+  "harness": "AA-Omniscience README prompts (answer and grader templates) with generate.py and judge.py",
+  "judge": {
+    "date": "2026-11-19",
+    "model": "openai-codex/gpt-6.1-sol (GPT-6.1 Sol), thinking high",
+    "official_grader": "Gemini 2.5 Flash Preview (09-2025); scores not comparable with Artificial Analysis",
+    "raw_replies": "results/slayer1b-60000-judge.jsonl.gz",
+    "served_via": "OMP coding-agent CLI (omp -p --no-tools), subscription login, no API key"
+  },
+  "measured_by": "bench-team",
+  "metric": "omniscience_index",
+  "model": "slayer1b-60000",
+  "model_revision": null,
+  "n": 600,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": -59.33,
+  "settings": {
+    "chat_template": false,
+    "judge": {
+      "date": "2026-11-19",
+      "model": "openai-codex/gpt-6.1-sol (GPT-6.1 Sol), thinking high",
+      "official_grader": "Gemini 2.5 Flash Preview (09-2025); scores not comparable with Artificial Analysis",
+      "raw_replies": "results/slayer1b-60000-judge.jsonl.gz",
+      "served_via": "OMP coding-agent CLI (omp -p --no-tools), subscription login, no API key"
+    },
+    "max_tokens_per_turn": 1280,
+    "max_turns": 1,
+    "temperature": 0,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/aa-omniscience/results/slayer1b-60000.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "b80a1bd84f25bec0346922a6f089e359b96dd81a6f23643bc17a23c31ed64c10",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/aa-omniscience/results/slayer1b-60000.json"
+  },
+  "status": "measured",
+  "stderr": 2.14,
+  "subset": null
+}

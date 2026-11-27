@@ -1,0 +1,44 @@
+{
+  "benchmark": "IFBench",
+  "benchmark_version": "https://huggingface.co/datasets/allenai/IFBench_test @ ed7c12452594b7028b15807b86d3938150b663ae",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/allenai/IFBench_test @ ed7c12452594b7028b15807b86d3938150b663ae",
+  "date": "2026-11-19",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "Slayer",
+  "harness": "https://github.com/allenai/IFBench @ 488918665d53f867fa908a293769ec6e71e74aec (generate_responses.py, run_eval)",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "prompt_level_strict_acc",
+  "model": "slayer1b-60000",
+  "model_revision": null,
+  "n": 300,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 8.33,
+  "settings": {
+    "chat_template": false,
+    "max_tokens_per_turn": 1280,
+    "max_turns": 1,
+    "temperature": 0,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/ifbench/results/slayer1b-60000.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "0e4d6be54b740bd95521eaa02676eba0b7f583169bacc1a93dbdd3ebbf478751",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/ifbench/results/slayer1b-60000.json"
+  },
+  "status": "measured",
+  "stderr": 1.6,
+  "subset": null
+}

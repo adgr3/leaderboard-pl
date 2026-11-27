@@ -1,0 +1,58 @@
+{
+  "benchmark": "winogrande",
+  "benchmark_version": "T07",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.5488482922954726,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.5989014185969189
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "6b8fb528fccf7dd0e0fdd3b06465b4af95507ec8",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "slayer1b-1.09-k70000",
+  "model_revision": "adfaf3fd5402bc7f3adbfe077798f20262979433",
+  "n": 1267,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.5737963693764798,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.09-checkpoints",
+    "review_flag": "ok",
+    "review_notes": [
+      "1.09, step 70 000, training in progress, preliminary result (RTX 4090, slayer-1.09-k70000/PROTOKOL.md)"
+    ],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/winogrande/slayer1b-1.09-k70000/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "34f211e00f59bed72e2281222252cc32f0226dd77d0a2ddebd989411ab2c2e98",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/winogrande/slayer1b-1.09-k70000/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.012876476638838954,
+  "subset": "validation split"
+}

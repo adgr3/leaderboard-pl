@@ -1,0 +1,56 @@
+{
+  "benchmark": "hellaswag",
+  "benchmark_version": "T05",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.5833499302927704,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.6022704640509858
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "EuroLLM",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "eurollm-1.7b",
+  "model_revision": "c730cd9b616799ace3c65e927d63191446f59374",
+  "n": 10042,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.5927106154152559,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "utter-project/EuroLLM-1.7B",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/hellaswag/eurollm-1.7b/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "eaaacd7183e2ae1a64eeda313f590fd7a0d9a2cdf319369dc92b51a194512d6a",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/hellaswag/eurollm-1.7b/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.004903254264177805,
+  "subset": "validation split"
+}

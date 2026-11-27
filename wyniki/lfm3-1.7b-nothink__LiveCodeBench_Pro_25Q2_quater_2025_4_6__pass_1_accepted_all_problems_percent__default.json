@@ -1,0 +1,95 @@
+{
+  "benchmark": "LiveCodeBench Pro 25Q2 (quater_2025_4_6)",
+  "benchmark_version": "https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro @ adebffce047dddb7768a86bace6aea4f7425e3bc, split quater_2025_4_6; tests https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro-Testcase @ 5257736c0a4e30ba0949d41c56a257c323d9c600",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro @ adebffce047dddb7768a86bace6aea4f7425e3bc, split quater_2025_4_6; tests https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro-Testcase @ 5257736c0a4e30ba0949d41c56a257c323d9c600",
+  "date": "2026-11-22",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "LFM",
+  "harness": "https://github.com/GavinZhengOI/LiveCodeBench-Pro @ d614eef4f95b3654bf0758c64e1194b2575850b8 (LightCPVerifier @ 021d121c882e70856b66113142495e31b9fe1d80)",
+  "judge": {
+    "go_judge_version": "v1.9.6",
+    "image": "lightcpverifier",
+    "image_created": "2026-11-22T16:25:45.84428277Z",
+    "image_id": "sha256:a04214fc3f8a0274d252c161a2b58cf59606aa6f37a019da19d7b94c2c9acad0",
+    "image_repo_digests": [],
+    "workers": 8
+  },
+  "measured_by": "bench-team",
+  "metric": "pass@1 (accepted / all problems, percent)",
+  "model": "lfm3-1.7b-nothink",
+  "model_revision": null,
+  "n": 167,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 28.74,
+  "settings": {
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "context": 262144,
+    "effective": {
+      "frequency_penalty": 0,
+      "n": 1,
+      "presence_penalty": 0,
+      "repetition_penalty": 1.0,
+      "seed": 20261122,
+      "temperature": 0.6,
+      "top_k": 0,
+      "top_p": 0.95
+    },
+    "judge": {
+      "go_judge_version": "v1.9.6",
+      "image": "lightcpverifier",
+      "image_created": "2026-11-22T16:25:45.84428277Z",
+      "image_id": "sha256:a04214fc3f8a0274d252c161a2b58cf59606aa6f37a019da19d7b94c2c9acad0",
+      "image_repo_digests": [],
+      "workers": 8
+    },
+    "judge_machine": {
+      "cpu": "AMD EPYC 7302P 16-Core Processor",
+      "cpu_count": 30,
+      "platform": "Linux-5.15.0-1067-kvm-x86_64-with-glibc2.35"
+    },
+    "judge_workers": 8,
+    "max_tokens": "context minus prompt tokens",
+    "prompt": "api_interface.LLMInterface().prompt + problem_statement, the only user message",
+    "request_sampling": {
+      "frequency_penalty": 0,
+      "n": 1,
+      "presence_penalty": 0,
+      "repetition_penalty": 1.0,
+      "seed": 20261122,
+      "temperature": 0.6,
+      "top_k": 0,
+      "top_p": 0.95
+    },
+    "scored_text": "after the last </think>, code by util.extract_longest_cpp_code",
+    "seed": 20261122,
+    "server_defaults": {},
+    "server_defaults_source": "vLLM generation_config=auto: LiquidAI/LFM3-1.7B@1da06bec6a819da10b54c67e5c90972b46d81871 generation_config.json",
+    "temperature": 0.6,
+    "thinking": "off",
+    "top_p": 0.95,
+    "trials": 1,
+    "unfinished": "thinking on: no </think> or finish_reason other than stop; counted as not accepted"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/livecodebench-pro-25q2/results/lfm3-1.7b-nothink.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "3a7d3480adfcd3716c300df0e35057553cc99a43a725066ff441f46587102f0b",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/livecodebench-pro-25q2/results/lfm3-1.7b-nothink.json"
+  },
+  "status": "measured",
+  "stderr": 3.5,
+  "subset": null
+}

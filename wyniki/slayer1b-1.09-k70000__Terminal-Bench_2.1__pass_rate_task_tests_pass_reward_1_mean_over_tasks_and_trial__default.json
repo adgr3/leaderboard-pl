@@ -1,0 +1,40 @@
+{
+  "benchmark": "Terminal-Bench 2.1",
+  "benchmark_version": "https://github.com/harbor-framework/terminal-bench-2-1 @ 12b7565679ce5006230b820666353673a133db93, 89 tasks",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://github.com/harbor-framework/terminal-bench-2-1 @ 12b7565679ce5006230b820666353673a133db93, 89 tasks",
+  "date": "2026-11-24",
+  "deviations": [
+    "not run: a base model without a chat template or a tool-call format, so OpenCode cannot drive it (see README)"
+  ],
+  "family": "Slayer",
+  "harness": "https://github.com/harbor-framework/harbor v0.27.0, agent opencode (opencode-ai 1.19.6)",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "pass rate (task tests pass, reward 1), mean over tasks and trials",
+  "model": "slayer1b-1.09-k70000",
+  "model_revision": null,
+  "n": 0,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "not run: a base model without a chat template or a tool-call format, so OpenCode cannot drive it (see README)",
+  "score": null,
+  "settings": {
+    "value": null
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/terminal-bench-2-1/results/slayer1b-1.09-k70000.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "f143024dd36363b060f205cf3d8d6505e6af164121e85922245b5daed8fcf49e",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/terminal-bench-2-1/results/slayer1b-1.09-k70000.json"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": null
+}

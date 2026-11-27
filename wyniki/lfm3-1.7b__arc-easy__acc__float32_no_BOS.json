@@ -1,0 +1,62 @@
+{
+  "benchmark": "arc-easy",
+  "benchmark_version": "T51",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.382996632996633,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.4234006734006734
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [
+    "model instruct liczony na surowym tekście, bez chat template",
+    "reguła kontekstu: acc_pmi poniżej bazy losowej na 2 testach PMI (ARC-Challenge, PIQA); próg 2 ustalony po obejrzeniu tego przebiegu"
+  ],
+  "family": "LFM",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.13"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "lfm3-1.7b",
+  "model_revision": "1da06bec6a819da10b54c67e5c90972b46d81871",
+  "n": 2376,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.4031986531986532,
+  "settings": {
+    "category": "Reasoning and science",
+    "harness": "lm-eval 0.4.13",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "LiquidAI/LFM3-1.7B",
+    "review_flag": "do_sprawdzenia",
+    "review_notes": [
+      "model instruct liczony na surowym tekście, bez chat template",
+      "reguła kontekstu: acc_pmi poniżej bazy losowej na 2 testach PMI (ARC-Challenge, PIQA); próg 2 ustalony po obejrzeniu tego przebiegu"
+    ],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/arc-easy/lfm3-1.7b/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "e30fade9beaa43735e7cb755d1264fc63eed862ca42f4c2f145210e78f2b2c94",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/arc-easy/lfm3-1.7b/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.010065668576794674,
+  "subset": "test split"
+}

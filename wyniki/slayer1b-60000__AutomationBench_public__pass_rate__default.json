@@ -1,0 +1,38 @@
+{
+  "benchmark": "AutomationBench (public)",
+  "benchmark_version": "bundled with the harness, public domains",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "bundled with the harness, public domains",
+  "date": "2026-11-19",
+  "deviations": [
+    "Slayer 1B is a base model without a chat template or tool-calling format; the serving endpoint rejects requests with tools (HTTP 400), so no syntactically valid call is possible."
+  ],
+  "family": "Slayer",
+  "harness": "https://github.com/zapier/AutomationBench @ 4a8e1061254004d9dac807054eed33fad7d1ff14",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "pass_rate",
+  "model": "slayer1b-60000",
+  "model_revision": null,
+  "n": 0,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "Slayer 1B is a base model without a chat template or tool-calling format; the serving endpoint rejects requests with tools (HTTP 400), so no syntactically valid call is possible.",
+  "score": null,
+  "settings": {},
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/automationbench/results/slayer1b-60000.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "f05df0fc54187b085a525b3057ce26b31753f5e5f9199a9af741a16439622a66",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/automationbench/results/slayer1b-60000.json"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": null
+}

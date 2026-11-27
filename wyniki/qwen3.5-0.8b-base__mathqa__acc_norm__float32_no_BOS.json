@@ -1,0 +1,56 @@
+{
+  "benchmark": "mathqa",
+  "benchmark_version": "T19",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.3169179229480737,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.3510887772194305
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Qwen",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.13"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "qwen3.5-0.8b-base",
+  "model_revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+  "n": 2985,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.3336683417085427,
+  "settings": {
+    "category": "Reasoning and science",
+    "harness": "lm-eval 0.4.13",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "Qwen/Qwen3.5-0.8B-Base",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/mathqa/qwen3.5-0.8b-base/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "78282239fbb291725b4b425b2c4ac49e3c233b378e9daea6263965694951622e",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/mathqa/qwen3.5-0.8b-base/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.00863183869322614,
+  "subset": "test split"
+}

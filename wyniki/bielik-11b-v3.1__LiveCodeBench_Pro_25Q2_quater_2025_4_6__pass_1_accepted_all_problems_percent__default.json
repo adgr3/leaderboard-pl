@@ -1,0 +1,77 @@
+{
+  "benchmark": "LiveCodeBench Pro 25Q2 (quater_2025_4_6)",
+  "benchmark_version": "https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro @ adebffce047dddb7768a86bace6aea4f7425e3bc, split quater_2025_4_6; tests https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro-Testcase @ 5257736c0a4e30ba0949d41c56a257c323d9c600",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro @ adebffce047dddb7768a86bace6aea4f7425e3bc, split quater_2025_4_6; tests https://huggingface.co/datasets/QAQAQAQAQ/LiveCodeBench-Pro-Testcase @ 5257736c0a4e30ba0949d41c56a257c323d9c600",
+  "date": "2026-11-22",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "Bielik",
+  "harness": "https://github.com/GavinZhengOI/LiveCodeBench-Pro @ d614eef4f95b3654bf0758c64e1194b2575850b8 (LightCPVerifier @ 021d121c882e70856b66113142495e31b9fe1d80)",
+  "judge": {
+    "go_judge_version": "v1.9.6",
+    "image": "lightcpverifier",
+    "image_created": "2026-11-22T16:25:45.84428277Z",
+    "image_id": "sha256:a04214fc3f8a0274d252c161a2b58cf59606aa6f37a019da19d7b94c2c9acad0",
+    "image_repo_digests": [],
+    "workers": 8
+  },
+  "measured_by": "bench-team",
+  "metric": "pass@1 (accepted / all problems, percent)",
+  "model": "bielik-11b-v3.1",
+  "model_revision": null,
+  "n": 167,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 1.8,
+  "settings": {
+    "chat_template_kwargs": null,
+    "context": 32768,
+    "judge": {
+      "go_judge_version": "v1.9.6",
+      "image": "lightcpverifier",
+      "image_created": "2026-11-22T16:25:45.84428277Z",
+      "image_id": "sha256:a04214fc3f8a0274d252c161a2b58cf59606aa6f37a019da19d7b94c2c9acad0",
+      "image_repo_digests": [],
+      "workers": 8
+    },
+    "judge_machine": {
+      "cpu": "AMD EPYC 7302P 16-Core Processor",
+      "cpu_count": 30,
+      "platform": "Linux-5.15.0-1067-kvm-x86_64-with-glibc2.35"
+    },
+    "judge_workers": 8,
+    "max_tokens": "context minus prompt tokens minus a margin of 64",
+    "prompt": "api_interface.LLMInterface().prompt + problem_statement, the only user message",
+    "request_sampling": {
+      "seed": 20261122,
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "scored_text": "after the last </think>, code by util.extract_longest_cpp_code",
+    "seed": 20261122,
+    "server_defaults": "unknown (Fabryka API)",
+    "temperature": 0.6,
+    "thinking": "none",
+    "top_p": 0.95,
+    "trials": 1,
+    "unfinished": "thinking on: no </think> or finish_reason other than stop; counted as not accepted"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/livecodebench-pro-25q2/results/bielik-11b-v3.1.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "735141ec48bf3a7bd91df636d6d2f7eb56071124ab1c5ce1f1ea4be543a959b8",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/livecodebench-pro-25q2/results/bielik-11b-v3.1.json"
+  },
+  "status": "measured",
+  "stderr": 1.03,
+  "subset": null
+}

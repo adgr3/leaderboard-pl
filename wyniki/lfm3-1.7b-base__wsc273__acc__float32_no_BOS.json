@@ -1,0 +1,56 @@
+{
+  "benchmark": "wsc273",
+  "benchmark_version": "T14",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.6666363636363636,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.7610294117647058
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "LFM",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.13"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "lfm3-1.7b-base",
+  "model_revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+  "n": 273,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.7142857142857143,
+  "settings": {
+    "category": "Commonsense",
+    "harness": "lm-eval 0.4.13",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "LiquidAI/LFM3-1.7B-Base",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/wsc273/lfm3-1.7b-base/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "48a7d4216d342c9cb2f082427848d7341f764653cdf40bf6c5f0c5a54da319dd",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/wsc273/lfm3-1.7b-base/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.024160817767219362,
+  "subset": "test split"
+}

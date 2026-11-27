@@ -1,0 +1,54 @@
+{
+  "benchmark": "GPQA Diamond (exploratory, CoT zero-shot)",
+  "benchmark_version": "https://huggingface.co/datasets/Idavidrein/gpqa, config gpqa_diamond @ 83022cefff930aea54f654c0b282e74b9eeda5c6 (gated), 198 questions",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/Idavidrein/gpqa, config gpqa_diamond @ 83022cefff930aea54f654c0b282e74b9eeda5c6 (gated), 198 questions",
+  "date": "2026-11-19",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "LFM",
+  "harness": "https://github.com/EleutherAI/lm-evaluation-harness v0.4.13, task gpqa_diamond_cot_zeroshot (task version 2.2); repo pin is 0.4.9.1 (unreconciled)",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "exact_match (flexible-extract)",
+  "model": "lfm3-1.7b",
+  "model_revision": null,
+  "n": 198,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 53.54,
+  "settings": {
+    "chat_template": true,
+    "cot": true,
+    "decoding": "greedy (do_sample=false, temperature=0.0)",
+    "dtype": "bfloat16",
+    "hardware": "RTX A4000, batch 22",
+    "max_gen_toks": 8192,
+    "model_weights": "LiquidAI/LFM3-1.7B @ 1da06bec6a819da10b54c67e5c90972b46d81871",
+    "shots": 0,
+    "stop": [
+      "</s>"
+    ],
+    "torch": "2.8.0+cu128",
+    "transformers": "5.22.1",
+    "trials": 1,
+    "trust_remote_code": true
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/gpqa-diamond/results/lfm3-1.7b.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "83870d718d6cfeafa4b0424bb7ba1f7abe2e5b4e6b8d598b05cb2730a511652c",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/gpqa-diamond/results/lfm3-1.7b.json"
+  },
+  "status": "measured",
+  "stderr": 3.54,
+  "subset": null
+}

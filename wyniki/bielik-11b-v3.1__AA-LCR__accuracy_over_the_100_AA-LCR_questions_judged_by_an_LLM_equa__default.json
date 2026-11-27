@@ -1,0 +1,46 @@
+{
+  "benchmark": "AA-LCR",
+  "benchmark_version": "ArtificialAnalysis/AA-LCR @ 9a77ef56b717057ade24ceab4d273712a0b4f19e: AA-LCR_Dataset.csv and extracted_text/AA-LCR_extracted-text.zip",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "ArtificialAnalysis/AA-LCR @ 9a77ef56b717057ade24ceab4d273712a0b4f19e: AA-LCR_Dataset.csv and extracted_text/AA-LCR_extracted-text.zip",
+  "date": "2026-11-23",
+  "deviations": [
+    "not run: the 32768-token context window does not hold any AA-LCR prompt: the shortest of 100 prompts has 100913 tokens, the longest 141519; the benchmark is not cut down (no truncation, chunking or retrieval)"
+  ],
+  "family": "Bielik",
+  "harness": "AA-LCR dataset card prompt template and judge prompts, ArtificialAnalysis/AA-LCR @ 9a77ef56b717057ade24ceab4d273712a0b4f19e (v1.1); no official harness repository",
+  "judge": "GPT-5.6 Luna (medium) with the v1.1 system and user prompts: required by AA-LCR, paid API, not run",
+  "measured_by": "bench-team",
+  "metric": "accuracy over the 100 AA-LCR questions, judged by an LLM equality checker (percent)",
+  "model": "bielik-11b-v3.1",
+  "model_revision": null,
+  "n": null,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": "not run: the 32768-token context window does not hold any AA-LCR prompt: the shortest of 100 prompts has 100913 tokens, the longest 141519; the benchmark is not cut down (no truncation, chunking or retrieval)",
+  "score": null,
+  "settings": {
+    "context_window": 32768,
+    "generation": "none: no request was sent for scoring",
+    "judge": "GPT-5.6 Luna (medium) with the v1.1 system and user prompts: required by AA-LCR, paid API, not run",
+    "prompt": "dataset card template, documents in the order of data_source_filenames, one user message through the chat template with its defaults",
+    "serving": "Fabryka AI API, https://fabryka.ai/v1/chat/completions, model bielik-11b-v3.1",
+    "weights": "speakleash/Bielik-11B-v3.1-Instruct @ d6e755d356ad418d0f0e30b8c428db267415ddb9",
+    "window_source": "GET /v1/models lists context_length 32768; probe_window.py: a templated prompt of 32767 tokens plus 1 output token is accepted, 32768 is rejected (results/api-window.json)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/aa-lcr/results/bielik-11b-v3.1.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "a5d049047a02c38d90dc7776df4b7de94b34ec4eb55f963b79acd479b9c5e7ec",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/aa-lcr/results/bielik-11b-v3.1.json"
+  },
+  "status": "null",
+  "stderr": null,
+  "subset": null
+}

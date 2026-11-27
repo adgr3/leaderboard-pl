@@ -1,0 +1,10 @@
+_zrodla/
+.pytest_cache/
+__pycache__/
+*.pyc
+leaderboard_wewnetrzne/
+INWENTARZ.md
+RAPORT_LEADERBOARD_R*.md
+hf/.cache/
+
+

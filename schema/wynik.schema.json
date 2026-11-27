@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/wynik.schema.json",
+  "title": "Wynik pomiaru benchmarkowego",
+  "type": "object",
+  "required": [
+    "model",
+    "model_revision",
+    "family",
+    "benchmark",
+    "benchmark_version",
+    "data_revision",
+    "subset",
+    "metric",
+    "score",
+    "stderr",
+    "ci95",
+    "n",
+    "n_empty",
+    "n_overflow",
+    "settings",
+    "harness",
+    "judge",
+    "deviations",
+    "comparable_to_reference",
+    "source",
+    "measured_by",
+    "date",
+    "status",
+    "null_reason"
+  ],
+  "properties": {
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "benchmark": {
+      "type": "string",
+      "minLength": 1
+    },
+    "benchmark_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subset": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metric": {
+      "type": "string",
+      "minLength": 1
+    },
+    "score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "stderr": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ci95": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "n": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "n_empty": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "n_overflow": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "settings": {
+      "type": "object"
+    },
+    "harness": {
+      "type": [
+        "string",
+        "object",
+        "null"
+      ]
+    },
+    "judge": {
+      "type": [
+        "string",
+        "object",
+        "null"
+      ]
+    },
+    "deviations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "comparable_to_reference": {
+      "type": "object",
+      "required": [
+        "comparable",
+        "reason"
+      ],
+      "properties": {
+        "comparable": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "repo",
+        "path",
+        "commit",
+        "sha256"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pr_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "measured_by": {
+      "type": "string",
+      "enum": [
+        "adgr3",
+        "bench-team",
+        "model-card"
+      ]
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "measured",
+        "null"
+      ]
+    },
+    "null_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "null"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "const": null
+          },
+          "null_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "measured"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  ],
+  "anyOf": [
+    {
+      "properties": {
+        "status": {
+          "const": "null"
+        }
+      }
+    },
+    {
+      "required": [
+        "stderr"
+      ],
+      "not": {
+        "properties": {
+          "stderr": {
+            "const": null
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "ci95"
+      ],
+      "not": {
+        "properties": {
+          "ci95": {
+            "const": null
+          }
+        }
+      }
+    }
+  ]
+}

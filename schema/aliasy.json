@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "aliases": {
+    "ifeval": "IFEval",
+    "IfEval": "IFEval",
+    "IFEVAL": "IFEval"
+  },
+  "notes": "Normalize benchmark names for display/grouping; keep raw source paths."
+}

@@ -1,0 +1,44 @@
+{
+  "benchmark": "IFEval",
+  "benchmark_version": "https://huggingface.co/datasets/google/IFEval @ 966cd89545d6b6acfd7638bc708b98261ca58e84",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/google/IFEval @ 966cd89545d6b6acfd7638bc708b98261ca58e84",
+  "date": "2026-11-19",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "LFM",
+  "harness": "https://github.com/EleutherAI/lm-evaluation-harness v0.4.9.1",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "prompt_level_strict_acc",
+  "model": "lfm3-1.7b",
+  "model_revision": null,
+  "n": 541,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 94.64,
+  "settings": {
+    "max_tokens_per_turn": 32768,
+    "max_turns": 1,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/ifeval/results/lfm3-1.7b.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "244a2a7e0dd48c4b5d36a9be824ba991745d9ee3fe541a0a90c237b3d1e3648b",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/ifeval/results/lfm3-1.7b.json"
+  },
+  "status": "measured",
+  "stderr": 0.97,
+  "subset": null
+}

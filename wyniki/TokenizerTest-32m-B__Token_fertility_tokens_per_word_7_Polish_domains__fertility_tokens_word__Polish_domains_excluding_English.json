@@ -1,0 +1,43 @@
+{
+  "benchmark": "Token fertility (tokens per word, 7 Polish domains)",
+  "benchmark_version": "TKX-A",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by this project (adgr3) on same corpus"
+  },
+  "data_revision": "corpus word counts in results/benchmark.json meta",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Tokenizer",
+  "harness": "TOKENIZATOREX benchmark script",
+  "judge": null,
+  "measured_by": "adgr3",
+  "metric": "fertility (tokens/word)",
+  "model": "TokenizerTest-32m-B",
+  "model_revision": null,
+  "n": 1918225,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 2.035405648451042,
+  "settings": {
+    "group": "polski",
+    "note": "SlayerLab",
+    "roundtrip_all": false,
+    "tokens_pl": 3904366,
+    "vocab": 32000,
+    "vs_tokenizatorex_pl": 1.2293289639151466
+  },
+  "source": {
+    "commit": "4afe4f85548e510b5ab43ec5aa61aafc4fd8c3e2",
+    "path": "results/benchmark.json",
+    "pr_status": null,
+    "repo": "adgr3/tokenizatorex",
+    "sha256": "b2ec92b05c78abcccf984cb1370fd0e65bda95cdf1265f6f6aad5f9ec2007149",
+    "url": "https://github.com/adgr3/tokenizatorex/blob/4afe4f85548e510b5ab43ec5aa61aafc4fd8c3e2/results/benchmark.json"
+  },
+  "status": "measured",
+  "stderr": 0.0,
+  "subset": "Polish domains (excluding English)"
+}

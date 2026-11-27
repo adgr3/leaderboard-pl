@@ -1,0 +1,55 @@
+{
+  "benchmark": "LiveCodeBench v6 (code generation, release_v6)",
+  "benchmark_version": "https://huggingface.co/datasets/livecodebench/code_generation_lite @ 0fe84c3912ea0c4d4a78037083943e8f0c4dd505, release_v6",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "https://huggingface.co/datasets/livecodebench/code_generation_lite @ 0fe84c3912ea0c4d4a78037083943e8f0c4dd505, release_v6",
+  "date": "2026-11-22",
+  "deviations": [
+    "see README.md, Deviations"
+  ],
+  "family": "Bielik",
+  "harness": "https://github.com/LiveCodeBench/LiveCodeBench @ 28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24",
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "pass@1",
+  "model": "bielik-11b-v3.1",
+  "model_revision": null,
+  "n": 1055,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 16.68,
+  "settings": {
+    "context": 32768,
+    "eval_processes": 12,
+    "eval_timeout_s": 6,
+    "max_tokens": "context minus prompt tokens minus a margin of 64",
+    "prompt_style": "OpenAIChat",
+    "request_sampling": {
+      "seed": 20261122,
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "scored_text": "after the last </think>",
+    "seed": 20261122,
+    "server_defaults": "unknown (Fabryka API)",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "trials": 1
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/api-benchmarks/livecodebench-v6/results/bielik-11b-v3.1.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "e426a60de67bc65c971e27a26da2b131acd2fe7af1064248f1d08043271119dc",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/api-benchmarks/livecodebench-v6/results/bielik-11b-v3.1.json"
+  },
+  "status": "measured",
+  "stderr": 1.15,
+  "subset": null
+}

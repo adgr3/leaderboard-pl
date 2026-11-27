@@ -1,0 +1,62 @@
+{
+  "benchmark": "mathqa",
+  "benchmark_version": "T19",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.22747068676716917,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.25862646566164155
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [
+    "model instruct liczony na surowym tekście, bez chat template",
+    "reguła kontekstu: acc_pmi poniżej bazy losowej na 2 testach PMI (ARC-Challenge, PIQA); próg 2 ustalony po obejrzeniu tego przebiegu"
+  ],
+  "family": "LFM",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.13"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "lfm3-1.7b",
+  "model_revision": "1da06bec6a819da10b54c67e5c90972b46d81871",
+  "n": 2985,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.24321608040201004,
+  "settings": {
+    "category": "Reasoning and science",
+    "harness": "lm-eval 0.4.13",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "LiquidAI/LFM3-1.7B",
+    "review_flag": "do_sprawdzenia",
+    "review_notes": [
+      "model instruct liczony na surowym tekście, bez chat template",
+      "reguła kontekstu: acc_pmi poniżej bazy losowej na 2 testach PMI (ARC-Challenge, PIQA); próg 2 ustalony po obejrzeniu tego przebiegu"
+    ],
+    "unit": "score",
+    "variant": "float32, no BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/mathqa/lfm3-1.7b/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "fb55e62d108b84636a64e29fff1d41ea241f63d893a7ffa11b806ce2a9f7819b",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/mathqa/lfm3-1.7b/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.007853851419309265,
+  "subset": "test split"
+}

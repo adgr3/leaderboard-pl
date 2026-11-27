@@ -1,0 +1,55 @@
+{
+  "benchmark": "Humanity's Last Exam (no tools)",
+  "benchmark_version": "cais/hle test @ 5a81a4c7271a2a2a312b9a690f0c2fde837e4c29, text-only subset (2158/2500)",
+  "ci95": null,
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by this project (adgr3); judge agreement 100%"
+  },
+  "data_revision": "cais/hle test @ 5a81a4c7271a2a2a312b9a690f0c2fde837e4c29, text-only subset (2158/2500)",
+  "date": "2026-11-23",
+  "deviations": [
+    "1 sample per item (methodology: 10)",
+    "5 unjudged answers counted incorrect",
+    "see source README Deviations"
+  ],
+  "family": "Bielik",
+  "harness": "centerforaisafety/hle @ 22ed3074b1e7b134bcbc09028d0ba320839b0655 (adapted: predict_api.py/judge_batches.py, Anthropic Message Batches)",
+  "judge": "claude-opus-4-6",
+  "measured_by": "adgr3",
+  "metric": "accuracy",
+  "model": "bielik-11b-v3.1",
+  "model_revision": null,
+  "n": 2158,
+  "n_empty": null,
+  "n_overflow": 0,
+  "null_reason": null,
+  "score": 5.4217,
+  "settings": {
+    "decoding_source": "LFM3-1.7B model card, Evaluation details",
+    "judge_agreement": [
+      "claude-opus-5-5",
+      "claude-sonnet-5-5"
+    ],
+    "judge_main": "claude-opus-4-6",
+    "judge_stability": "claude-opus-4-6",
+    "max_completion_tokens": 8192,
+    "max_turns": 1,
+    "samples_per_item": 1,
+    "subset": "text-only",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "trials": 1
+  },
+  "source": {
+    "commit": "89f4667ecedf0cfdd8741162435484d552b72afb",
+    "path": "research/api-benchmarks/hle/results/bielik-11b-v3.1.json",
+    "pr_status": "open (#358)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "929bbce1e18ce9660a43ca5a6ddbafa08e4ca2e1316a482624de69a11a4345bc",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/pull/358"
+  },
+  "status": "measured",
+  "stderr": 0.4875,
+  "subset": "text-only"
+}

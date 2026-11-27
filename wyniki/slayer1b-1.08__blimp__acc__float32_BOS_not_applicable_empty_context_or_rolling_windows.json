@@ -1,0 +1,58 @@
+{
+  "benchmark": "blimp",
+  "benchmark_version": "T01",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.7618955223880597,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.8449410447761194
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "slayer1b-1.08",
+  "model_revision": "5f854a0cc7160594d54d1788d37a44e8ebabe16c",
+  "n": 67000,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.8047313432835821,
+  "settings": {
+    "category": "Language modeling and linguistics",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.08",
+    "review_flag": "ok",
+    "review_notes": [
+      "bramka przyjęcia niezaliczona (ARC-Easy); kontynuacja 1.07, punkt startowy 1.09"
+    ],
+    "unit": "score",
+    "variant": "float32, BOS not applicable (empty context or rolling windows)"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/blimp/slayer1b-1.08/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "170a9a9da8589af1cddb79a00659a29d4d11b5059ecbed94e0813cd5af70ec1b",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/blimp/slayer1b-1.08/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.02126792305145138,
+  "subset": "train split"
+}

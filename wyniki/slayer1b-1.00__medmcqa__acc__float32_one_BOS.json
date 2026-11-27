@@ -1,0 +1,56 @@
+{
+  "benchmark": "medmcqa",
+  "benchmark_version": "T45",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.30408797513746116,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.3320583313411427
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc",
+  "model": "slayer1b-1.00",
+  "model_revision": "43e7ca2022dbd96a1bd0ed448f1ebb78209dbbfc",
+  "n": 4183,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.31795362180253406,
+  "settings": {
+    "category": "Knowledge (medical)",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.00",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/medmcqa/slayer1b-1.00/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "1b02f3f2c6281a7d919fa5c011ad234c8e7a83f702e00febb25ea55d96d8a37f",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/medmcqa/slayer1b-1.00/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.007201066598710159,
+  "subset": "validation split"
+}

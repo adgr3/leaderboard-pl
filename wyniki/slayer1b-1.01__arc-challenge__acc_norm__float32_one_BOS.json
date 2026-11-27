@@ -1,0 +1,56 @@
+{
+  "benchmark": "arc-challenge",
+  "benchmark_version": "T02",
+  "ci95": {
+    "level": 0.95,
+    "lower": 0.2167235494880546,
+    "method": "paired_bootstrap",
+    "replicates": 10000,
+    "seed": 20261028,
+    "upper": 0.26621160409556316
+  },
+  "comparable_to_reference": {
+    "comparable": true,
+    "reason": "measured by Bench Team contributors in slayerlabs/benchmarks-fabryka-ai; reproduced here with link"
+  },
+  "data_revision": "fe82b632887857585cc5482741d19b500868698d",
+  "date": "2026-11-26",
+  "deviations": [],
+  "family": "Slayer",
+  "harness": {
+    "commit": null,
+    "name": "lm-eval 0.4.9.1"
+  },
+  "judge": null,
+  "measured_by": "bench-team",
+  "metric": "acc_norm",
+  "model": "slayer1b-1.01",
+  "model_revision": "727b5f5ea4598e685af98d7aac2f3d4aad7f72d5",
+  "n": 1172,
+  "n_empty": null,
+  "n_overflow": null,
+  "null_reason": null,
+  "score": 0.24146757679180889,
+  "settings": {
+    "category": "Reasoning and science",
+    "harness": "lm-eval 0.4.9.1",
+    "language": "EN",
+    "protocol": "full-run-2026-11",
+    "repo": "SlayerLab/Slayer1B-1.01",
+    "review_flag": "ok",
+    "review_notes": [],
+    "unit": "score",
+    "variant": "float32, one BOS"
+  },
+  "source": {
+    "commit": "a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf",
+    "path": "research/results/full-run-2026-11/arc-challenge/slayer1b-1.01/results.json",
+    "pr_status": "merged (main)",
+    "repo": "slayerlabs/benchmarks-fabryka-ai",
+    "sha256": "2a33a1960e6dfb5cb1f24675c6a723747fc48761fbc54c0eeb76ed198e630b1a",
+    "url": "https://github.com/slayerlabs/benchmarks-fabryka-ai/blob/a46eabf41b22e9ad80f9bf48a1961dc1c32e4faf/research/results/full-run-2026-11/arc-challenge/slayer1b-1.01/results.json"
+  },
+  "status": "measured",
+  "stderr": 0.012506564839739448,
+  "subset": "test split"
+}
