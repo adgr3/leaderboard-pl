@@ -4,12 +4,20 @@
 
 `leaderboard-pl` to publiczne repozytorium z wynikami benchmarków modeli językowych, zebranymi w ujednoliconym formacie JSON. Każdy rekord ma źródło, metadane uruchomienia i jest walidowany schematem. Tabela `leaderboard.md` jest generowana skryptem z plików `wyniki/*.json`.
 
+- Hugging Face Space: https://huggingface.co/spaces/adegier/leaderboard-pl
+- Hugging Face Dataset: https://huggingface.co/datasets/adegier/leaderboard-pl-results
+
 ### Co tu jest
 
 - `wyniki/*.json` — rekordy pomiarów zgodne ze `schema/wynik.schema.json`
-- `leaderboard.md` — wygenerowany widok główny
+- `opisy/benchmarki.yaml` — opisy benchmarków (PL/EN, rodzina, metryka, kierunek, źródło)
+- `leaderboard.md` — wygenerowany widok główny (ranking, wykresy, sekcje rodzin)
+- `docs/wykresy/*.svg` — deterministyczne wykresy SVG generowane z danych
 - `docs/wszystkie_rekordy.md` — pełna lista rekordów
-- `scripts/buduj.py` — generator tabel i tryb sprawdzania `--check`
+- `scripts/buduj.py` — generator tabel/wykresów i `--check`
+- `scripts/eksport_hf.py` — eksport HF dataset/Space i `--check`
+- `hf/dataset/` — karta zbioru + `data/results.parquet/jsonl/csv`, `benchmarks.jsonl`
+- `hf/space/` — statyczny Space (HTML + `results.json` + `benchmarks.json`)
 - `schema/` — schemat JSON i aliasy nazw benchmarków
 
 ### Jak czytać znaczniki
@@ -32,13 +40,14 @@ Porównuj tylko wyniki, które mają ten sam benchmark, tę samą metrykę i zgo
 1. Dodaj plik JSON do `wyniki/`, zgodny ze `schema/wynik.schema.json`.
 2. Uzupełnij źródło (`source.repo`, `source.path`, `source.commit`, `source.sha256`, opcjonalnie `source.url`).
 3. Ustaw `status`: `measured` dla realnego pomiaru albo `null` z `null_reason`.
-4. Wygeneruj tabele: `python scripts/buduj.py`.
-5. Sprawdź spójność: `python scripts/buduj.py --check`.
-6. Uruchom testy: `python -m pytest -q`.
+4. Wygeneruj tabele/wykresy: `python scripts/buduj.py`.
+5. Wygeneruj eksport HF: `python scripts/eksport_hf.py`.
+6. Sprawdź spójność: `python scripts/buduj.py --check` i `python scripts/eksport_hf.py --check`.
+7. Uruchom testy: `python -m pytest -q`.
 
 ### Licencje danych
 
-Kod w tym repozytorium jest objęty licencją MIT (`LICENSE`). Dane/wyniki pochodzą z wielu źródeł i mogą mieć własne warunki:
+Kod w tym repozytorium jest objęty licencją MIT (`LICENSE`). Kompilacja danych w tym repozytorium jest udostępniana jako CC-BY-4.0, z zastrzeżeniem, że wyniki pochodzą z wymienionych źródeł i mogą podlegać ich własnym warunkom:
 
 | Źródło | Licencja | Uwagi |
 |---|---|---|
@@ -51,6 +60,9 @@ Przed ponownym użyciem danych sprawdź licencję i warunki źródła pierwotneg
 ## English
 
 `leaderboard-pl` is a public repository of language-model benchmark results collected in a unified JSON format. Every record includes provenance, run metadata, and is validated against a schema. `leaderboard.md` is generated from `wyniki/*.json`.
+
+- Hugging Face Space: https://huggingface.co/spaces/adegier/leaderboard-pl
+- Hugging Face Dataset: https://huggingface.co/datasets/adegier/leaderboard-pl-results
 
 ### Contents
 
@@ -86,7 +98,7 @@ Compare only results with the same benchmark, metric, and compatible settings. D
 
 ### Data licenses
 
-Code in this repository is MIT-licensed (`LICENSE`). Results/data come from multiple sources and may have their own terms:
+Code in this repository is MIT-licensed (`LICENSE`). The compiled dataset in this repository is published as CC-BY-4.0, while underlying results come from the listed sources and may have their own terms:
 
 | Source | License | Notes |
 |---|---|---|
