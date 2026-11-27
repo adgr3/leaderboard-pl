@@ -137,6 +137,45 @@ def fmt_num(v, pct=False):
     return f"{v:.4f}".rstrip("0").rstrip(".")
 
 
+def fmt_svg_num(v, pct=False):
+    if v is None:
+        return "—"
+    if pct:
+        return f"{v:.1f}%"
+    return f"{v:.3g}"
+
+
+def nice_ticks(vmin, vmax, n=6):
+    import math
+    if vmax <= vmin:
+        return [vmin]
+    span = vmax - vmin
+    raw_step = span / max(1, (n - 1))
+    if raw_step <= 0:
+        return [vmin, vmax]
+    mag = 10 ** math.floor(math.log10(raw_step))
+    norm = raw_step / mag
+    if norm < 1.5:
+        step = 1 * mag
+    elif norm < 3:
+        step = 2 * mag
+    elif norm < 7:
+        step = 5 * mag
+    else:
+        step = 10 * mag
+    start = math.floor(vmin / step) * step
+    ticks = []
+    v = start
+    guard = 0
+    while v <= vmax + step * 1e-9 and guard < n + 4:
+        ticks.append(v)
+        v = round(v + step, 10)
+        guard += 1
+    if not ticks or ticks[-1] < vmax:
+        ticks.append(ticks[-1] + step if ticks else vmax)
+    return ticks
+
+
 def fmt_score(r):
     if r.get("status") == "null" or r.get("score") is None:
         reason = r.get("null_reason") or "brak powodu"
@@ -338,11 +377,11 @@ def build_bar_svg(path, title, subtitle, items, value_label, lower_better=False)
     plot_w = W - left - 140
     lines = svg_header(W,H,title,subtitle)
     lines.append(f'<line x1="{left}" y1="{top-10}" x2="{left}" y2="{H-35}" stroke="#555"/>')
-    for t in range(5):
-        x = left + plot_w*t/4
-        val = vmin + span*t/4
+    pct = "%" in value_label
+    for val in nice_ticks(vmin, vmax):
+        x = left + (val - vmin) / span * plot_w
         lines.append(f'<line x1="{x:.1f}" y1="{top-10}" x2="{x:.1f}" y2="{H-35}" stroke="#ddd"/>')
-        lines.append(f'<text x="{x:.1f}" y="{H-18}" font-size="10" text-anchor="middle" fill="#444">{svg_escape(fmt_num(val, pct=("%" in value_label)))}</text>')
+        lines.append(f'<text x="{x:.1f}" y="{H-18}" font-size="10" text-anchor="middle" fill="#444">{svg_escape(fmt_svg_num(val, pct=pct))}</text>')
     lines.append(f'<text x="{left + plot_w/2:.1f}" y="{H-4}" font-size="11" text-anchor="middle" fill="#444">{svg_escape(value_label)}</text>')
     for idx,(label,val,se,note,color) in enumerate(items):
         y = top + idx*row_h
@@ -360,7 +399,7 @@ def build_bar_svg(path, title, subtitle, items, value_label, lower_better=False)
             lines.append(f'<line x1="{cx-err:.2f}" y1="{y+10}" x2="{cx+err:.2f}" y2="{y+10}" stroke="#222"/>')
             lines.append(f'<line x1="{cx-err:.2f}" y1="{y+6}" x2="{cx-err:.2f}" y2="{y+14}" stroke="#222"/>')
             lines.append(f'<line x1="{cx+err:.2f}" y1="{y+6}" x2="{cx+err:.2f}" y2="{y+14}" stroke="#222"/>')
-        txt = fmt_num(val, pct=("%" in value_label))
+        txt = fmt_svg_num(val, pct=("%" in value_label))
         if note:
             txt += f" {note}"
         lines.append(f'<text x="{left+bw+6:.2f}" y="{y+15}" font-size="10" fill="#111">{svg_escape(txt)}</text>')
@@ -373,17 +412,17 @@ def build_heatmap_svg(path, models, benchmarks, matrix, title, subtitle):
     if not models or not benchmarks:
         write_svg(path, svg_header(640,80,title,subtitle)+['<text x="20" y="70" font-size="12">Brak danych.</text>','</svg>'])
         return
-    cell_w, cell_h = 54, 22
-    left, top = 220, 90
+    cell_w, cell_h = 62, 28
+    left, top = 240, 90
     W = left + cell_w*len(benchmarks) + 40
     H = top + cell_h*len(models) + 70
     lines = svg_header(W,H,title,subtitle)
     for j,b in enumerate(benchmarks):
         x = left + j*cell_w + cell_w/2
-        lines.append(f'<text x="{x:.1f}" y="{top-18}" font-size="9" text-anchor="middle" fill="#111">{svg_escape(b)}</text>')
+        lines.append(f'<text x="{x:.1f}" y="{top-18}" font-size="10" text-anchor="middle" fill="#111">{svg_escape(b)}</text>')
     for i,m in enumerate(models):
         y = top + i*cell_h
-        lines.append(f'<text x="{left-8}" y="{y+15}" font-size="10" text-anchor="end" fill="#111">{svg_escape(short_model(m))}</text>')
+        lines.append(f'<text x="{left-8}" y="{y+18}" font-size="11" text-anchor="end" fill="#111">{svg_escape(short_model(m))}</text>')
         for j,b in enumerate(benchmarks):
             x = left + j*cell_w
             cell = matrix.get(m,{}).get(b)
@@ -401,7 +440,7 @@ def build_heatmap_svg(path, models, benchmarks, matrix, title, subtitle):
             stroke = "#2b6cb0" if cell and cell[2] else "#ffffff"
             sw = 1.5 if cell and cell[2] else 0.5
             lines.append(f'<rect x="{x}" y="{y}" width="{cell_w}" height="{cell_h}" fill="{color}" stroke="{stroke}" stroke-width="{sw}"/>')
-            lines.append(f'<text x="{x+cell_w/2:.1f}" y="{y+14}" font-size="8.5" text-anchor="middle" fill="{tcolor}">{svg_escape(txt)}</text>')
+            lines.append(f'<text x="{x+cell_w/2:.1f}" y="{y+19}" font-size="11" text-anchor="middle" fill="{tcolor}">{svg_escape(txt)}</text>')
     # legend
     ly = H - 28
     for k in range(6):
@@ -557,7 +596,7 @@ def build_ranking_charts(models, benchmarks, chosen, mean_score):
             nv=(v-vmin)/span
             dirn=direction_for(r)
             if dirn=='lower': nv=1-nv
-            disp = fmt_num(v, pct=is_percent(r))
+            disp = fmt_svg_num(v, pct=is_percent(r))
             # best?
             best=False
             if dirn=='higher':
